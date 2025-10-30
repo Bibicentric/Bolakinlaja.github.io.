@@ -1,225 +1,162 @@
-se<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Bolametiren's Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bolametiren Akinlaja - Portfolio</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 0;
+      background: #f4f7fa;
+      color: #222;
+    }
+    header, section, footer { max-width: 900px; margin: auto; padding: 2rem 1rem; }
+    header { text-align: center; background: #222; color: #fff; border-radius: 0 0 1.2rem 1.2rem;}
+    header img { width: 140px; border-radius: 100px; margin-top: 1rem; }
+    nav { margin: 1.5rem 0; }
+    nav a {
+      color: #0078e7; text-decoration: none; margin: 0 1rem; font-weight: 500;
+    }
+    nav a:hover { text-decoration: underline; }
+    .socials a { margin: 0 0.5rem; font-size: 1.3rem; color: #0078e7; }
+    .section-title { font-size: 2rem; margin: 2rem 0 1rem 0; border-left: 4px solid #0078e7; padding-left: 0.6rem; }
+    .projects { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); }
+    .project-card {
+      background: #fff; border-radius: 1rem; padding: 1rem;
+      box-shadow: 0 2px 8px #0001;
+      display: flex; flex-direction: column; align-items: flex-start;
+    }
+    .project-card img { width: 100%; border-radius: 0.6rem; margin-bottom: 1rem; }
+    .project-title { margin: 0.5rem 0; font-size: 1.2rem; }
+    .skills { display: flex; flex-wrap: wrap; gap: 0.7rem; margin: 1rem 0; }
+    .skill { background: #e3eefe; color: #00336e; padding: 0.3rem 0.8rem; border-radius: 1rem; font-size: 0.98rem; }
+    form { display: flex; flex-direction: column; gap: 1rem; }
+    input, textarea {
+      padding: 0.7rem;
+      border: 1px solid #bbb;
+      border-radius: 0.4rem;
+      font-size: 1rem;
+    }
+    input[type="submit"] {
+      background: #0078e7; color: #fff;
+      border: none; cursor: pointer;
+      transition: background 0.2s;
+    }
+    input[type="submit"]:hover { background: #005bb5; }
+    footer { text-align: center; font-size: 1rem; color: #555; margin-bottom: 1.5rem; }
+    @media (max-width: 600px) {
+      header, section, footer { padding: 1rem; }
+      .section-title { font-size: 1.2rem; }
+      .projects { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/Image (14).jpg" alt="Bolametiren Akinlaja">
+    <h1>Bolametiren Akinlaja</h1>
+    <p>Program Manager | Data Analytics | Project Management | Workforce Development</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <span class="socials">
+        <a href="https://www.linkedin.com/in/bolametiren-akinlaja-497602213/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Bibicentric" title="GitHub"><i class="fab fa-github"></i></a>
+      </span>
+    </nav>
+  </header>
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="custom">
+  <section id="about">
+    <div class="section-title">About Me</div>
+    <p>
+      Hello! I'm Bolametiren Akinlaja, a results-driven Program Manager at Bowie State University’s Center for Data Analytics (CDA). I design and lead initiatives blending data literacy, workforce readiness, student engagement, and entrepreneurship. My passion lies in bridging academia and industry to empower students with the tools and networks needed for success in today’s digital economy.
+    </p>
+    <p>
+      I specialize in <strong>project management</strong>, <strong>data analytics training</strong>, and <strong>strategic partnerships</strong> that prepare the next generation of leaders. Let's connect and make an impact together!
+    </p>
+  </section>
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Bolametiren Akinlaja's Portfolio<br />
-						</h1>
-						<a href="" class="image main"><img src="images/Image (14).jpg " alt="" /></a>
-						<p>Program Manager at Bowie State University’s Center for Data Analytics (CDA), where I design and lead initiatives that blend data literacy, workforce readiness, student engagement, and entrepreneurship support. My work focuses on transforming ideas into impactful programs that prepare students for careers in technology, research, and business innovation, while advancing the university’s mission of excellence, inclusion, and innovation. <a href="https://www.linkedin.com/in/bolametiren-akinlaja-497602213/">@LinkedIn</a> </p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
-<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo"> About Me </a>
-					</header>
+  <section id="projects">
+    <div class="section-title">Featured Projects</div>
+    <div class="projects">
+      <div class="project-card">
+        <img src="images/Aki pics 1.png" alt="T-Mobile Curiosity Lab">
+        <div class="project-title">T-Mobile Curiosity Lab Initiative</div>
+        <p>Represented BSU at an executive briefing in Atlanta, engaged in conversations on 5G-powered learning, AI tools, and IoT innovation. Strengthened BSU’s position as a national partner in digital transformation.</p>
+        <a href="https://akiavichotels.ng/booking-confirmation/" target="_blank">Learn More</a>
+      </div>
+      <div class="project-card">
+        <img src="images/Aki pics 1.png" alt="Reservation Tracking System">
+        <div class="project-title">Reservation Tracking System</div>
+        <p>Led the development of a comprehensive Reservation Tracking System, resolving critical deployment issues and driving improvements in testing and communication with the web team.</p>
+        <a href="https://akiavichotels.ng/booking-confirmation/" target="_blank">See System</a>
+      </div>
+      <div class="project-card">
+        <img src="images/Aki seo.png" alt="SEO & Social Media Engagement">
+        <div class="project-title">SEO & Social Media Engagement</div>
+        <p>Directed an SEO and social outreach campaign to position Akiavic Blue Roof Hotel as a top destination in Ondo, boosting visibility, engagement, and bookings.</p>
+        <a href="https://www.instagram.com/akiavic_blue_roof_hotel/?hl=en" target="_blank">Instagram</a>
+      </div>
+      <div class="project-card">
+        <img src="images/Bibi.png" alt="Data Analytics Training">
+        <div class="project-title">Data Analytics Training Program</div>
+        <p>Spearheaded and managed a multi-session data analytics training at BSU, deploying content on Microsoft Excel, Tableau, and Power BI, and empowering participants with practical skills.</p>
+        <a href="https://www.bowiestate.edu/calendar/index.php?eID=4659" target="_blank">View Project</a>
+      </div>
+      <div class="project-card">
+        <img src="images/Bibi1.jpg" alt="DARTT Lab Enhancement">
+        <div class="project-title">DARTT Lab Grant Acquisition</div>
+        <p>Secured funding for the Data Analytics Research Trading and Technology Lab at BSU—enhancing resources for hands-on financial technology learning.</p>
+        <a href="https://bowiestate.edu/about/news/2023/college-of-business-unveils-truist-darrtt-lab.php" target="_blank">Full Story</a>
+      </div>
+      <div class="project-card">
+        <img src="images/Msu.png" alt="Stock Market Challenge">
+        <div class="project-title">Stock Market Challenge 2023</div>
+        <p>Coordinated the MSU/BSU Stock Market Challenge, giving students hands-on experience in savings, investing, and financial literacy.</p>
+        <a href="https://edu.stocktrak.com/morgantrading/msu-stock-market-challenge/" target="_blank">Read More</a>
+      </div>
+    </div>
+  </section>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Project</a></li>
-						
-						</ul>
-						<ul class="icons">
-							
-							<li><a href="https://www.linkedin.com/in/bolametiren-akinlaja-497602213/" class="icon brands alt fa-linkedin"><span class="label">linkedIn</span></a></li>
-							<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+  <section id="skills">
+    <div class="section-title">Skills & Technologies</div>
+    <div class="skills">
+      <span class="skill">Program Management</span>
+      <span class="skill">Data Analytics</span>
+      <span class="skill">Microsoft Excel</span>
+      <span class="skill">Power BI</span>
+      <span class="skill">Tableau</span>
+      <span class="skill">Strategic Partnerships</span>
+      <span class="skill">Workforce Development</span>
+      <span class="skill">Project Delivery</span>
+      <span class="skill">Team Leadership</span>
+      <span class="skill">Communication</span>
+      <span class="skill">SEO & Digital Marketing</span>
+      <span class="skill">Research & Analysis</span>
+    </div>
+  </section>
 
-				<!-- Main -->
-					<div id="main">
+  <section id="contact">
+    <div class="section-title">Contact</div>
+    <form method="POST" action="mailto:bibicentric@gmail.com" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <input type="submit" value="Send Message">
+    </form>
+    <div style="margin-top: 1.5rem;">
+      <strong>Email:</strong> <a href="mailto:bibicentric@gmail.com">bibicentric@gmail.com</a><br>
+      <strong>Phone:</strong> <a href="tel:2407436402">(240) 743-6402</a>
+    </div>
+  </section>
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<span class="date"></span>
-									<h2><a href="#">T-Mobile<br />
-									</a></h2>
-									<p>I have built and sustained strategic partnerships that expand student opportunities, elevate Bowie State University’s visibility, and align academic programming with industry needs.
-
-T-Mobile Curiosity Lab (2025): Represented BSU at an executive briefing in Atlanta, engaging in conversations on 5G-powered learning, AI tools, and IoT innovation. Strengthened BSU’s position as a national partner in digital equity.
-
-Impact: These partnerships highlight my ability to bridge academia and industry, creating pathways for students to access cutting-edge tools, training, and professional networks that prepare them for leadership in a digital-first economy. </p>
-								</header>
-								<a href="" class="image main"><img src="images/Aki pics 1.png" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="https://akiavichotels.ng/booking-confirmation/" class="button large">Link</a></li>
-								</ul>
-					
-	                           <!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<span class="date"></span>
-									<h2><a href="#">Reservation Tracking system <br />
-									</a></h2>
-									<p>I Led development of Reservation Tracking System, resolving critical deployment issue through collaboration with web design team. Lessons learned drove improvements in testing and communication strategies. Embraced Agile for adaptability, overcoming challenges through training and fostering collaboration. Prioritized stakeholder engagement, incorporating feedback for continuous improvement. Balanced project tools with interpersonal communication, ensuring a cohesive team. Strategic decision-making navigated varied methodologies, reflecting commitment to adaptive solutions. Achieved project success through dynamic, collaborative, and stakeholder-focused project management.older-focused, and transparent project management practices. </p>
-								</header>
-								<a href="" class="image main"><img src="images/Aki pics 1.png" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="https://akiavichotels.ng/booking-confirmation/" class="button large">Link</a></li>
-								</ul>
-								
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-	
-										<h2><a href="#">Search Engine Optimization & Social Media Engagement <br />
-									</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/Aki seo.png" alt="" /></a>
-									<p>led a comprehensive Search Engine Optimization (SEO) and Social Media Engagement project aimed at positioning the hotel as the top choice in Ondo. 
-										The project involved creating and optimizing online platforms to enhance visibility, customer engagement, and brand recognition.</p>
-									<ul class="actions special">
-										<li><a href="https://www.instagram.com/akiavic_blue_roof_hotel/?hl=en" class="button">View Project</a></li>
-										<li><a href="https://www.google.com/travel/search?q=hotels%20in%20ondo&g2lb=2502548%2C2503771%2C2503781%2C2504374%2C4258168%2C4284970%2C4291517%2C4597339%2C4814050%2C4874190%2C4893075%2C4924070%2C4965990%2C10208620%2C72277293%2C72298667%2C72302247%2C72313836%2C72317059%2C72406588%2C72412680%2C72414906%2C72421566%2C72430562%2C72440516%2C72442338%2C72458707%2C72470439%2C72470899%2C72471395%2C72473737&hl=en-US&gl=us&ssta=1&ts=CAESCAoCCAMKAggDGh4SHBIUCgcI6A8QARgNEgcI6A8QARgOGAEyBAgAEAAqBwoFOgNVU0Q&qs=CAEyJ0Noa0luYTZLc2VMQW10RWhHZzB2Wnk4eE1XSjZlSGcwY0hreUVBRTgKQgkJHZciJgZqoiFCCQnRRM9HiwB3GkIJCXfMUNHfM7kZ&ap=aAG6AQhvdmVydmlldw&ictx=1&sa=X&ved=0CAAQ5JsGahcKEwiI29vh1daDAxUAAAAAHQAAAAAQCw" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-			
-										<h2><a href="#">Data Analytics Training Program Management<br />
-										</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/Bibi.png" alt="" /></a>
-									<p>As a Project Manager, I spearheaded and managed the Data Analytics Training Program at Bowie State University, collaborating with facilitators to deploy comprehensive sessions covering Microsoft Excel, Tableau, SPSS, Python, and Power BI. These training initiatives commenced in Spring 2023, engaging a significant cohort of 100+ students across all department.The success of the Data Analytics Training Program establishes a strong foundation for continuous improvement and expansion. Plans include diversifying training content, exploring emerging analytics tools, and further tailoring sessions to meet evolving industry demands.</p>
-									<ul class="actions special">
-										<li><a href="https://www.bowiestate.edu/calendar/index.php?eID=4659" class="button">View project</a></li>
-									</ul>
-								</The success of the Data Analytics Training Program establishes a strong foundation for continuous improvement and expansion. Plans include diversifying training content, exploring emerging analytics tools, and further tailoring sessions to meet evolving industry demands.
->
-								<article>
-									<header>
-										
-										<h2><a href="#">Grant Acquisition for DARTT Lab Enhancement<br />
-										</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/Bibi1.jpg" alt="" /></a>
-									<p>        As a Project Manager, I played a pivotal role in securing funding for the Data Analytics Research Trading and Technology (DARTT) Lab at Bowie State University. The project aimed at enhancing the lab's capabilities and expanding its impactful initiatives.</p>
-									<ul class="actions special">
-										<li><a href="https://bowiestate.edu/about/news/2023/college-of-business-unveils-truist-darrtt-lab.php" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										
-										<h2><a href="#">Bowie State University/Morgan State University Stock Market Challenge – 2023<br />
-										</a></h2>
-									</header>
-									<a href="" class="image fit"><img src="images/Msu.png" alt="" /></a>
-									<p>        The MSU/BSU 2023 Stock Market Challenge and Financial Literacy Campaign was a groundbreaking initiative that provided students with hands-on experience in savings and investing. Open to students from all majors, the event aimed to enhance financial literacy and promote sound investment strategies.</p>
-									<ul class="actions special">
-										<li><a href="https://edu.stocktrak.com/morgantrading/msu-stock-market-challenge/" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										
-						<!-- Footer -->
-							<footer>
-								<div class="pagination">
-									<!--<a href="#" class="previous">Prev</a>-->
-									<a href="#" class="page active">1</a>
-									<a href="#" class="page">2</a>
-									<a href="#" class="page">3</a>
-									<span class="extra">&hellip;</span>
-									<a href="#" class="page">8</a>
-									<a href="#" class="page">9</a>
-									<a href="#" class="page">10</a>
-									<a href="#" class="next">Next</a>
-								</div>
-							</footer>
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Bowie</h3>
-								<p>Maryland<br />
-						</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(240) 743-6402</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">bibicentric@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									
-									<li><a href="https://www.linkedin.com/in/bolametiren-akinlaja-497602213/" class="icon brands alt fa-linkedin"><span class="label">linkedIn</span></a></li>
-									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+  <footer>
+    &copy; 2025 Bolametiren Akinlaja. Designed with ❤️ | <a href="https://html5up.net" target="_blank" style="color:#0078e7;">HTML5 UP</a>
+  </footer>
+</body>
 </html>
-
-
-
-
-
-
