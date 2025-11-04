@@ -1,17 +1,20 @@
 /* Portfolio Site - Main Stylesheet */
 
 :root {
-  --primary-color: #0078e7;
-  --primary-hover: #005bb5;
-  --dark-bg: #222;
-  --light-bg: #f4f7fa;
-  --text-dark: #222;
-  --text-light: #555;
-  --white: #fff;
-  --border-color: #bbb;
-  --skill-bg: #e3eefe;
-  --skill-color: #00336e;
-  --shadow: rgba(0, 0, 0, 0.1);
+  --primary-color: #0066ff;
+  --primary-hover: #0052cc;
+  --dark-bg: #000000;
+  --light-bg: #ffffff;
+  --gradient-primary: linear-gradient(135deg, #000000 0%, #0066ff 50%, #000000 100%);
+  --gradient-secondary: linear-gradient(135deg, #0066ff 0%, #000000 100%);
+  --gradient-accent: linear-gradient(90deg, #000000 0%, #0066ff 50%, #ffffff 100%);
+  --text-dark: #000000;
+  --text-light: #666666;
+  --white: #ffffff;
+  --border-color: #0066ff;
+  --skill-bg: linear-gradient(135deg, #e6f0ff 0%, #cce0ff 100%);
+  --skill-color: #003d99;
+  --shadow: rgba(0, 102, 255, 0.2);
   --max-width: 900px;
 }
 
@@ -34,9 +37,10 @@ header {
   margin: 0 auto;
   padding: 2rem 1rem;
   text-align: center;
-  background: var(--dark-bg);
+  background: var(--gradient-primary);
   color: var(--white);
   border-radius: 0 0 1.2rem 1.2rem;
+  box-shadow: 0 4px 20px var(--shadow);
 }
 
 header img {
@@ -45,6 +49,8 @@ header img {
   border-radius: 100px;
   margin-top: 1rem;
   object-fit: cover;
+  border: 4px solid var(--white);
+  box-shadow: 0 0 20px var(--shadow);
 }
 
 header h1 {
@@ -108,12 +114,20 @@ section {
   border-left: 4px solid var(--primary-color);
   padding-left: 0.6rem;
   font-weight: 600;
+  background: var(--gradient-accent);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Hero Section (Home Page) */
 .hero {
   text-align: center;
   padding: 3rem 1rem;
+  background: linear-gradient(180deg, rgba(0, 102, 255, 0.05) 0%, rgba(255, 255, 255, 1) 100%);
+  border-radius: 1rem;
+  margin: 2rem auto;
+  max-width: var(--max-width);
 }
 
 .hero h2 {
@@ -141,16 +155,21 @@ section {
   background: var(--white);
   border-radius: 1rem;
   padding: 1rem;
-  box-shadow: 0 2px 8px var(--shadow);
+  box-shadow: 0 4px 16px var(--shadow);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 2px solid transparent;
+  background-image: linear-gradient(white, white), var(--gradient-secondary);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
 
 .project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 16px var(--shadow);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px var(--shadow);
+  border-color: var(--primary-color);
 }
 
 .project-card img {
@@ -201,11 +220,14 @@ section {
   border-radius: 1rem;
   font-size: 0.98rem;
   font-weight: 500;
-  transition: transform 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 2px 8px rgba(0, 102, 255, 0.1);
 }
 
 .skill:hover {
   transform: scale(1.05);
+  box-shadow: 0 4px 12px var(--shadow);
 }
 
 /* Form Styles */
@@ -240,19 +262,21 @@ textarea {
 
 input[type="submit"],
 button {
-  background: var(--primary-color);
+  background: var(--gradient-secondary);
   color: var(--white);
   border: none;
   cursor: pointer;
   padding: 0.7rem 2rem;
   font-size: 1rem;
   font-weight: 500;
-  transition: background 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px var(--shadow);
 }
 
 input[type="submit"]:hover,
 button:hover {
-  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px var(--shadow);
 }
 
 /* Contact Info */
