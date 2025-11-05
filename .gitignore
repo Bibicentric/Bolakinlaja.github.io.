@@ -1,3 +1,4 @@
+*.old
 # Backup files
 *.old
 *_old.html
