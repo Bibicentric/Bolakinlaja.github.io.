@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: "Bolametiren Akinlaja - Portfolio" }}</title>
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <header>
+    <img src="{{ site.baseurl }}/images/Image (14).jpg" alt="Bolametiren Akinlaja">
+    <h1>Bolametiren Akinlaja</h1>
+    <p>Program Manager | Data Analytics | Project Management | Workforce Development</p>
+    <nav>
+      <a href="{{ site.baseurl }}/index.html">Home</a>
+      <a href="{{ site.baseurl }}/about.html">About</a>
+      <a href="{{ site.baseurl }}/projects.html">Projects</a>
+      <a href="{{ site.baseurl }}/skills.html">Skills</a>
+      <a href="{{ site.baseurl }}/contact.html">Contact</a>
+      <span class="socials">
+        <a href="https://www.linkedin.com/in/bolametiren-akinlaja-497602213/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Bibicentric" title="GitHub"><i class="fab fa-github"></i></a>
+      </span>
+    </nav>
+  </header>
+
+  {% if page.url == '/' %}
+  <section class="hero">
+    <h2>Welcome to My Portfolio</h2>
+    <p>
+      Hello! I'm Bolametiren Akinlaja, a results-driven Program Manager at Bowie State University's Center for Data Analytics. 
+      I design and lead initiatives blending data literacy, workforce readiness, and strategic partnerships to empower the next generation of leaders.
+    </p>
+    <p>
+      Explore my work in <a href="{{ site.baseurl }}/projects.html" style="color: #0078e7; font-weight: 600;">projects</a>, 
+      learn more <a href="{{ site.baseurl }}/about.html" style="color: #0078e7; font-weight: 600;">about me</a>, 
+      or <a href="{{ site.baseurl }}/contact.html" style="color: #0078e7; font-weight: 600;">get in touch</a> to collaborate!
+    </p>
+  </section>
+  {% endif %}
+
+  {{ content }}
+
+  <footer>
+    &copy; 2025 Bolametiren Akinlaja. Designed with ❤️ | <a href="https://html5up.net" target="_blank">HTML5 UP</a>
+  </footer>
+</body>
+</html>
