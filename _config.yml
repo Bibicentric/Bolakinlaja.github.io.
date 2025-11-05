@@ -1,0 +1,19 @@
+# Site settings
+title: Bolametiren Akinlaja - Portfolio
+description: Program Manager | Data Analytics | Project Management | Workforce Development
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+permalink: /:title.html
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - README.txt
+  - LICENSE.txt
+  - src_App.jsx
+  - index_Version2.html
+  - generic.html
+  - elements.html

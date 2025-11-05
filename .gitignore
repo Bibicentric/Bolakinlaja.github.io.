@@ -1,1 +1,11 @@
 *.old
+# Backup files
+*.old
+*_old.html
+
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
