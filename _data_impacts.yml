@@ -1,0 +1,33 @@
+# Add or edit items here. Use `metric` for display (short), `number` for counters, `title`, `description`, `link`.
+# Keep `number` as an integer for animation; `metric` can include +, K, etc.
+- id: people_helped
+  metric: "32K+"
+  number: 32000
+  title: "People helped"
+  description: "Workshops, tutorials and mentoring that taught web development fundamentals and best practices."
+  link: "/projects/web-workshops"
+  icon: "users"
+
+- id: hours_saved
+  metric: "4,200"
+  number: 4200
+  title: "Hours saved"
+  description: "Automation and tooling improvements that reduced manual work for clients and teammates."
+  link: "/projects/automation"
+  icon: "clock"
+
+- id: revenue_generated
+  metric: "$1.2M"
+  number: 1200000
+  title: "Revenue influenced"
+  description: "Product improvements and launches that contributed to revenue and customer retention."
+  link: "/projects/product-launch"
+  icon: "trending-up"
+
+- id: open_source
+  metric: "15"
+  number: 15
+  title: "Open-source contributions"
+  description: "Libraries, plugins and docs contributed to the community with active maintainership."
+  link: "/projects/open-source"
+  icon: "code"
