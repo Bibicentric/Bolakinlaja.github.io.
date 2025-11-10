@@ -17,6 +17,7 @@
       <a href="{{ site.baseurl }}/about.html">About</a>
       <a href="{{ site.baseurl }}/projects.html">Projects</a>
       <a href="{{ site.baseurl }}/skills.html">Skills</a>
+      <a href="{{ site.baseurl }}/impacts.html">Impacts</a>
       <a href="{{ site.baseurl }}/contact.html">Contact</a>
       <span class="socials">
         <a href="https://www.linkedin.com/in/bolametiren-akinlaja-497602213/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -25,7 +26,6 @@
     </nav>
   </header>
 
-  {% if page.url == '/' or page.url == '/index.html' %}
   <section class="hero">
     <h2>Welcome to My Portfolio</h2>
     <p>
@@ -38,7 +38,6 @@
       or <a href="{{ site.baseurl }}/contact.html" style="color: #0078e7; font-weight: 600;">get in touch</a> to collaborate!
     </p>
   </section>
-  {% endif %}
 
   {{ content }}
 
