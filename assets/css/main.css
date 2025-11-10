@@ -186,6 +186,38 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* Impacts */
+.impact-item {
+  background: var(--card-bg);
+  border-left: 4px solid var(--primary-color);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impact-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.impact-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: var(--primary-color);
+}
+
+.impact-item p {
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.impact-item strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
 /* Skills */
 .skills {
   display: flex;
