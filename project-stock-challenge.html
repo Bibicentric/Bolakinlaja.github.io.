@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Market Challenge 2023 - Bolametiren Akinlaja</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <script defer src="assets/js/portfolio-enhancements.js"></script>
+  <style>
+    .project-hero {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(139, 92, 246, 0.1));
+      padding: 3rem 2rem;
+      border-radius: 1.25rem;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+    .project-hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .project-hero .project-meta {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .project-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-light);
+      font-weight: 600;
+    }
+    .project-meta-item i {
+      color: var(--primary-color);
+    }
+    .project-image-main {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto 3rem;
+      border-radius: 1.25rem;
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+    }
+    .project-image-main img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .project-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .project-section {
+      margin-bottom: 3rem;
+    }
+    .project-section h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--text-color);
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    .project-section h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+      border-radius: 2px;
+    }
+    .project-section p {
+      line-height: 1.8;
+      color: var(--text-light);
+      margin-bottom: 1rem;
+    }
+    .challenge-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .stat-card {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 1rem;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      border: 2px solid var(--border-color);
+      transition: all 0.3s ease;
+    }
+    .stat-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--primary-color);
+    }
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+    }
+    .stat-label {
+      color: var(--text-light);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .learning-objectives {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .objective-card {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(139, 92, 246, 0.05));
+      padding: 1.75rem;
+      border-radius: 1rem;
+      border-left: 4px solid var(--primary-color);
+      transition: all 0.3s ease;
+    }
+    .objective-card:hover {
+      transform: translateX(5px);
+      box-shadow: var(--shadow-md);
+    }
+    .objective-card i {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+    .objective-card h4 {
+      color: var(--text-color);
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+    }
+    .objective-card p {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+    .partnership-box {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: var(--shadow-md);
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+    .partnership-box .logo-section {
+      text-align: center;
+    }
+    .partnership-box .logo-section h4 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    .partnership-box .info-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    .partnership-box .info-section li {
+      padding: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      color: var(--text-light);
+    }
+    .partnership-box .info-section li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--primary-color);
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .activities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .activity-badge {
+      background: var(--card-bg);
+      padding: 1.25rem;
+      border-radius: 0.75rem;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      border: 2px solid var(--border-color);
+      transition: all 0.3s ease;
+    }
+    .activity-badge:hover {
+      border-color: var(--primary-color);
+      transform: scale(1.05);
+    }
+    .activity-badge i {
+      font-size: 2rem;
+      color: var(--primary-color);
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+    .activity-badge span {
+      color: var(--text-color);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .project-outcomes {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(139, 92, 246, 0.05));
+      padding: 2rem;
+      border-radius: 1rem;
+      margin-top: 2rem;
+    }
+    .project-outcomes ul {
+      list-style: none;
+      padding: 0;
+    }
+    .project-outcomes li {
+      padding: 0.75rem 0;
+      padding-left: 2rem;
+      position: relative;
+      color: var(--text-light);
+    }
+    .project-outcomes li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--primary-color);
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .back-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      background: rgba(37, 99, 235, 0.1);
+      transition: all 0.3s ease;
+      margin-top: 2rem;
+    }
+    .back-button:hover {
+      background: var(--primary-color);
+      color: white;
+      transform: translateX(-3px);
+    }
+    .back-button i {
+      transition: transform 0.3s ease;
+    }
+    .back-button:hover i {
+      transform: translateX(-3px);
+    }
+    @media (max-width: 768px) {
+      .partnership-box {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/Image (14).jpg" alt="Bolametiren Akinlaja">
+    <h1>Bolametiren Akinlaja</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html">Contact</a>
+      <span class="socials">
+        <a href="https://www.linkedin.com/in/bolametiren-akinlaja-497602213/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Bibicentric" title="GitHub"><i class="fab fa-github"></i></a>
+      </span>
+    </nav>
+  </header>
+
+  <section>
+    <a href="projects.html" class="back-button">
+      <i class="fas fa-arrow-left"></i> Back to Projects
+    </a>
+
+    <div class="project-hero">
+      <h2>Stock Market Challenge 2023</h2>
+      <p style="font-size: 1.2rem; color: var(--text-light); max-width: 700px; margin: 1rem auto;">
+        An innovative financial literacy initiative bringing together students from two universities to build practical investing skills through hands-on market simulation and competition.
+      </p>
+      <div class="project-meta">
+        <div class="project-meta-item">
+          <i class="fas fa-calendar"></i>
+          <span>2023</span>
+        </div>
+        <div class="project-meta-item">
+          <i class="fas fa-trophy"></i>
+          <span>Inter-University Competition</span>
+        </div>
+        <div class="project-meta-item">
+          <i class="fas fa-chart-line"></i>
+          <span>Financial Education</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-image-main">
+      <img src="images/Msu.png" alt="Stock Market Challenge 2023">
+    </div>
+
+    <div class="project-content">
+      <div class="project-section">
+        <h3>Challenge Overview</h3>
+        <p>
+          Coordinated and managed the MSU/BSU Stock Market Challenge, a collaborative financial education initiative 
+          between Morgan State University and Bowie State University. This experiential learning program provided 
+          students with hands-on experience in stock market investing, portfolio management, and financial 
+          decision-making through a competitive yet educational environment.
+        </p>
+        <p>
+          The challenge utilized StockTrak's professional trading simulation platform, giving students $100,000 
+          in virtual capital to build and manage diversified investment portfolios. Over the course of the semester, 
+          participants applied classroom concepts to real market conditions, developing crucial skills in financial 
+          analysis, risk management, and strategic investment planning.
+        </p>
+      </div>
+
+      <div class="project-section">
+        <h3>Challenge Statistics</h3>
+        <div class="challenge-stats">
+          <div class="stat-card">
+            <div class="stat-number">150+</div>
+            <div class="stat-label">Student Participants</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">2</div>
+            <div class="stat-label">Universities</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">$100K</div>
+            <div class="stat-label">Virtual Capital</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">12</div>
+            <div class="stat-label">Week Duration</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Trades Executed</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h3>Learning Objectives</h3>
+        <div class="learning-objectives">
+          <div class="objective-card">
+            <i class="fas fa-piggy-bank"></i>
+            <h4>Savings & Investment Fundamentals</h4>
+            <p>Understanding the importance of saving, compound interest, and long-term wealth building strategies.</p>
+          </div>
+          <div class="objective-card">
+            <i class="fas fa-balance-scale"></i>
+            <h4>Risk Management</h4>
+            <p>Learning to assess investment risks, diversify portfolios, and balance potential returns with acceptable risk levels.</p>
+          </div>
+          <div class="objective-card">
+            <i class="fas fa-chart-bar"></i>
+            <h4>Market Analysis</h4>
+            <p>Developing skills in fundamental and technical analysis to evaluate stocks and make informed investment decisions.</p>
+          </div>
+          <div class="objective-card">
+            <i class="fas fa-briefcase"></i>
+            <h4>Portfolio Management</h4>
+            <p>Building, monitoring, and rebalancing investment portfolios based on market conditions and financial goals.</p>
+          </div>
+          <div class="objective-card">
+            <i class="fas fa-book-open"></i>
+            <h4>Financial Literacy</h4>
+            <p>Gaining comprehensive understanding of financial markets, investment vehicles, and economic indicators.</p>
+          </div>
+          <div class="objective-card">
+            <i class="fas fa-users"></i>
+            <h4>Collaborative Learning</h4>
+            <p>Sharing strategies, learning from peers, and building professional networks across universities.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h3>University Partnership</h3>
+        <div class="partnership-box">
+          <div class="logo-section">
+            <h4>MSU x BSU</h4>
+            <p style="color: var(--text-light); margin: 0;">Morgan State University & Bowie State University</p>
+          </div>
+          <div class="info-section">
+            <ul>
+              <li>Joint educational initiative promoting financial literacy</li>
+              <li>Cross-institutional collaboration and networking</li>
+              <li>Shared resources and faculty expertise</li>
+              <li>Competitive yet supportive learning environment</li>
+              <li>Foundation for future collaborative programs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h3>Challenge Activities</h3>
+        <div class="activities-grid">
+          <div class="activity-badge">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <span>Workshops</span>
+          </div>
+          <div class="activity-badge">
+            <i class="fas fa-laptop-code"></i>
+            <span>Trading Sessions</span>
+          </div>
+          <div class="activity-badge">
+            <i class="fas fa-comments"></i>
+            <span>Strategy Discussions</span>
+          </div>
+          <div class="activity-badge">
+            <i class="fas fa-presentation"></i>
+            <span>Guest Speakers</span>
+          </div>
+          <div class="activity-badge">
+            <i class="fas fa-award"></i>
+            <span>Weekly Rankings</span>
+          </div>
+          <div class="activity-badge">
+            <i class="fas fa-trophy"></i>
+            <span>Awards Ceremony</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h3>Program Coordination & Responsibilities</h3>
+        <div class="project-outcomes">
+          <ul>
+            <li>Developed comprehensive challenge framework and rules in collaboration with faculty from both universities</li>
+            <li>Coordinated registration, onboarding, and platform training for 150+ student participants</li>
+            <li>Organized weekly workshops on investment strategies, market analysis, and financial planning</li>
+            <li>Facilitated communication between universities and managed inter-institutional collaboration</li>
+            <li>Created educational resources including trading guides, market research tools, and strategy templates</li>
+            <li>Monitored challenge progress, tracked participant engagement, and provided individual support</li>
+            <li>Arranged guest speakers from financial services industry to share professional insights</li>
+            <li>Coordinated awards ceremony recognizing top performers and highlighting learning achievements</li>
+            <li>Collected feedback and assessed program outcomes for continuous improvement</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h3>Student Outcomes & Impact</h3>
+        <p>
+          Participants in the Stock Market Challenge gained invaluable hands-on experience that complemented 
+          their academic coursework. Many students reported increased confidence in their financial 
+          decision-making abilities and a deeper understanding of how financial markets operate. The competitive 
+          element motivated participants to research thoroughly, think critically about investment strategies, 
+          and learn from both successes and setbacks in a risk-free environment.
+        </p>
+        <p>
+          Beyond technical skills, the challenge fostered important soft skills including time management, 
+          analytical thinking, and the ability to make decisions under pressure. The inter-university format 
+          also created networking opportunities and friendly competition that enriched the learning experience.
+        </p>
+      </div>
+
+      <div class="project-section">
+        <h3>Skills Demonstrated</h3>
+        <div class="skills">
+          <span class="skill">Event Coordination</span>
+          <span class="skill">Program Management</span>
+          <span class="skill">Financial Education</span>
+          <span class="skill">Partnership Building</span>
+          <span class="skill">Student Engagement</span>
+          <span class="skill">Workshop Facilitation</span>
+          <span class="skill">Communication</span>
+          <span class="skill">Educational Technology</span>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h3>Learn More About the Challenge</h3>
+        <a href="https://edu.stocktrak.com/morgantrading/msu-stock-market-challenge/" target="_blank" class="cta-button">
+          View Challenge Details <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Bolametiren Akinlaja. Designed with ❤️ | <a href="https://html5up.net" target="_blank">HTML5 UP</a>
+  </footer>
+</body>
+</html>
