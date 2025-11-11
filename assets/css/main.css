@@ -43,9 +43,16 @@ body {
 }
 
 header, section, footer {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: auto;
-  padding: 1.5rem 2rem;
+  padding: 2rem 3rem;
+}
+
+@media (min-width: 1921px) {
+  header, section, footer {
+    max-width: 1800px;
+    padding: 2.5rem 4rem;
+  }
 }
 
 header {
@@ -56,7 +63,7 @@ header {
   box-shadow: var(--shadow-xl);
   position: relative;
   overflow: hidden;
-  padding: 1.5rem 2rem;
+  padding: 2rem 3rem;
 }
 
 header::before {
@@ -212,10 +219,17 @@ header.compact nav a {
 
 .hero {
   text-align: center;
-  padding: 3rem 0;
+  padding: 3.5rem 0;
   animation: fadeIn 1s ease-in;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
+}
+
+@media (min-width: 1400px) {
+  .hero {
+    padding: 4rem 0;
+    max-width: 1200px;
+  }
 }
 
 @keyframes fadeIn {
@@ -275,8 +289,15 @@ header.compact nav a {
 .projects {
   display: grid;
   gap: 2.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   margin-top: 2rem;
+}
+
+@media (min-width: 1400px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
 }
 
 .project-card {
@@ -392,9 +413,16 @@ header.compact nav a {
 /* Stats Section */
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;
   margin: 3rem 0;
+}
+
+@media (min-width: 1400px) {
+  .stats-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3rem;
+  }
 }
 
 .stat-card {
@@ -435,9 +463,16 @@ header.compact nav a {
 /* Testimonials Section */
 .testimonials {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
   margin: 3rem 0;
+}
+
+@media (min-width: 1200px) {
+  .testimonials {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
 }
 
 .testimonial-card {
@@ -506,7 +541,7 @@ header.compact nav a {
 
 /* Center all major sections on About page */
 #about, #what-i-do, #my-impact, #my-journey, #education, #my-approach, #about-cta {
-  max-width: 1000px;
+  max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -553,12 +588,19 @@ header.compact nav a {
 
 .what-i-do-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
   margin-top: 3rem;
-  max-width: 1200px;
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (min-width: 1400px) {
+  .what-i-do-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
 }
 
 .what-card {
@@ -615,12 +657,19 @@ header.compact nav a {
 
 .impact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2.5rem;
   margin-top: 3rem;
-  max-width: 1200px;
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (min-width: 1400px) {
+  .impact-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+  }
 }
 
 .impact-card {
