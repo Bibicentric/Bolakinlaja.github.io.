@@ -286,6 +286,60 @@ header.compact nav a {
   margin-left: 0.5rem;
 }
 
+.cta-button.secondary {
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.cta-button.secondary:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Hero Highlights */
+.hero-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2.5rem auto;
+  max-width: 900px;
+}
+
+.highlight-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  border: 2px solid var(--border-color);
+}
+
+.highlight-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-light);
+}
+
+.highlight-item i {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.highlight-item span {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-color);
+  text-align: center;
+}
+
 .projects {
   display: grid;
   gap: 2.5rem;
@@ -404,6 +458,34 @@ header.compact nav a {
 }
 
 .project-card a:hover::after {
+  transform: translateX(3px);
+}
+
+.project-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  background: rgba(37, 99, 235, 0.1);
+}
+
+.project-link:hover {
+  background: var(--primary-color);
+  color: white;
+  gap: 0.7rem;
+  transform: translateX(3px);
+}
+
+.project-link i {
+  transition: transform 0.3s ease;
+}
+
+.project-link:hover i {
   transform: translateX(3px);
 }
 
@@ -554,6 +636,57 @@ header.compact nav a {
 .testimonial-role {
   font-size: 0.9rem;
   color: var(--text-lighter);
+}
+
+.quote-icon {
+  font-size: 2.5rem;
+  color: var(--primary-light);
+  opacity: 0.3;
+  margin-bottom: 1rem;
+}
+
+.quote-icon i {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* CTA Section */
+#cta-section {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(139, 92, 246, 0.05));
+  border-radius: 1.5rem;
+  padding: 4rem 3rem;
+  text-align: center;
+  margin: 3rem auto;
+  border: 2px solid var(--border-color);
+}
+
+.cta-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cta-container p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* About Section Enhancements */
@@ -1120,6 +1253,23 @@ footer a:hover {
     font-size: 1.1rem;
   }
   
+  .hero-highlights {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .highlight-item {
+    padding: 1rem;
+  }
+  
+  .highlight-item i {
+    font-size: 2rem;
+  }
+  
+  .highlight-item span {
+    font-size: 0.85rem;
+  }
+  
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
@@ -1137,6 +1287,28 @@ footer a:hover {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
+  }
+  
+  #cta-section {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .cta-container h2 {
+    font-size: 1.8rem;
+  }
+  
+  .cta-container p {
+    font-size: 1rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .cta-button {
+    width: 100%;
+    text-align: center;
   }
 
   /* New responsive styles for about page */
