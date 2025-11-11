@@ -517,6 +517,17 @@ header.compact nav a {
 }
 
 /* Stats Section */
+#stats {
+  padding: 2rem 3rem;
+}
+
+#featured-projects {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.02), rgba(139, 92, 246, 0.02));
+  border-radius: 1.5rem;
+  padding: 3rem 3rem 4rem 3rem;
+  margin: 2rem auto;
+}
+
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -567,6 +578,10 @@ header.compact nav a {
 }
 
 /* Testimonials Section */
+#testimonials {
+  padding: 3rem 3rem 2rem 3rem;
+}
+
 .testimonials {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
