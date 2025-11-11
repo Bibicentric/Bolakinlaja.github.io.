@@ -35,7 +35,7 @@
 
   // Animate elements on scroll
   function animateOnScroll() {
-    const elements = document.querySelectorAll('.project-card, .stat-card, .testimonial-card, .skill');
+    const elements = document.querySelectorAll('.project-card, .stat-card, .testimonial-card, .skill, .what-card, .impact-card, .timeline-item, .approach-item');
     
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry, index) => {
@@ -90,12 +90,12 @@
 
   // Animate stats numbers
   function animateStats() {
-    const statNumbers = document.querySelectorAll('.stat-number');
+    const statNumbers = document.querySelectorAll('.stat-number, .impact-number');
     
     const animateNumber = (element) => {
-      const target = element.textContent;
-      const numericPart = parseInt(target.replace(/\D/g, ''));
-      const suffix = target.replace(/[\d,]/g, '');
+      const target = element.getAttribute('data-target') || element.textContent;
+      const numericPart = parseInt(target.toString().replace(/\D/g, ''));
+      const suffix = target.toString().replace(/[\d,]/g, '');
       
       if (isNaN(numericPart)) return;
       
@@ -104,10 +104,10 @@
       const timer = setInterval(() => {
         current += increment;
         if (current >= numericPart) {
-          element.textContent = numericPart + suffix;
+          element.textContent = numericPart.toLocaleString() + suffix;
           clearInterval(timer);
         } else {
-          element.textContent = Math.floor(current) + suffix;
+          element.textContent = Math.floor(current).toLocaleString() + suffix;
         }
       }, 30);
     };
