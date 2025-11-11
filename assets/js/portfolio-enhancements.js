@@ -124,6 +124,163 @@
     statNumbers.forEach(stat => observer.observe(stat));
   }
 
+  // Add interactive hover effects for project cards
+  function addProjectCardEffects() {
+    const projectCards = document.querySelectorAll('.project-card, .feature-card, .module-card');
+    
+    projectCards.forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-8px) scale(1.02)';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+      });
+    });
+  }
+
+  // Add progress bar animations for impact metrics
+  function animateProgressBars() {
+    const progressBars = document.querySelectorAll('[data-progress]');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const bar = entry.target;
+          const progress = bar.getAttribute('data-progress');
+          bar.style.width = progress + '%';
+          observer.unobserve(bar);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    progressBars.forEach(bar => {
+      bar.style.width = '0%';
+      bar.style.transition = 'width 1.5s ease-out';
+      observer.observe(bar);
+    });
+  }
+
+  // Add click-to-reveal sections
+  function setupRevealSections() {
+    const revealTriggers = document.querySelectorAll('[data-reveal-trigger]');
+    
+    revealTriggers.forEach(trigger => {
+      trigger.style.cursor = 'pointer';
+      trigger.addEventListener('click', function() {
+        const targetId = this.getAttribute('data-reveal-trigger');
+        const target = document.getElementById(targetId);
+        
+        if (target) {
+          target.classList.toggle('revealed');
+          const icon = this.querySelector('.reveal-icon');
+          if (icon) {
+            icon.style.transform = target.classList.contains('revealed') 
+              ? 'rotate(180deg)' 
+              : 'rotate(0deg)';
+          }
+        }
+      });
+    });
+  }
+
+  // Add floating animation to key elements
+  function addFloatingAnimation() {
+    const floatingElements = document.querySelectorAll('.floating-element');
+    
+    floatingElements.forEach((element, index) => {
+      element.style.animation = `float ${3 + index * 0.5}s ease-in-out infinite`;
+    });
+  }
+
+  // Add interactive tooltips
+  function setupTooltips() {
+    const tooltipElements = document.querySelectorAll('[data-tooltip]');
+    
+    tooltipElements.forEach(element => {
+      element.addEventListener('mouseenter', function(e) {
+        const tooltip = document.createElement('div');
+        tooltip.className = 'custom-tooltip';
+        tooltip.textContent = this.getAttribute('data-tooltip');
+        tooltip.style.position = 'absolute';
+        tooltip.style.background = 'rgba(0, 0, 0, 0.9)';
+        tooltip.style.color = 'white';
+        tooltip.style.padding = '0.5rem 1rem';
+        tooltip.style.borderRadius = '0.5rem';
+        tooltip.style.fontSize = '0.875rem';
+        tooltip.style.zIndex = '1000';
+        tooltip.style.pointerEvents = 'none';
+        tooltip.style.whiteSpace = 'nowrap';
+        
+        document.body.appendChild(tooltip);
+        
+        const rect = this.getBoundingClientRect();
+        tooltip.style.top = (rect.top - tooltip.offsetHeight - 10) + 'px';
+        tooltip.style.left = (rect.left + rect.width / 2 - tooltip.offsetWidth / 2) + 'px';
+        
+        this._tooltip = tooltip;
+      });
+      
+      element.addEventListener('mouseleave', function() {
+        if (this._tooltip) {
+          this._tooltip.remove();
+          this._tooltip = null;
+        }
+      });
+    });
+  }
+
+  // Add particle effect for celebration
+  function createParticleEffect(element) {
+    const colors = ['#2563eb', '#8b5cf6', '#22c55e', '#f59e0b'];
+    const particleCount = 30;
+    
+    for (let i = 0; i < particleCount; i++) {
+      const particle = document.createElement('div');
+      particle.style.position = 'absolute';
+      particle.style.width = '8px';
+      particle.style.height = '8px';
+      particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+      particle.style.borderRadius = '50%';
+      particle.style.pointerEvents = 'none';
+      
+      const rect = element.getBoundingClientRect();
+      particle.style.left = (rect.left + rect.width / 2) + 'px';
+      particle.style.top = (rect.top + rect.height / 2) + 'px';
+      
+      document.body.appendChild(particle);
+      
+      const angle = (Math.PI * 2 * i) / particleCount;
+      const velocity = 100 + Math.random() * 100;
+      const tx = Math.cos(angle) * velocity;
+      const ty = Math.sin(angle) * velocity;
+      
+      particle.animate([
+        { transform: 'translate(0, 0) scale(1)', opacity: 1 },
+        { transform: `translate(${tx}px, ${ty}px) scale(0)`, opacity: 0 }
+      ], {
+        duration: 1000 + Math.random() * 500,
+        easing: 'cubic-bezier(0, .9, .57, 1)'
+      }).onfinish = () => particle.remove();
+    }
+  }
+
+  // Add celebration effect to high-impact metrics
+  function addCelebrationEffects() {
+    const celebrationElements = document.querySelectorAll('[data-celebrate]');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setTimeout(() => createParticleEffect(entry.target), 500);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.8 });
+
+    celebrationElements.forEach(el => observer.observe(el));
+  }
+
   // Initialize all enhancements when DOM is ready
   function init() {
     highlightActiveNav();
@@ -132,6 +289,12 @@
     setupSmoothScroll();
     // setupParallax(); // Commented out as it can affect readability
     animateStats();
+    addProjectCardEffects();
+    animateProgressBars();
+    setupRevealSections();
+    addFloatingAnimation();
+    setupTooltips();
+    addCelebrationEffects();
   }
 
   // Run initialization
