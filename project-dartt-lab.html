@@ -10,135 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <script defer src="assets/js/portfolio-enhancements.js"></script>
   <style>
-    .project-hero {
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(139, 92, 246, 0.1));
-      padding: 3rem 2rem;
-      border-radius: 1.25rem;
-      margin-bottom: 3rem;
-      text-align: center;
-    }
-    .project-hero h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .project-hero .project-meta {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 1.5rem;
-      flex-wrap: wrap;
-    }
-    .project-meta-item {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--text-light);
-      font-weight: 600;
-    }
-    .project-meta-item i {
-      color: var(--primary-color);
-    }
-    .project-image-main {
-      width: 100%;
-      max-width: 900px;
-      margin: 0 auto 3rem;
-      border-radius: 1.25rem;
-      overflow: hidden;
-      box-shadow: var(--shadow-xl);
-    }
-    .project-image-main img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .project-content {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .project-section {
-      margin-bottom: 3rem;
-    }
-    .project-section h3 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      color: var(--text-color);
-      position: relative;
-      padding-bottom: 0.5rem;
-    }
-    .project-section h3::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 50px;
-      height: 3px;
-      background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-      border-radius: 2px;
-    }
-    .project-section p {
-      line-height: 1.8;
-      color: var(--text-light);
-      margin-bottom: 1rem;
-    }
-    .funding-highlight {
-      background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(22, 163, 74, 0.05));
-      padding: 3rem 2rem;
-      border-radius: 1.25rem;
-      text-align: center;
-      margin: 2rem 0;
-      border: 2px solid rgba(34, 197, 94, 0.2);
-    }
-    .funding-amount {
-      font-size: 3.5rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, #22c55e, #16a34a);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 0.5rem;
-    }
-    .funding-label {
-      font-size: 1.2rem;
-      color: var(--text-light);
-      font-weight: 600;
-    }
-    .lab-features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-    .feature-card {
-      background: var(--card-bg);
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: var(--shadow-sm);
-      border-top: 4px solid var(--primary-color);
-      transition: all 0.3s ease;
-    }
-    .feature-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-lg);
-      border-top-color: var(--accent-color);
-    }
-    .feature-card i {
-      font-size: 2.5rem;
-      color: var(--primary-color);
-      margin-bottom: 1rem;
-    }
-    .feature-card h4 {
-      color: var(--text-color);
-      margin-bottom: 0.75rem;
-      font-size: 1.2rem;
-    }
-    .feature-card p {
-      margin: 0;
-      font-size: 0.95rem;
-    }
+    /* Timeline specific styles not in main.css */
     .timeline {
       position: relative;
       padding-left: 3rem;
@@ -151,7 +23,7 @@
       top: 0;
       bottom: 0;
       width: 3px;
-      background: linear-gradient(180deg, var(--primary-color), var(--accent-color));
+      background: linear-gradient(180deg, var(--brand-teal), var(--brand-navy));
     }
     .timeline-item {
       position: relative;
@@ -165,97 +37,18 @@
       top: 0.5rem;
       width: 15px;
       height: 15px;
-      background: var(--primary-color);
+      background: var(--brand-teal);
       border-radius: 50%;
       border: 3px solid var(--bg-color);
     }
     .timeline-item h4 {
-      color: var(--primary-color);
+      color: var(--brand-navy);
       font-weight: 700;
       margin-bottom: 0.5rem;
     }
     .timeline-item p {
       margin: 0;
-    }
-    .impact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-    .impact-box {
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(139, 92, 246, 0.05));
-      padding: 1.5rem;
-      border-radius: 1rem;
-      text-align: center;
-      border: 2px solid var(--border-color);
-      transition: all 0.3s ease;
-    }
-    .impact-box:hover {
-      border-color: var(--primary-color);
-      transform: scale(1.05);
-    }
-    .impact-number {
-      font-size: 2.5rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 0.5rem;
-    }
-    .impact-label {
       color: var(--text-light);
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-    .project-outcomes {
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(139, 92, 246, 0.05));
-      padding: 2rem;
-      border-radius: 1rem;
-      margin-top: 2rem;
-    }
-    .project-outcomes ul {
-      list-style: none;
-      padding: 0;
-    }
-    .project-outcomes li {
-      padding: 0.75rem 0;
-      padding-left: 2rem;
-      position: relative;
-      color: var(--text-light);
-    }
-    .project-outcomes li::before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: var(--primary-color);
-      font-weight: bold;
-      font-size: 1.2rem;
-    }
-    .back-button {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--primary-color);
-      text-decoration: none;
-      font-weight: 600;
-      padding: 0.75rem 1.5rem;
-      border-radius: 0.5rem;
-      background: rgba(37, 99, 235, 0.1);
-      transition: all 0.3s ease;
-      margin-top: 2rem;
-    }
-    .back-button:hover {
-      background: var(--primary-color);
-      color: white;
-      transform: translateX(-3px);
-    }
-    .back-button i {
-      transition: transform 0.3s ease;
-    }
-    .back-button:hover i {
-      transform: translateX(-3px);
     }
   </style>
 </head>
@@ -275,14 +68,14 @@
     </nav>
   </header>
 
-  <section>
-    <a href="projects.html" class="back-button">
+  <main class="project-detail-main">
+    <a href="projects.html" class="back-to-projects">
       <i class="fas fa-arrow-left"></i> Back to Projects
     </a>
 
     <div class="project-hero">
-      <h2>DARTT Lab Grant Acquisition</h2>
-      <p style="font-size: 1.2rem; color: var(--text-light); max-width: 700px; margin: 1rem auto;">
+      <h2>🚀 DARTT Lab Grant Acquisition</h2>
+      <p class="project-subtitle">
         Successfully secured significant funding to establish a cutting-edge Data Analytics Research Trading and Technology Lab, transforming financial technology education at BSU.
       </p>
       <div class="project-meta">
@@ -355,7 +148,7 @@
 
       <div class="project-section">
         <h3>Lab Features & Capabilities</h3>
-        <div class="lab-features">
+        <div class="feature-grid">
           <div class="feature-card">
             <i class="fas fa-chart-line"></i>
             <h4>Bloomberg Terminals</h4>
@@ -391,40 +184,38 @@
 
       <div class="project-section">
         <h3>Student Impact</h3>
-        <div class="impact-grid">
-          <div class="impact-box">
-            <div class="impact-number">300+</div>
-            <div class="impact-label">Students Served Annually</div>
+        <div class="impact-stats-grid">
+          <div class="impact-stat-box">
+            <div class="impact-stat-number">300+</div>
+            <div class="impact-stat-label">Students Served Annually</div>
           </div>
-          <div class="impact-box">
-            <div class="impact-number">15+</div>
-            <div class="impact-label">Course Integrations</div>
+          <div class="impact-stat-box">
+            <div class="impact-stat-number">15+</div>
+            <div class="impact-stat-label">Course Integrations</div>
           </div>
-          <div class="impact-box">
-            <div class="impact-number">50+</div>
-            <div class="impact-label">Research Projects</div>
+          <div class="impact-stat-box">
+            <div class="impact-stat-number">50+</div>
+            <div class="impact-stat-label">Research Projects</div>
           </div>
-          <div class="impact-box">
-            <div class="impact-number">85%</div>
-            <div class="impact-label">Career Placement Rate</div>
+          <div class="impact-stat-box">
+            <div class="impact-stat-number">85%</div>
+            <div class="impact-stat-label">Career Placement Rate</div>
           </div>
         </div>
       </div>
 
       <div class="project-section">
         <h3>Key Achievements</h3>
-        <div class="project-outcomes">
-          <ul>
-            <li>Secured $387,000+ in funding through strategic partnership development and compelling proposal writing</li>
-            <li>Established Bowie State University as a leader in fintech education among HBCUs</li>
-            <li>Created hands-on learning opportunities with industry-standard tools and platforms</li>
-            <li>Developed sustainable partnership with Truist Bank for ongoing support and student opportunities</li>
-            <li>Enhanced curriculum with practical, experiential learning in financial technology</li>
-            <li>Provided students with competitive advantage in job market through access to Bloomberg certification</li>
-            <li>Facilitated research opportunities for faculty and students in financial data analytics</li>
-            <li>Created pathway for student internships and employment with Truist Bank and partner institutions</li>
-          </ul>
-        </div>
+        <ul class="achievements-list">
+          <li>Secured $387,000+ in funding through strategic partnership development and compelling proposal writing</li>
+          <li>Established Bowie State University as a leader in fintech education among HBCUs</li>
+          <li>Created hands-on learning opportunities with industry-standard tools and platforms</li>
+          <li>Developed sustainable partnership with Truist Bank for ongoing support and student opportunities</li>
+          <li>Enhanced curriculum with practical, experiential learning in financial technology</li>
+          <li>Provided students with competitive advantage in job market through access to Bloomberg certification</li>
+          <li>Facilitated research opportunities for faculty and students in financial data analytics</li>
+          <li>Created pathway for student internships and employment with Truist Bank and partner institutions</li>
+        </ul>
       </div>
 
       <div class="project-section">
@@ -440,15 +231,15 @@
 
       <div class="project-section">
         <h3>Skills Demonstrated</h3>
-        <div class="skills">
-          <span class="skill">Grant Writing</span>
-          <span class="skill">Partnership Development</span>
-          <span class="skill">Strategic Planning</span>
-          <span class="skill">Stakeholder Management</span>
-          <span class="skill">Project Management</span>
-          <span class="skill">Budget Management</span>
-          <span class="skill">Negotiation</span>
-          <span class="skill">Educational Innovation</span>
+        <div class="tools-grid">
+          <div class="tool-badge">Grant Writing</div>
+          <div class="tool-badge">Partnership Development</div>
+          <div class="tool-badge">Strategic Planning</div>
+          <div class="tool-badge">Stakeholder Management</div>
+          <div class="tool-badge">Project Management</div>
+          <div class="tool-badge">Budget Management</div>
+          <div class="tool-badge">Negotiation</div>
+          <div class="tool-badge">Educational Innovation</div>
         </div>
       </div>
 
@@ -459,7 +250,7 @@
         </a>
       </div>
     </div>
-  </section>
+  </main>
 
   <footer>
     &copy; 2025 Bolametiren Akinlaja. Designed with ❤️ | <a href="https://html5up.net" target="_blank">HTML5 UP</a>
