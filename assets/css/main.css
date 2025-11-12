@@ -460,7 +460,7 @@ header.compact nav a {
   gap: 0.5rem;
   padding: 0.6rem 1.2rem;
   border-radius: 0.5rem;
-  background: rgba(37, 99, 235, 0.1);
+  background: rgba(15, 23, 42, 0.1);
 }
 
 .project-card a:hover {
@@ -490,7 +490,7 @@ header.compact nav a {
   gap: 0.5rem;
   padding: 0.6rem 1.2rem;
   border-radius: 0.5rem;
-  background: rgba(37, 99, 235, 0.1);
+  background: rgba(15, 23, 42, 0.1);
 }
 
 .project-link:hover {
@@ -541,7 +541,7 @@ header.compact nav a {
 }
 
 #featured-projects {
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.02), rgba(139, 92, 246, 0.02));
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.02), rgba(14, 165, 166, 0.02));
   border-radius: 1.5rem;
   padding: 3rem 3rem 4rem 3rem;
   margin: 2rem auto;
@@ -688,7 +688,7 @@ header.compact nav a {
 
 /* CTA Section */
 #cta-section {
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(139, 92, 246, 0.05));
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.05), rgba(14, 165, 166, 0.05));
   border-radius: 1.5rem;
   padding: 4rem 3rem;
   text-align: center;
@@ -745,7 +745,7 @@ header.compact nav a {
 }
 
 .about-highlight {
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(139, 92, 246, 0.1));
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.1), rgba(14, 165, 166, 0.1));
   padding: 2rem 2.5rem;
   border-radius: 1.25rem;
   border-left: 4px solid var(--primary-color);
@@ -772,7 +772,7 @@ header.compact nav a {
 
 /* What I Do Section */
 #what-i-do {
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.03), rgba(139, 92, 246, 0.03));
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.03), rgba(14, 165, 166, 0.03));
   padding: 4rem 2rem;
   margin: 3rem -2rem;
 }
@@ -901,7 +901,7 @@ header.compact nav a {
   width: 70px;
   height: 70px;
   margin: 0 auto 1.5rem;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(139, 92, 246, 0.1));
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.1), rgba(14, 165, 166, 0.1));
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -944,7 +944,7 @@ header.compact nav a {
 /* Journey Timeline */
 #my-journey {
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.03), rgba(139, 92, 246, 0.03));
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.03), rgba(14, 165, 166, 0.03));
   margin: 3rem -2rem;
 }
 
@@ -980,13 +980,13 @@ header.compact nav a {
   background: var(--card-bg);
   border: 3px solid var(--primary-color);
   border-radius: 50%;
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+  box-shadow: 0 0 0 4px rgba(15, 23, 42, 0.1);
   transition: all 0.3s ease;
 }
 
 .timeline-item:hover .timeline-marker {
   transform: scale(1.3);
-  box-shadow: 0 0 0 8px rgba(37, 99, 235, 0.2);
+  box-shadow: 0 0 0 8px rgba(15, 23, 42, 0.2);
 }
 
 .timeline-content {
@@ -1103,7 +1103,7 @@ header.compact nav a {
 #about-cta {
   text-align: center;
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(139, 92, 246, 0.05));
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.05), rgba(14, 165, 166, 0.05));
   margin: 3rem -2rem;
   border-radius: 2rem;
 }
@@ -1487,7 +1487,7 @@ section {
 }
 
 .animated-gradient {
-  background: linear-gradient(270deg, rgba(37, 99, 235, 0.1), rgba(139, 92, 246, 0.1), rgba(34, 197, 94, 0.1));
+  background: linear-gradient(270deg, rgba(15, 23, 42, 0.1), rgba(14, 165, 166, 0.1), rgba(34, 197, 94, 0.1));
   background-size: 600% 600%;
   animation: gradientShift 15s ease infinite;
 }
@@ -1602,7 +1602,7 @@ section {
 .fun-metric {
   position: relative;
   padding: 2rem;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(139, 92, 246, 0.05));
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.05), rgba(14, 165, 166, 0.05));
   border-radius: 1rem;
   border: 2px solid transparent;
   background-clip: padding-box;
@@ -1660,7 +1660,7 @@ section {
 
 .interactive-timeline-item:hover::before {
   transform: scale(1.5);
-  box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.2);
+  box-shadow: 0 0 0 6px rgba(15, 23, 42, 0.2);
 }
 
 .interactive-timeline-item:hover {
@@ -1673,8 +1673,8 @@ section {
 }
 
 .glow-on-hover:hover {
-  box-shadow: 0 0 20px rgba(37, 99, 235, 0.4),
-              0 0 40px rgba(139, 92, 246, 0.2);
+  box-shadow: 0 0 20px rgba(15, 23, 42, 0.4),
+              0 0 40px rgba(14, 165, 166, 0.2);
 }
 
 /* Stagger Animation for Lists */
