@@ -11,9 +11,4 @@ permalink: /:title.html
 # Exclude files from processing
 exclude:
   - README.md
-  - README.txt
   - LICENSE.txt
-  - src_App.jsx
-  - index_Version2.html
-  - generic.html
-  - elements.html
