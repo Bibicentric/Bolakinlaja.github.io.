@@ -1,0 +1,18 @@
+/* Project Cards Hover Effects */
+.project-card-hover {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.08);
+}
+
+.project-card-hover a {
+  transition: gap 0.3s ease;
+}
+
+.project-card-hover:hover a {
+  gap: 0.75rem !important;
+}
