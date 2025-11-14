@@ -34,34 +34,89 @@
         <em>A collection of initiatives at the intersection of data, innovation, strategy, and community impact.</em>
       </p>
       
-      <!-- Quick Navigation -->
-      <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, rgba(15, 23, 42, 0.05), rgba(14, 165, 166, 0.05)); border-radius: 1rem;">
-        <a href="#ai-innovation" style="padding: 0.75rem 1.5rem; background: var(--card-bg); border: 2px solid var(--accent-gold); border-radius: 2rem; color: var(--brand-navy); text-decoration: none; font-weight: 600; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.5rem;">
+      <!-- Project Stats Overview -->
+      <div class="project-stats-bar">
+        <div class="stat-item">
+          <i class="fas fa-project-diagram"></i>
+          <div>
+            <span class="stat-count">15+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-users"></i>
+          <div>
+            <span class="stat-count">500+</span>
+            <span class="stat-label">People Impacted</span>
+          </div>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-dollar-sign"></i>
+          <div>
+            <span class="stat-count">$387K+</span>
+            <span class="stat-label">Value Generated</span>
+          </div>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-handshake"></i>
+          <div>
+            <span class="stat-count">10+</span>
+            <span class="stat-label">Partnerships</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive View Toggle -->
+      <div class="view-controls">
+        <div class="view-toggle">
+          <button class="view-btn active" data-view="grid" title="Grid View">
+            <i class="fas fa-th"></i> Grid
+          </button>
+          <button class="view-btn" data-view="list" title="List View">
+            <i class="fas fa-list"></i> List
+          </button>
+          <button class="view-btn" data-view="timeline" title="Timeline View">
+            <i class="fas fa-stream"></i> Timeline
+          </button>
+        </div>
+        
+        <div class="filter-toggle">
+          <button class="filter-btn active" data-filter="all">
+            <i class="fas fa-layer-group"></i> All Projects
+          </button>
+          <button class="filter-btn" data-filter="ai">
+            <i class="fas fa-robot"></i> AI
+          </button>
+          <button class="filter-btn" data-filter="innovation">
+            <i class="fas fa-bolt"></i> Innovation
+          </button>
+          <button class="filter-btn" data-filter="education">
+            <i class="fas fa-graduation-cap"></i> Education
+          </button>
+          <button class="filter-btn" data-filter="community">
+            <i class="fas fa-users"></i> Community
+          </button>
+        </div>
+      </div>
+      
+      <!-- Quick Navigation Pills -->
+      <div class="quick-nav-pills">
+        <a href="#ai-innovation" class="nav-pill">
           <i class="fas fa-robot"></i> AI Innovation
         </a>
-        <a href="#innovation-tech" style="padding: 0.75rem 1.5rem; background: var(--card-bg); border: 2px solid var(--accent-teal); border-radius: 2rem; color: var(--brand-navy); text-decoration: none; font-weight: 600; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.5rem;">
+        <a href="#innovation-tech" class="nav-pill">
           <i class="fas fa-bolt"></i> Innovation & Tech
         </a>
-        <a href="#education" style="padding: 0.75rem 1.5rem; background: var(--card-bg); border: 2px solid var(--accent-gold); border-radius: 2rem; color: var(--brand-navy); text-decoration: none; font-weight: 600; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.5rem;">
+        <a href="#education" class="nav-pill">
           <i class="fas fa-graduation-cap"></i> Education
         </a>
-        <a href="#community" style="padding: 0.75rem 1.5rem; background: var(--card-bg); border: 2px solid var(--accent-teal); border-radius: 2rem; color: var(--brand-navy); text-decoration: none; font-weight: 600; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.5rem;">
+        <a href="#community" class="nav-pill">
           <i class="fas fa-users"></i> Community
         </a>
-        <a href="#entrepreneurship" style="padding: 0.75rem 1.5rem; background: var(--card-bg); border: 2px solid var(--accent-gold); border-radius: 2rem; color: var(--brand-navy); text-decoration: none; font-weight: 600; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.5rem;">
+        <a href="#entrepreneurship" class="nav-pill">
           <i class="fas fa-chart-line"></i> Entrepreneurship
         </a>
       </div>
-      
-      <style>
-        .projects-header a:hover {
-          transform: translateY(-3px) scale(1.05);
-          box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-          border-color: var(--brand-teal);
-          background: linear-gradient(135deg, var(--accent-gold), var(--brand-teal));
-          color: white;
-        }
-      </style>
     </div>
 
     <!-- CATEGORY 0: AI Innovation & Strategy Projects -->

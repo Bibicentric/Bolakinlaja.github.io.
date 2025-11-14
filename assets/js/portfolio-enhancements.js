@@ -387,6 +387,119 @@
     addCelebrationEffects();
     addScrollToTopButton();
     enhanceNavigation();
+    setupProjectViewToggle();
+    setupProjectFilters();
+  }
+
+  // Setup project view toggle (grid/list/timeline)
+  function setupProjectViewToggle() {
+    const viewButtons = document.querySelectorAll('.view-btn');
+    const projectsGrid = document.querySelector('.projects-grid');
+    
+    if (!viewButtons.length || !projectsGrid) return;
+    
+    viewButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        // Remove active class from all buttons
+        viewButtons.forEach(b => b.classList.remove('active'));
+        
+        // Add active class to clicked button
+        this.classList.add('active');
+        
+        // Get view type
+        const viewType = this.getAttribute('data-view');
+        
+        // Remove all view classes
+        projectsGrid.classList.remove('list-view', 'timeline-view');
+        
+        // Add appropriate view class
+        if (viewType === 'list') {
+          projectsGrid.classList.add('list-view');
+        } else if (viewType === 'timeline') {
+          projectsGrid.classList.add('timeline-view');
+        }
+        
+        // Add animation
+        const cards = projectsGrid.querySelectorAll('.project-card-enhanced');
+        cards.forEach((card, index) => {
+          card.style.animation = 'none';
+          setTimeout(() => {
+            card.style.animation = `fadeInUp 0.5s ease-out ${index * 0.1}s backwards`;
+          }, 10);
+        });
+      });
+    });
+  }
+
+  // Setup project filters
+  function setupProjectFilters() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card-enhanced');
+    const categoryHeaders = document.querySelectorAll('.category-header');
+    
+    if (!filterButtons.length) return;
+    
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        // Remove active class from all buttons
+        filterButtons.forEach(b => b.classList.remove('active'));
+        
+        // Add active class to clicked button
+        this.classList.add('active');
+        
+        // Get filter type
+        const filterType = this.getAttribute('data-filter');
+        
+        // Filter projects
+        if (filterType === 'all') {
+          // Show all
+          categoryHeaders.forEach(header => {
+            header.style.display = 'block';
+            const nextGrid = header.nextElementSibling;
+            if (nextGrid && nextGrid.classList.contains('projects-grid')) {
+              nextGrid.style.display = 'grid';
+            }
+          });
+          projectCards.forEach(card => {
+            card.classList.remove('filtered-out');
+            card.classList.add('filtered-in');
+            card.style.display = 'flex';
+          });
+        } else {
+          // Filter by category
+          categoryHeaders.forEach(header => {
+            const categoryId = header.getAttribute('id');
+            const shouldShow = matchesFilter(categoryId, filterType);
+            
+            header.style.display = shouldShow ? 'block' : 'none';
+            const nextGrid = header.nextElementSibling;
+            if (nextGrid && nextGrid.classList.contains('projects-grid')) {
+              nextGrid.style.display = shouldShow ? 'grid' : 'none';
+            }
+          });
+        }
+        
+        // Smooth scroll to first visible section
+        setTimeout(() => {
+          const firstVisible = Array.from(categoryHeaders).find(h => h.style.display !== 'none');
+          if (firstVisible) {
+            firstVisible.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 100);
+      });
+    });
+  }
+
+  // Helper function to match filter with category
+  function matchesFilter(categoryId, filterType) {
+    const filterMap = {
+      'ai': ['ai-innovation'],
+      'innovation': ['innovation-tech', 'ai-innovation'],
+      'education': ['education'],
+      'community': ['community']
+    };
+    
+    return filterMap[filterType] && filterMap[filterType].includes(categoryId);
   }
 
   // Run initialization
