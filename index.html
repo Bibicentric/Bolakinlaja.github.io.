@@ -11,6 +11,7 @@
   <meta property="og:type" content="website">
   <title>Bolametiren Akinlaja - Portfolio</title>
   <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/project-cards.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <script defer src="assets/js/portfolio-enhancements.js"></script>
 </head>
@@ -86,42 +87,190 @@
     </div>
   </section>
 
-  <section id="featured-projects">
+  <section id="projects">
     <div class="section-title">Featured Projects</div>
     <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; color: var(--text-light); font-size: 1.1rem;">
-      Showcasing impactful work across technology innovation, workforce development, and community engagement
+      Showcasing impactful work across innovation, technology, community, workforce development, research, and entrepreneurship
     </p>
-    <div class="projects">
-      <div class="project-card featured">
-        <img src="images/Bibi1.jpg" alt="DARTT Lab Modernization">
-        <div class="project-card-content">
-          <div class="project-title">🚀 Smart DARTT Lab Modernization</div>
-          <div class="project-theme">Technology & Innovation</div>
-          <p>Led modernization of BSU's Data Analytics Lab, securing $350K+ in funding from Truist. Transformed the space into an AI-ready innovation hub supporting 80+ learners.</p>
-          <a href="project-dartt-lab.html" class="project-link">Read Full Story <i class="fas fa-arrow-right"></i></a>
+    
+    <!-- Projects Grid -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+      
+      <!-- DigiBibi AfroTech -->
+      <div class="project-card-hover" style="background: white; border-radius: 1rem; overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s, box-shadow 0.3s; border: 2px solid var(--border-color);">
+        <div style="background: linear-gradient(135deg, var(--brand-teal), var(--brand-gold)); padding: 2rem; text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 0.5rem;">🚀</div>
+          <h3 style="color: white; margin: 0; font-size: 1.3rem;">DigiBibi: AfroTech Innovation</h3>
+        </div>
+        <div style="padding: 1.5rem;">
+          <p style="color: var(--brand-teal); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">
+            <i class="fas fa-tag"></i> Innovation • Technology
+          </p>
+          <p style="color: var(--text-color); margin-bottom: 1rem; line-height: 1.6;">
+            Digital storytelling brand showcasing HBCU excellence at AfroTech 2025, engaging 300+ industry professionals and forging partnerships with T-Mobile, AWS, and HPE.
+          </p>
+          <a href="projects/digibibi-afrotech/" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--brand-teal); text-decoration: none; font-weight: 600; transition: gap 0.3s;">
+            View Project <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
       </div>
-      <div class="project-card featured">
-        <img src="images/Bibi.png" alt="EIC Market Research">
-        <div class="project-card-content">
-          <div class="project-title">🤝 EIC Market Research Collaboration</div>
-          <div class="project-theme">Entrepreneurship & Growth</div>
-          <p>Designed business consultation series helping 8 student entrepreneurs use data for strategic decisions. Saved participants $12K+ in consulting costs.</p>
-          <a href="project-eic-collaboration.html" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
+
+      <!-- Smart DARTT Lab -->
+      <div class="project-card-hover" style="background: white; border-radius: 1rem; overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s, box-shadow 0.3s; border: 2px solid var(--border-color);">
+        <div style="background: linear-gradient(135deg, var(--brand-navy), var(--brand-teal)); padding: 2rem; text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 0.5rem;">💡</div>
+          <h3 style="color: white; margin: 0; font-size: 1.3rem;">Smart DARTT Lab Modernization</h3>
+        </div>
+        <div style="padding: 1.5rem;">
+          <p style="color: var(--brand-teal); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">
+            <i class="fas fa-tag"></i> Technology • Workforce
+          </p>
+          <p style="color: var(--text-color); margin-bottom: 1rem; line-height: 1.6;">
+            Led $350K+ lab modernization creating AI-ready data innovation hub supporting 80+ learners through strategic Truist Bank partnership.
+          </p>
+          <a href="projects/smart-dartt-lab/" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--brand-teal); text-decoration: none; font-weight: 600; transition: gap 0.3s;">
+            View Project <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
       </div>
-      <div class="project-card featured">
-        <img src="images/Bibi.png" alt="Sincerely Love Research">
-        <div class="project-card-content">
-          <div class="project-title">🧠 Sincerely, Love Research Cohort</div>
-          <div class="project-theme">Community Engagement</div>
-          <p>Founded research cohort employing 5 students to explore mental health through data. Organized summit uniting 100+ attendees for wellbeing discussions.</p>
-          <a href="project-sincerely-love.html" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+
+      <!-- Data Tribe -->
+      <div class="project-card-hover" style="background: white; border-radius: 1rem; overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s, box-shadow 0.3s; border: 2px solid var(--border-color);">
+        <div style="background: linear-gradient(135deg, #8b5cf6, var(--brand-gold)); padding: 2rem; text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 0.5rem;">🤝</div>
+          <h3 style="color: white; margin: 0; font-size: 1.3rem;">Data Tribe Community</h3>
+        </div>
+        <div style="padding: 1.5rem;">
+          <p style="color: var(--brand-teal); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">
+            <i class="fas fa-tag"></i> Community • Workforce
+          </p>
+          <p style="color: var(--text-color); margin-bottom: 1rem; line-height: 1.6;">
+            Founded student-led community fostering data literacy and collaboration, engaging 250+ participants through innovative events and leadership programs.
+          </p>
+          <a href="projects/data-tribe/" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--brand-teal); text-decoration: none; font-weight: 600; transition: gap 0.3s;">
+            View Project <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
       </div>
+
+      <!-- EIC Market Research -->
+      <div class="project-card-hover" style="background: white; border-radius: 1rem; overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s, box-shadow 0.3s; border: 2px solid var(--border-color);">
+        <div style="background: linear-gradient(135deg, var(--brand-gold), var(--brand-navy)); padding: 2rem; text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 0.5rem;">📊</div>
+          <h3 style="color: white; margin: 0; font-size: 1.3rem;">EIC Market Research</h3>
+        </div>
+        <div style="padding: 1.5rem;">
+          <p style="color: var(--brand-teal); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">
+            <i class="fas fa-tag"></i> Entrepreneurship • Research
+          </p>
+          <p style="color: var(--text-color); margin-bottom: 1rem; line-height: 1.6;">
+            Delivered 8 professional market research reports empowering student entrepreneurs, generating $12K+ in consulting value and strategic insights.
+          </p>
+          <a href="projects/eic-market-research/" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--brand-teal); text-decoration: none; font-weight: 600; transition: gap 0.3s;">
+            View Project <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Sincerely Love -->
+      <div class="project-card-hover" style="background: white; border-radius: 1rem; overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s, box-shadow 0.3s; border: 2px solid var(--border-color);">
+        <div style="background: linear-gradient(135deg, #ec4899, #8b5cf6); padding: 2rem; text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 0.5rem;">💝</div>
+          <h3 style="color: white; margin: 0; font-size: 1.3rem;">Sincerely, Love Research</h3>
+        </div>
+        <div style="padding: 1.5rem;">
+          <p style="color: var(--brand-teal); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">
+            <i class="fas fa-tag"></i> Community • Research
+          </p>
+          <p style="color: var(--text-color); margin-bottom: 1rem; line-height: 1.6;">
+            Founded research cohort employing 5 students exploring mental health and data, hosting summit with 100+ attendees for wellbeing conversations.
+          </p>
+          <a href="projects/sincerely-love/" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--brand-teal); text-decoration: none; font-weight: 600; transition: gap 0.3s;">
+            View Project <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Sports Analytics -->
+      <div class="project-card-hover" style="background: white; border-radius: 1rem; overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s, box-shadow 0.3s; border: 2px solid var(--border-color);">
+        <div style="background: linear-gradient(135deg, #22c55e, #3b82f6); padding: 2rem; text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 0.5rem;">⚽</div>
+          <h3 style="color: white; margin: 0; font-size: 1.3rem;">Sports Analytics Camp</h3>
+        </div>
+        <div style="padding: 1.5rem;">
+          <p style="color: var(--brand-teal); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">
+            <i class="fas fa-tag"></i> Workforce • Community
+          </p>
+          <p style="color: var(--text-color); margin-bottom: 1rem; line-height: 1.6;">
+            Co-designed camp introducing 18 high school students to data analytics through sports, sparking STEM interest among minority youth.
+          </p>
+          <a href="projects/sports-analytics/" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--brand-teal); text-decoration: none; font-weight: 600; transition: gap 0.3s;">
+            View Project <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- NSF Workshop -->
+      <div class="project-card-hover" style="background: white; border-radius: 1rem; overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s, box-shadow 0.3s; border: 2px solid var(--border-color);">
+        <div style="background: linear-gradient(135deg, #4f46e5, #22c55e); padding: 2rem; text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 0.5rem;">🎓</div>
+          <h3 style="color: white; margin: 0; font-size: 1.3rem;">NSF Discovery Workshop</h3>
+        </div>
+        <div style="padding: 1.5rem;">
+          <p style="color: var(--brand-teal); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">
+            <i class="fas fa-tag"></i> Research • Workforce
+          </p>
+          <p style="color: var(--text-color); margin-bottom: 1rem; line-height: 1.6;">
+            Co-facilitated NSF-funded workshop with 60+ HBCU educators developing culturally relevant data science curricula for inclusive education.
+          </p>
+          <a href="projects/nsf-workshop/" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--brand-teal); text-decoration: none; font-weight: 600; transition: gap 0.3s;">
+            View Project <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Blue Roof Hotel -->
+      <div class="project-card-hover" style="background: white; border-radius: 1rem; overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s, box-shadow 0.3s; border: 2px solid var(--border-color);">
+        <div style="background: linear-gradient(135deg, var(--brand-teal), #f97316); padding: 2rem; text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 0.5rem;">🏨</div>
+          <h3 style="color: white; margin: 0; font-size: 1.3rem;">Blue Roof Hotel Optimization</h3>
+        </div>
+        <div style="padding: 1.5rem;">
+          <p style="color: var(--brand-teal); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">
+            <i class="fas fa-tag"></i> Innovation • Entrepreneurship
+          </p>
+          <p style="color: var(--text-color); margin-bottom: 1rem; line-height: 1.6;">
+            Led digital transformation in Nigeria implementing SEO, analytics, and reservation systems, increasing operational efficiency by 40%.
+          </p>
+          <a href="projects/blue-roof/" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--brand-teal); text-decoration: none; font-weight: 600; transition: gap 0.3s;">
+            View Project <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Middle Gates -->
+      <div class="project-card-hover" style="background: white; border-radius: 1rem; overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s, box-shadow 0.3s; border: 2px solid var(--border-color);">
+        <div style="background: linear-gradient(135deg, var(--brand-gold), #4f46e5); padding: 2rem; text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 0.5rem;">🚪</div>
+          <h3 style="color: white; margin: 0; font-size: 1.3rem;">Middle Gates Ventures</h3>
+        </div>
+        <div style="padding: 1.5rem;">
+          <p style="color: var(--brand-teal); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">
+            <i class="fas fa-tag"></i> Entrepreneurship • Innovation
+          </p>
+          <p style="color: var(--text-color); margin-bottom: 1rem; line-height: 1.6;">
+            Founded multi-service business in logistics, events, and analytics consulting, serving 25+ clients through data-driven operations.
+          </p>
+          <a href="projects/middle-gates/" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--brand-teal); text-decoration: none; font-weight: 600; transition: gap 0.3s;">
+            View Project <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
     </div>
+
     <div style="text-align: center; margin-top: 3rem;">
-      <a href="projects.html" class="cta-button secondary">View All 15+ Projects <i class="fas fa-arrow-right"></i></a>
+      <a href="projects.html" class="cta-button secondary">View All Projects <i class="fas fa-arrow-right"></i></a>
     </div>
   </section>
 
