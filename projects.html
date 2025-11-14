@@ -33,15 +33,44 @@
       <p class="subtitle">
         <em>A collection of initiatives at the intersection of data, innovation, strategy, and community impact.</em>
       </p>
+      
+      <!-- Quick Navigation -->
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, rgba(15, 23, 42, 0.05), rgba(14, 165, 166, 0.05)); border-radius: 1rem;">
+        <a href="#ai-innovation" style="padding: 0.75rem 1.5rem; background: var(--card-bg); border: 2px solid var(--accent-gold); border-radius: 2rem; color: var(--brand-navy); text-decoration: none; font-weight: 600; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.5rem;">
+          <i class="fas fa-robot"></i> AI Innovation
+        </a>
+        <a href="#innovation-tech" style="padding: 0.75rem 1.5rem; background: var(--card-bg); border: 2px solid var(--accent-teal); border-radius: 2rem; color: var(--brand-navy); text-decoration: none; font-weight: 600; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.5rem;">
+          <i class="fas fa-bolt"></i> Innovation & Tech
+        </a>
+        <a href="#education" style="padding: 0.75rem 1.5rem; background: var(--card-bg); border: 2px solid var(--accent-gold); border-radius: 2rem; color: var(--brand-navy); text-decoration: none; font-weight: 600; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.5rem;">
+          <i class="fas fa-graduation-cap"></i> Education
+        </a>
+        <a href="#community" style="padding: 0.75rem 1.5rem; background: var(--card-bg); border: 2px solid var(--accent-teal); border-radius: 2rem; color: var(--brand-navy); text-decoration: none; font-weight: 600; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.5rem;">
+          <i class="fas fa-users"></i> Community
+        </a>
+        <a href="#entrepreneurship" style="padding: 0.75rem 1.5rem; background: var(--card-bg); border: 2px solid var(--accent-gold); border-radius: 2rem; color: var(--brand-navy); text-decoration: none; font-weight: 600; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.5rem;">
+          <i class="fas fa-chart-line"></i> Entrepreneurship
+        </a>
+      </div>
+      
+      <style>
+        .projects-header a:hover {
+          transform: translateY(-3px) scale(1.05);
+          box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+          border-color: var(--brand-teal);
+          background: linear-gradient(135deg, var(--accent-gold), var(--brand-teal));
+          color: white;
+        }
+      </style>
     </div>
 
     <!-- CATEGORY 0: AI Innovation & Strategy Projects -->
-    <div class="category-header">
+    <div class="category-header" id="ai-innovation">
       <h2><span class="category-icon">🤖</span> AI Innovation & Strategy Projects</h2>
     </div>
     
     <div class="projects-grid">
-      <div class="project-card-enhanced">
+      <div class="project-card-enhanced" onclick="window.location.href='ai-innovation.html'" style="cursor: pointer;">
         <div class="project-header">
           <h3 class="project-name">AI Innovation & Strategy Portfolio</h3>
         </div>
@@ -64,8 +93,8 @@
             </ul>
           </div>
           <div style="margin-top: 1rem;">
-            <a href="ai-innovation.html" style="color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
-              Explore All AI Projects <i class="fas fa-arrow-right"></i>
+            <a href="ai-innovation.html" style="color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.3s ease;">
+              Explore All AI Projects <i class="fas fa-arrow-right" style="transition: transform 0.3s;"></i>
             </a>
           </div>
         </div>
@@ -73,7 +102,7 @@
     </div>
 
     <!-- CATEGORY 1: Innovation & Technology Leadership -->
-    <div class="category-header">
+    <div class="category-header" id="innovation-tech">
       <h2><span class="category-icon">⚡</span> Innovation & Technology Leadership</h2>
     </div>
     
@@ -141,7 +170,7 @@
     </div>
 
     <!-- CATEGORY 2: Data Education & Workforce Development -->
-    <div class="category-header">
+    <div class="category-header" id="education">
       <h2><span class="category-icon">🎓</span> Data Education & Workforce Development</h2>
     </div>
     
@@ -215,7 +244,7 @@
     </div>
 
     <!-- CATEGORY 3: Community Engagement & Student Empowerment -->
-    <div class="category-header">
+    <div class="category-header" id="community">
       <h2><span class="category-icon">🤝</span> Community Engagement & Student Empowerment</h2>
     </div>
     
@@ -316,7 +345,7 @@
     </div>
 
     <!-- CATEGORY 4: Entrepreneurship & Applied Data Projects -->
-    <div class="category-header">
+    <div class="category-header" id="entrepreneurship">
       <h2><span class="category-icon">📈</span> Entrepreneurship & Applied Data Projects</h2>
     </div>
     

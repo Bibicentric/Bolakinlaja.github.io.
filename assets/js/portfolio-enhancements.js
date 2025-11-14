@@ -281,6 +281,96 @@
     celebrationElements.forEach(el => observer.observe(el));
   }
 
+  // Add scroll to top button
+  function addScrollToTopButton() {
+    // Create button
+    const scrollBtn = document.createElement('button');
+    scrollBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    scrollBtn.className = 'scroll-to-top';
+    scrollBtn.setAttribute('aria-label', 'Scroll to top');
+    
+    // Style the button
+    scrollBtn.style.cssText = `
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--brand-navy), var(--brand-teal));
+      color: white;
+      border: none;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      z-index: 1000;
+    `;
+    
+    document.body.appendChild(scrollBtn);
+    
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        scrollBtn.style.display = 'flex';
+        scrollBtn.style.animation = 'fadeInUp 0.3s ease';
+      } else {
+        scrollBtn.style.display = 'none';
+      }
+    });
+    
+    // Scroll to top on click
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Hover effect
+    scrollBtn.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-5px) scale(1.1)';
+      this.style.boxShadow = '0 6px 20px rgba(0,0,0,0.3)';
+    });
+    
+    scrollBtn.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0) scale(1)';
+      this.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
+    });
+  }
+
+  // Enhance navigation links with active section highlighting
+  function enhanceNavigation() {
+    const sections = document.querySelectorAll('[id]');
+    const navLinks = document.querySelectorAll('a[href^="#"]');
+    
+    if (sections.length === 0) return;
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === '#' + entry.target.id) {
+              link.style.background = 'linear-gradient(135deg, var(--accent-gold), var(--brand-teal))';
+              link.style.color = 'white';
+              link.style.transform = 'scale(1.05)';
+            } else if (link.style.background) {
+              link.style.background = '';
+              link.style.color = '';
+              link.style.transform = '';
+            }
+          });
+        }
+      });
+    }, { threshold: 0.3 });
+    
+    sections.forEach(section => observer.observe(section));
+  }
+
   // Initialize all enhancements when DOM is ready
   function init() {
     highlightActiveNav();
@@ -295,6 +385,8 @@
     addFloatingAnimation();
     setupTooltips();
     addCelebrationEffects();
+    addScrollToTopButton();
+    enhanceNavigation();
   }
 
   // Run initialization
