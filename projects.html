@@ -29,14 +29,135 @@
   <section id="featured-projects">
     <!-- Projects Header -->
     <div class="projects-header">
-      <h1>🌟 Featured Projects</h1>
+      <h1>Featured Projects</h1>
       <p class="subtitle">
         <em>A collection of initiatives at the intersection of data, innovation, strategy, and community impact.</em>
       </p>
+      
+      <!-- Project Stats Overview -->
+      <div class="project-stats-bar">
+        <div class="stat-item">
+          <i class="fas fa-project-diagram"></i>
+          <div>
+            <span class="stat-count">15+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-users"></i>
+          <div>
+            <span class="stat-count">500+</span>
+            <span class="stat-label">People Impacted</span>
+          </div>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-dollar-sign"></i>
+          <div>
+            <span class="stat-count">$387K+</span>
+            <span class="stat-label">Value Generated</span>
+          </div>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-handshake"></i>
+          <div>
+            <span class="stat-count">10+</span>
+            <span class="stat-label">Partnerships</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive View Toggle -->
+      <div class="view-controls">
+        <div class="view-toggle">
+          <button class="view-btn active" data-view="grid" title="Grid View">
+            <i class="fas fa-th"></i> Grid
+          </button>
+          <button class="view-btn" data-view="list" title="List View">
+            <i class="fas fa-list"></i> List
+          </button>
+          <button class="view-btn" data-view="timeline" title="Timeline View">
+            <i class="fas fa-stream"></i> Timeline
+          </button>
+        </div>
+        
+        <div class="filter-toggle">
+          <button class="filter-btn active" data-filter="all">
+            <i class="fas fa-layer-group"></i> All Projects
+          </button>
+          <button class="filter-btn" data-filter="ai">
+            <i class="fas fa-robot"></i> AI
+          </button>
+          <button class="filter-btn" data-filter="innovation">
+            <i class="fas fa-bolt"></i> Innovation
+          </button>
+          <button class="filter-btn" data-filter="education">
+            <i class="fas fa-graduation-cap"></i> Education
+          </button>
+          <button class="filter-btn" data-filter="community">
+            <i class="fas fa-users"></i> Community
+          </button>
+        </div>
+      </div>
+      
+      <!-- Quick Navigation Pills -->
+      <div class="quick-nav-pills">
+        <a href="#ai-innovation" class="nav-pill">
+          <i class="fas fa-robot"></i> AI Innovation
+        </a>
+        <a href="#innovation-tech" class="nav-pill">
+          <i class="fas fa-bolt"></i> Innovation & Tech
+        </a>
+        <a href="#education" class="nav-pill">
+          <i class="fas fa-graduation-cap"></i> Education
+        </a>
+        <a href="#community" class="nav-pill">
+          <i class="fas fa-users"></i> Community
+        </a>
+        <a href="#entrepreneurship" class="nav-pill">
+          <i class="fas fa-chart-line"></i> Entrepreneurship
+        </a>
+      </div>
+    </div>
+
+    <!-- CATEGORY 0: AI Innovation & Strategy Projects -->
+    <div class="category-header" id="ai-innovation">
+      <h2><span class="category-icon">🤖</span> AI Innovation & Strategy Projects</h2>
+    </div>
+    
+    <div class="projects-grid">
+      <div class="project-card-enhanced" onclick="window.location.href='ai-innovation.html'" style="cursor: pointer;">
+        <div class="project-header">
+          <h3 class="project-name">AI Innovation & Strategy Portfolio</h3>
+        </div>
+        <div class="project-body">
+          <div class="project-description">
+            <ul>
+              <li>Comprehensive portfolio of AI initiatives spanning <strong>strategic implementation, AI literacy & education, GenAI-driven program design</strong>, and <strong>ethical AI adoption</strong>.</li>
+              <li>Leading AI integration across <strong>higher education, research, and community empowerment</strong>.</li>
+            </ul>
+          </div>
+          <div class="impact-metrics">
+            <strong>Featured Projects:</strong>
+            <ul style="margin-top: 0.5rem;">
+              <li>Johns Hopkins AI Business Strategy Certificate Program</li>
+              <li>DigiBibi AI Learning & Support Assistant</li>
+              <li>CDA AI Initiatives & Innovation Pipeline</li>
+              <li>Applied AI Research & Project Work</li>
+              <li>AI Dashboards, Automation & Predictive Insights</li>
+              <li>Upcoming AI Projects (Resource Hub, Summer Research Cohort)</li>
+            </ul>
+          </div>
+          <div style="margin-top: 1rem;">
+            <a href="ai-innovation.html" style="color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.3s ease;">
+              Explore All AI Projects <i class="fas fa-arrow-right" style="transition: transform 0.3s;"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- CATEGORY 1: Innovation & Technology Leadership -->
-    <div class="category-header">
+    <div class="category-header" id="innovation-tech">
       <h2><span class="category-icon">⚡</span> Innovation & Technology Leadership</h2>
     </div>
     
@@ -104,7 +225,7 @@
     </div>
 
     <!-- CATEGORY 2: Data Education & Workforce Development -->
-    <div class="category-header">
+    <div class="category-header" id="education">
       <h2><span class="category-icon">🎓</span> Data Education & Workforce Development</h2>
     </div>
     
@@ -178,7 +299,7 @@
     </div>
 
     <!-- CATEGORY 3: Community Engagement & Student Empowerment -->
-    <div class="category-header">
+    <div class="category-header" id="community">
       <h2><span class="category-icon">🤝</span> Community Engagement & Student Empowerment</h2>
     </div>
     
@@ -279,7 +400,7 @@
     </div>
 
     <!-- CATEGORY 4: Entrepreneurship & Applied Data Projects -->
-    <div class="category-header">
+    <div class="category-header" id="entrepreneurship">
       <h2><span class="category-icon">📈</span> Entrepreneurship & Applied Data Projects</h2>
     </div>
     

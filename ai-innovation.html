@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI Innovation & Strategy Projects - Leading AI integration across education, research, and student development">
+  <meta name="author" content="Bolametiren Akinlaja">
+  <title>AI Innovation & Strategy Projects - Bolametiren Akinlaja</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <script defer src="assets/js/portfolio-enhancements.js"></script>
+  <style>
+    .ai-hero {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(139, 92, 246, 0.1));
+      padding: 4rem 2rem;
+      border-radius: 1.25rem;
+      margin-bottom: 3rem;
+      text-align: center;
+      animation: fadeInUp 0.6s ease-out;
+    }
+    .ai-hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: slideInDown 0.8s ease-out;
+    }
+    .ai-focus-areas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0 3rem;
+    }
+    .focus-item {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      border: 2px solid rgba(37, 99, 235, 0.2);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      animation: fadeIn 0.6s ease-out backwards;
+      position: relative;
+      overflow: hidden;
+    }
+    .focus-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.1), transparent);
+      transition: left 0.5s;
+    }
+    .focus-item:hover::before {
+      left: 100%;
+    }
+    .focus-item:hover {
+      transform: translateY(-8px) scale(1.02);
+      border-color: var(--primary-color);
+      box-shadow: 0 12px 24px rgba(37, 99, 235, 0.2);
+    }
+    .focus-item h3 {
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+    .focus-item:hover h3 {
+      color: var(--accent-color);
+    }
+    .ai-subpages {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .subpage-card {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 1rem;
+      border: 2px solid rgba(37, 99, 235, 0.15);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      animation: fadeInUp 0.6s ease-out backwards;
+    }
+    .subpage-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .subpage-card:hover::after {
+      transform: scaleX(1);
+    }
+    .subpage-card:hover {
+      border-color: var(--primary-color);
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15), 0 5px 15px rgba(37, 99, 235, 0.2);
+    }
+    .subpage-card h3 {
+      color: var(--brand-navy);
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      transition: color 0.3s;
+    }
+    .subpage-card:hover h3 {
+      color: var(--accent-color);
+    }
+    .subpage-card p {
+      color: var(--text-light);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      transition: color 0.3s;
+    }
+    .subpage-card:hover p {
+      color: var(--text-color);
+    }
+    .subpage-link {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s;
+      position: relative;
+    }
+    .subpage-link:hover {
+      gap: 0.75rem;
+      color: var(--accent-color);
+    }
+    .subpage-link i {
+      transition: transform 0.3s;
+    }
+    .subpage-card:hover .subpage-link i {
+      transform: translateX(5px);
+    }
+    
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes slideInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Stagger animation delays */
+    .focus-item:nth-child(1) { animation-delay: 0.1s; }
+    .focus-item:nth-child(2) { animation-delay: 0.2s; }
+    .focus-item:nth-child(3) { animation-delay: 0.3s; }
+    .focus-item:nth-child(4) { animation-delay: 0.4s; }
+    .focus-item:nth-child(5) { animation-delay: 0.5s; }
+    
+    .subpage-card:nth-child(1) { animation-delay: 0.1s; }
+    .subpage-card:nth-child(2) { animation-delay: 0.2s; }
+    .subpage-card:nth-child(3) { animation-delay: 0.3s; }
+    .subpage-card:nth-child(4) { animation-delay: 0.4s; }
+    .subpage-card:nth-child(5) { animation-delay: 0.5s; }
+    .subpage-card:nth-child(6) { animation-delay: 0.6s; }
+  </style>
+</head>
+<body>
+  <header class="compact">
+    <h1>Bolametiren Akinlaja</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html">Contact</a>
+      <span class="socials">
+        <a href="https://www.linkedin.com/in/bolametiren-akinlaja-497602213/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Bibicentric" title="GitHub"><i class="fab fa-github"></i></a>
+      </span>
+    </nav>
+  </header>
+
+  <main class="project-detail-main">
+    <a href="projects.html" class="back-to-projects">
+      <i class="fas fa-arrow-left"></i> Back to Projects
+    </a>
+
+    <div class="ai-hero">
+      <h1>AI Innovation & Strategy Projects</h1>
+      <p class="project-subtitle" style="max-width: 900px; margin: 0 auto; font-size: 1.2rem; line-height: 1.8;">
+        Artificial intelligence is reshaping every industry — and I'm committed to ensuring that students, institutions, and communities are not only prepared for the future but actively leading it.
+      </p>
+    </div>
+
+    <section style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+      <h2 style="text-align: center; margin-bottom: 2rem; color: var(--brand-navy);">Overview</h2>
+      <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; line-height: 1.8; font-size: 1.1rem;">
+        My work in AI focuses on strategic implementation, AI literacy and education, GenAI-driven program design, ethical and responsible adoption, and applied AI for community and small business empowerment.
+      </p>
+      <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; line-height: 1.8; font-size: 1.1rem;">
+        This section highlights the AI programs, tools, and innovation pipelines I'm building across higher education, research, and emerging technologies.
+      </p>
+
+      <div class="ai-focus-areas">
+        <div class="focus-item">
+          <h3>Strategic Implementation</h3>
+          <p>Leading AI integration initiatives across departments and programs</p>
+        </div>
+        <div class="focus-item">
+          <h3>AI Literacy & Education</h3>
+          <p>Building accessible AI learning pathways for students and faculty</p>
+        </div>
+        <div class="focus-item">
+          <h3>GenAI-Driven Program Design</h3>
+          <p>Creating innovative programs powered by generative AI technologies</p>
+        </div>
+        <div class="focus-item">
+          <h3>Ethical & Responsible Adoption</h3>
+          <p>Ensuring AI deployment follows ethical guidelines and best practices</p>
+        </div>
+        <div class="focus-item">
+          <h3>Applied AI for Community Empowerment</h3>
+          <p>Supporting small businesses and communities with practical AI tools</p>
+        </div>
+      </div>
+
+      <h2 style="text-align: center; margin: 4rem 0 2rem; color: var(--brand-navy);">AI Projects & Initiatives</h2>
+
+      <div class="ai-subpages">
+        <div class="subpage-card" onclick="window.location.href='ai-jhu-program.html'">
+          <h3>1. Johns Hopkins AI Business Strategy Certificate Program</h3>
+          <p>Executive Education | 10-Week Program</p>
+          <p>Completing an immersive executive program to lead AI-integrated initiatives and build sustainable, future-ready innovation ecosystems.</p>
+          <a href="ai-jhu-program.html" class="subpage-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="subpage-card" onclick="window.location.href='ai-digibibi.html'">
+          <h3>2. DigiBibi — AI Learning & Support Assistant</h3>
+          <p>AI-Powered Educational Support Tool</p>
+          <p>An emerging AI assistant designed to support student engagement, academic success, and personalized learning experiences.</p>
+          <a href="ai-digibibi.html" class="subpage-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="subpage-card" onclick="window.location.href='ai-cda-initiatives.html'">
+          <h3>3. CDA AI Initiatives & Innovation Pipeline</h3>
+          <p>AI Programs for Student Training, Research, and Workforce Development</p>
+          <p>Leading multiple initiatives that introduce AI tools, literacy, and innovation to students across disciplines.</p>
+          <a href="ai-cda-initiatives.html" class="subpage-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="subpage-card" onclick="window.location.href='ai-research-projects.html'">
+          <h3>4. Applied AI Research & Project Work</h3>
+          <p>AI for Social Impact, Business Empowerment & Creative Collaboration</p>
+          <p>Integrating AI across small business intelligence, emotional insight tools, and creative arts collaboration.</p>
+          <a href="ai-research-projects.html" class="subpage-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="subpage-card" onclick="window.location.href='ai-dashboards.html'">
+          <h3>5. AI Dashboards, Automation & Predictive Insights</h3>
+          <p>AI-Driven Tools for Decision-Making and Impact</p>
+          <p>Building dashboards and automated insight systems for enhanced organizational efficiency and student engagement.</p>
+          <a href="ai-dashboards.html" class="subpage-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="subpage-card" onclick="window.location.href='ai-upcoming-projects.html'">
+          <h3>6. Upcoming AI Projects</h3>
+          <p>Future-Focused Innovation</p>
+          <p>AI Resource Hub, AI Summer Research Cohort, AI x Performing Arts collaboration, and AI Mentorship Pipeline.</p>
+          <a href="ai-upcoming-projects.html" class="subpage-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Bolametiren Akinlaja. Designed with ❤️ | <a href="https://html5up.net" target="_blank">HTML5 UP</a>
+  </footer>
+</body>
+</html>
