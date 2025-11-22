@@ -30,9 +30,15 @@
     <!-- Projects Header -->
     <div class="projects-header">
       <h1>Featured Projects</h1>
-      <p class="subtitle">
-        <em>A collection of initiatives at the intersection of data, innovation, strategy, and community impact.</em>
-      </p>
+      
+      <!-- Overview Section -->
+      <div class="projects-overview">
+        <p class="overview-text">
+          Explore a comprehensive portfolio of data-driven initiatives spanning AI innovation, technology leadership, 
+          workforce development, and community engagement. Each project demonstrates strategic program management, 
+          stakeholder collaboration, and measurable impact across education, entrepreneurship, and social innovation.
+        </p>
+      </div>
       
       <!-- Project Stats Overview -->
       <div class="project-stats-bar">
@@ -65,57 +71,14 @@
           </div>
         </div>
       </div>
-
-      <!-- Interactive View Toggle -->
-      <div class="view-controls">
-        <div class="view-toggle">
-          <button class="view-btn active" data-view="grid" title="Grid View">
-            <i class="fas fa-th"></i> Grid
-          </button>
-          <button class="view-btn" data-view="list" title="List View">
-            <i class="fas fa-list"></i> List
-          </button>
-          <button class="view-btn" data-view="timeline" title="Timeline View">
-            <i class="fas fa-stream"></i> Timeline
-          </button>
-        </div>
-        
-        <div class="filter-toggle">
-          <button class="filter-btn active" data-filter="all">
-            <i class="fas fa-layer-group"></i> All Projects
-          </button>
-          <button class="filter-btn" data-filter="ai">
-            <i class="fas fa-robot"></i> AI
-          </button>
-          <button class="filter-btn" data-filter="innovation">
-            <i class="fas fa-bolt"></i> Innovation
-          </button>
-          <button class="filter-btn" data-filter="education">
-            <i class="fas fa-graduation-cap"></i> Education
-          </button>
-          <button class="filter-btn" data-filter="community">
-            <i class="fas fa-users"></i> Community
-          </button>
-        </div>
-      </div>
       
-      <!-- Quick Navigation Pills -->
+      <!-- Quick Jump Navigation -->
       <div class="quick-nav-pills">
-        <a href="#ai-innovation" class="nav-pill">
-          <i class="fas fa-robot"></i> AI Innovation
-        </a>
-        <a href="#innovation-tech" class="nav-pill">
-          <i class="fas fa-bolt"></i> Innovation & Tech
-        </a>
-        <a href="#education" class="nav-pill">
-          <i class="fas fa-graduation-cap"></i> Education
-        </a>
-        <a href="#community" class="nav-pill">
-          <i class="fas fa-users"></i> Community
-        </a>
-        <a href="#entrepreneurship" class="nav-pill">
-          <i class="fas fa-chart-line"></i> Entrepreneurship
-        </a>
+        <a href="#ai-innovation" class="nav-pill">AI Innovation</a>
+        <a href="#innovation-tech" class="nav-pill">Innovation & Tech</a>
+        <a href="#education" class="nav-pill">Education</a>
+        <a href="#community" class="nav-pill">Community</a>
+        <a href="#entrepreneurship" class="nav-pill">Entrepreneurship</a>
       </div>
     </div>
 
@@ -163,7 +126,7 @@
     
     <div class="projects-grid">
       <!-- DigiBibi Project -->
-      <div class="project-card-enhanced">
+      <div class="project-card-enhanced" onclick="window.location.href='projects/digibibi-afrotech/'" style="cursor: pointer;">
         <div class="project-header">
           <h3 class="project-name">DigiBibi: AfroTech Innovation Experience</h3>
         </div>
@@ -178,11 +141,16 @@
             <strong>Impact:</strong>
             <p>Engaged <strong>300+ industry professionals</strong>, forged partnerships with <strong>T-Mobile, AWS, and HPE</strong>, and positioned CDA as a leader in digital equity and AI.</p>
           </div>
+          <div style="margin-top: 1rem;">
+            <a href="projects/digibibi-afrotech/" style="color: #000000; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
+              View Project Details <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
 
       <!-- Smart DARTT Lab -->
-      <div class="project-card-enhanced">
+      <div class="project-card-enhanced" onclick="window.location.href='projects/smart-dartt-lab/'" style="cursor: pointer;">
         <div class="project-header">
           <h3 class="project-name">Smart DARTT Lab Modernization (CDA × Truist Bank)</h3>
         </div>
@@ -201,11 +169,16 @@
               <span class="metric-badge"><i class="fas fa-users"></i> 80+ Learners</span>
             </div>
           </div>
+          <div style="margin-top: 1rem;">
+            <a href="projects/smart-dartt-lab/" style="color: #000000; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
+              View Project Details <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
 
       <!-- T-Mobile Curiosity Lab -->
-      <div class="project-card-enhanced">
+      <div class="project-card-enhanced" style="cursor: pointer;">
         <div class="project-header">
           <h3 class="project-name">T-Mobile Curiosity Lab Executive Briefing</h3>
         </div>
@@ -231,7 +204,7 @@
     
     <div class="projects-grid">
       <!-- Data Analytics Training Program -->
-      <div class="project-card-enhanced">
+      <div class="project-card-enhanced" style="cursor: pointer;">
         <div class="project-header">
           <h3 class="project-name">Data Analytics Training Program (CDA)</h3>
         </div>
@@ -254,7 +227,7 @@
       </div>
 
       <!-- CDA Matched Mentorship Program -->
-      <div class="project-card-enhanced">
+      <div class="project-card-enhanced" style="cursor: pointer;">
         <div class="project-header">
           <h3 class="project-name">CDA Matched Mentorship Program</h3>
         </div>
@@ -276,7 +249,7 @@
       </div>
 
       <!-- NSF Discovery Workshop -->
-      <div class="project-card-enhanced">
+      <div class="project-card-enhanced" onclick="window.location.href='projects/nsf-workshop/'" style="cursor: pointer;">
         <div class="project-header">
           <h3 class="project-name">NSF Discovery Workshop: Data & the African Diaspora</h3>
         </div>
@@ -294,6 +267,11 @@
               <span class="metric-badge"><i class="fas fa-chalkboard-teacher"></i> 60+ Educators</span>
             </div>
           </div>
+          <div style="margin-top: 1rem;">
+            <a href="projects/nsf-workshop/" style="color: #000000; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
+              View Project Details <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -305,7 +283,7 @@
     
     <div class="projects-grid">
       <!-- Data Tribe -->
-      <div class="project-card-enhanced">
+      <div class="project-card-enhanced" onclick="window.location.href='projects/data-tribe/'" style="cursor: pointer;">
         <div class="project-header">
           <h3 class="project-name">Data Tribe: Building a Culture of Data & Belonging</h3>
         </div>
@@ -330,11 +308,16 @@
               <span class="metric-badge"><i class="fas fa-user-check"></i> 30+ Members</span>
             </div>
           </div>
+          <div style="margin-top: 1rem;">
+            <a href="projects/data-tribe/" style="color: #000000; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
+              View Project Details <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
 
       <!-- Conversation with Northrop Grumman -->
-      <div class="project-card-enhanced">
+      <div class="project-card-enhanced" style="cursor: pointer;">
         <div class="project-header">
           <h3 class="project-name">Conversation with Northrop Grumman</h3>
         </div>
@@ -356,7 +339,7 @@
       </div>
 
       <!-- Sincerely, Love Research Cohort -->
-      <div class="project-card-enhanced">
+      <div class="project-card-enhanced" onclick="window.location.href='projects/sincerely-love/'" style="cursor: pointer;">
         <div class="project-header">
           <h3 class="project-name">Sincerely, Love Research Cohort & Mental Health Summit</h3>
         </div>
@@ -374,11 +357,16 @@
               <span class="metric-badge"><i class="fas fa-brain"></i> 100+ Summit Attendees</span>
             </div>
           </div>
+          <div style="margin-top: 1rem;">
+            <a href="projects/sincerely-love/" style="color: #000000; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
+              View Project Details <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
 
       <!-- Sports Analytics Camp -->
-      <div class="project-card-enhanced">
+      <div class="project-card-enhanced" onclick="window.location.href='projects/sports-analytics/'" style="cursor: pointer;">
         <div class="project-header">
           <h3 class="project-name">Sports Analytics Camp (Brian Westbrook Foundation x CDA)</h3>
         </div>
@@ -395,6 +383,11 @@
               <span class="metric-badge"><i class="fas fa-football-ball"></i> 18 Students</span>
             </div>
           </div>
+          <div style="margin-top: 1rem;">
+            <a href="projects/sports-analytics/" style="color: #000000; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
+              View Project Details <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -406,7 +399,7 @@
     
     <div class="projects-grid">
       <!-- EIC Market Research -->
-      <div class="project-card-enhanced">
+      <div class="project-card-enhanced" onclick="window.location.href='projects/eic-market-research/'" style="cursor: pointer;">
         <div class="project-header">
           <h3 class="project-name">EIC Market Research Collaboration</h3>
         </div>
@@ -424,11 +417,16 @@
               <span class="metric-badge"><i class="fas fa-file-alt"></i> 8 Reports</span>
             </div>
           </div>
+          <div style="margin-top: 1rem;">
+            <a href="projects/eic-market-research/" style="color: #000000; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
+              View Project Details <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
 
       <!-- Middle Gates Ventures -->
-      <div class="project-card-enhanced">
+      <div class="project-card-enhanced" onclick="window.location.href='projects/middle-gates/'" style="cursor: pointer;">
         <div class="project-header">
           <h3 class="project-name">Middle Gates Ventures</h3>
         </div>
@@ -442,11 +440,16 @@
             <strong>Impact:</strong>
             <p>Scaled services through operational analytics and performance tracking.</p>
           </div>
+          <div style="margin-top: 1rem;">
+            <a href="projects/middle-gates/" style="color: #000000; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
+              View Project Details <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
 
       <!-- Blue Roof Hotel -->
-      <div class="project-card-enhanced">
+      <div class="project-card-enhanced" onclick="window.location.href='projects/blue-roof/'" style="cursor: pointer;">
         <div class="project-header">
           <h3 class="project-name">Blue Roof Hotel Digital Optimization (Nigeria)</h3>
         </div>
@@ -462,6 +465,11 @@
             <div>
               <span class="metric-badge"><i class="fas fa-percent"></i> 40% Efficiency Increase</span>
             </div>
+          </div>
+          <div style="margin-top: 1rem;">
+            <a href="projects/blue-roof/" style="color: #000000; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
+              View Project Details <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
         </div>
       </div>
