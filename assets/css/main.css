@@ -1975,10 +1975,7 @@ section {
 
 /* Category Icons Styling */
 .category-header h2 .category-icon {
-  background: linear-gradient(135deg, var(--brand-teal), var(--accent-gold));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #000000;
 }
 
 /* Mobile Responsive */
@@ -2046,10 +2043,7 @@ section {
 .project-hero h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, var(--brand-navy), var(--brand-teal));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #000000;
   font-weight: 800;
 }
 
@@ -2082,7 +2076,7 @@ section {
 }
 
 .project-meta-item i {
-  color: var(--brand-teal);
+  color: #000000;
   font-size: 1.1rem;
 }
 
@@ -2112,7 +2106,7 @@ section {
   left: 0;
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, var(--brand-teal), var(--accent-gold));
+  background: #000000;
   border-radius: 2px;
 }
 
@@ -2137,12 +2131,12 @@ section {
 .funding-highlight,
 .savings-highlight,
 .value-highlight {
-  background: linear-gradient(135deg, rgba(14, 165, 166, 0.08), rgba(14, 165, 166, 0.03));
+  background: #f9f9f9;
   padding: 3rem 2rem;
   border-radius: 1.25rem;
   text-align: center;
   margin: 2rem 0;
-  border: 2px solid var(--brand-teal);
+  border: 2px solid #000000;
   position: relative;
   overflow: hidden;
 }
@@ -2156,7 +2150,7 @@ section {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(255, 199, 44, 0.05), rgba(14, 165, 166, 0.05));
+  background: #f5f5f5;
   z-index: 0;
 }
 
@@ -2172,10 +2166,7 @@ section {
 .value-amount {
   font-size: 3.5rem;
   font-weight: 800;
-  background: linear-gradient(135deg, var(--brand-teal), var(--brand-navy));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #000000;
   margin-bottom: 0.5rem;
 }
 
@@ -2200,7 +2191,7 @@ section {
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: var(--shadow-sm);
-  border-top: 4px solid var(--brand-teal);
+  border-top: 4px solid #000000;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -2213,14 +2204,14 @@ section {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(14, 165, 166, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.05), transparent);
   transition: left 0.5s ease;
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
-  border-top-color: var(--accent-gold);
+  border-top-color: #000000;
 }
 
 .feature-card:hover::before {
@@ -2229,14 +2220,14 @@ section {
 
 .feature-card i {
   font-size: 2.5rem;
-  color: var(--brand-teal);
+  color: #000000;
   margin-bottom: 1rem;
   display: block;
   transition: all 0.3s ease;
 }
 
 .feature-card:hover i {
-  color: var(--accent-gold);
+  color: #4a4a4a;
   transform: scale(1.1);
 }
 
@@ -2272,7 +2263,7 @@ section {
 }
 
 .impact-stat-box:hover {
-  border-color: var(--brand-teal);
+  border-color: #000000;
   transform: translateY(-3px);
   box-shadow: var(--shadow-md);
 }
@@ -2280,10 +2271,7 @@ section {
 .impact-stat-number {
   font-size: 2.5rem;
   font-weight: 800;
-  background: linear-gradient(135deg, var(--brand-navy), var(--brand-teal));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #000000;
   margin-bottom: 0.5rem;
 }
 
@@ -2310,9 +2298,9 @@ section {
 }
 
 .back-to-projects:hover {
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.08), rgba(14, 165, 166, 0.15));
+  background: #f5f5f5;
   transform: translateX(-5px);
-  border-color: var(--brand-teal);
+  border-color: #000000;
 }
 
 .back-to-projects i {
@@ -2366,7 +2354,7 @@ section {
   transform: translateY(-50%);
   width: 24px;
   height: 24px;
-  background: var(--brand-teal);
+  background: #000000;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -2378,12 +2366,12 @@ section {
 
 .achievements-list li:hover {
   transform: translateX(5px);
-  border-left-color: var(--accent-gold);
+  border-left-color: #000000;
   box-shadow: var(--shadow-md);
 }
 
 .achievements-list li:hover::before {
-  background: var(--accent-gold);
+  background: #4a4a4a;
 }
 
 /* Technologies/Tools Grid */
@@ -2409,7 +2397,7 @@ section {
 .tool-badge:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-md);
-  background: linear-gradient(135deg, var(--brand-teal), var(--brand-navy));
+  background: #000000;
 }
 
 /* Responsive Design for Project Detail Pages */
@@ -2589,6 +2577,11 @@ section {
   background: #f9f9f9;
   border-radius: 0.5rem;
   border: 2px solid #e0e0e0;
+}
+
+.simple-navigation {
+  text-align: center;
+  margin: 1rem 0;
 }
 
 .nav-pill {
