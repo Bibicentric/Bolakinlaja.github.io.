@@ -165,8 +165,8 @@ style="width: 100%; height: auto; object-fit: cover;"
 |------|----------|---------|-----------|
 | Home | Header | Profile photo | `index.html` line 20 |
 | About | Header | Profile photo | `about.html` line 609 |
-| About | Experience section | T-Mobile project | `about.html` line 868 |
-| About | Experience section | Middle Gates | `about.html` line 908 |
+| About | Experience section | T-Mobile project | `about.html` line 744 |
+| About | Experience section | Middle Gates | `about.html` line 751 |
 
 ---
 

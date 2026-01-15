@@ -40,7 +40,7 @@ All images should be placed in the `images/` directory:
 ```
 images/
 ├── Image (14).jpg          # Profile photo (currently used)
-├── Bowie State T-Mobile 08.2025.jpeg  # Example project photo
+├── Bowie State  T-Mobile 08.2025.jpeg  # Example project photo
 └── [your-new-photo.jpg]    # Add your photos here
 ```
 
@@ -114,8 +114,8 @@ To create a simple photo gallery in any page:
 |----------|------|--------|---------|
 | Header photo (Home) | `index.html` | 20 | Main profile photo |
 | Header photo (About) | `about.html` | 609 | About page profile |
-| Project photo 1 | `about.html` | 868 | T-Mobile Curiosity Lab |
-| Project photo 2 | `about.html` | 908 | Middle Gates Ventures |
+| Project photo 1 | `about.html` | 744 | T-Mobile Curiosity Lab |
+| Project photo 2 | `about.html` | 751 | Middle Gates Ventures |
 
 ### 8. Testing Your Changes
 

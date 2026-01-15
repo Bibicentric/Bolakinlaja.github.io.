@@ -8,7 +8,7 @@ This is a quick reference guide for managing photos in your portfolio. For detai
 Bolakinlaja.github.io/
 ├── images/                          # 👈 PUT ALL PHOTOS HERE
 │   ├── Image (14).jpg              # Current profile photo
-│   ├── Bowie State T-Mobile 08.2025.jpeg  # Project photo
+│   ├── Bowie State  T-Mobile 08.2025.jpeg  # Project photo
 │   └── [your-photos-here]          # Add new photos
 │
 ├── index.html                       # Home page (has profile photo)
@@ -92,8 +92,8 @@ When editing files in `projects/your-project/index.html`, use `../../images/`:
 |------|------|---------|---------|
 | `index.html` | 20 | `<img src="images/Image (14).jpg">` | Header profile photo |
 | `about.html` | 609 | `<img src="images/Image (14).jpg">` | About page header |
-| `about.html` | 868 | `<img src="images/Bowie State T-Mobile...">` | T-Mobile project |
-| `about.html` | 908 | `<img src="images/Image (14).jpg">` | Middle Gates project |
+| `about.html` | 744 | `<img src="images/Bowie State  T-Mobile...">` | T-Mobile project |
+| `about.html` | 751 | `<img src="images/Image (14).jpg">` | Middle Gates project |
 | `_layouts/default.html` | varies | `<img src="{{ site.baseurl }}/images/...">` | Jekyll template |
 
 ## ✅ Checklist Before Adding Photos
