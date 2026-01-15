@@ -2,6 +2,17 @@
 
 A modern, multi-page portfolio website showcasing professional experience in Program Management, Data Analytics, and Workforce Development.
 
+## 📸 Adding Photos to Your Portfolio
+
+**Quick Start:** See [PHOTO-REFERENCE.md](PHOTO-REFERENCE.md) for copy-paste ready examples
+
+**Detailed Guide:** See [ADDING-PHOTOS-GUIDE.md](ADDING-PHOTOS-GUIDE.md) for step-by-step instructions
+
+**TL;DR:** 
+1. Add your photo to the `images/` folder
+2. Edit the HTML file and change the image filename
+3. View in browser to see your changes
+
 ## Structure
 
 - **index.html** - Home page with welcome message and quick links
