@@ -115,7 +115,7 @@ To create a simple photo gallery in any page:
 | Header photo (Home) | `index.html` | 20 | Main profile photo |
 | Header photo (About) | `about.html` | 609 | About page profile |
 | Project photo 1 | `about.html` | 744 | T-Mobile Curiosity Lab |
-| Project photo 2 | `about.html` | 751 | Middle Gates Ventures |
+| Project photo 2 | `about.html` | 751 | Middle Gates (uses profile photo as placeholder) |
 
 ### 8. Testing Your Changes
 

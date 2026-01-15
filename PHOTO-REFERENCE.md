@@ -93,7 +93,7 @@ When editing files in `projects/your-project/index.html`, use `../../images/`:
 | `index.html` | 20 | `<img src="images/Image (14).jpg">` | Header profile photo |
 | `about.html` | 609 | `<img src="images/Image (14).jpg">` | About page header |
 | `about.html` | 744 | `<img src="images/Bowie State  T-Mobile...">` | T-Mobile project |
-| `about.html` | 751 | `<img src="images/Image (14).jpg">` | Middle Gates project |
+| `about.html` | 751 | `<img src="images/Image (14).jpg">` | Middle Gates (placeholder) |
 | `_layouts/default.html` | varies | `<img src="{{ site.baseurl }}/images/...">` | Jekyll template |
 
 ## ✅ Checklist Before Adding Photos
