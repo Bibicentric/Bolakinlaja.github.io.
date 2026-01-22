@@ -128,7 +128,7 @@
     const closeBtn = lightbox.querySelector('.lightbox-close');
     
     // Add click handlers to gallery images
-    const imageSelectors = '.photo-card img, .gallery-item img, .timeline-content-left img, .timeline-content-right img, .project-image-container img';
+    const imageSelectors = '.photo-card img, .gallery-item img, .about-hero-image img, .timeline-item-enhanced img, .project-image-container img';
     document.querySelectorAll(imageSelectors).forEach(img => {
       img.style.cursor = 'pointer';
       img.setAttribute('tabindex', '0');

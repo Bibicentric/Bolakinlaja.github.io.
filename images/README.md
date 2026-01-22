@@ -6,8 +6,8 @@ This folder contains all images used throughout the portfolio website.
 
 ### `/images/` (Root)
 Main portfolio images:
-- `Image (14).jpg` - Professional headshot
-- `Bowie State T-Mobile 08.2025.jpeg` - AfroTech conference photo
+- `Image (14).jpg` - Professional headshot (Note: Consider renaming to `profile-headshot.jpg` for web best practices)
+- `Bowie State T-Mobile 08.2025.jpeg` - AfroTech conference photo (Note: Consider renaming to `afrotech-2025-tmobile.jpg`)
 
 ### `/images/projects/`
 Project-specific images showcasing work and achievements:
