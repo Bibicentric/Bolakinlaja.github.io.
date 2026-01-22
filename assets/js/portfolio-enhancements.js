@@ -1,6 +1,6 @@
 /**
  * Portfolio Enhancement Script
- * Adds active navigation highlighting, smooth interactions, and animations
+ * Adds active navigation highlighting, smooth interactions, animations, and visual enhancements
  */
 
 (function() {
@@ -35,7 +35,7 @@
 
   // Animate elements on scroll
   function animateOnScroll() {
-    const elements = document.querySelectorAll('.project-card, .stat-card, .testimonial-card, .skill, .what-card, .impact-card, .timeline-item, .approach-item');
+    const elements = document.querySelectorAll('.project-card, .stat-card, .testimonial-card, .photo-card, .project-card-hover');
     
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry, index) => {
@@ -43,7 +43,7 @@
           setTimeout(() => {
             entry.target.style.opacity = '1';
             entry.target.style.transform = 'translateY(0)';
-          }, index * 100);
+          }, index * 50);
           observer.unobserve(entry.target);
         }
       });
@@ -60,12 +60,118 @@
     });
   }
 
-  // Add smooth scroll behavior for anchor links
+  // Animated counter for statistics
+  function animateCounters() {
+    const counters = document.querySelectorAll('.stat-number');
+    
+    const animateValue = (element, start, end, duration) => {
+      const range = end - start;
+      const increment = range / (duration / 16);
+      let current = start;
+      
+      const timer = setInterval(() => {
+        current += increment;
+        if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
+          element.textContent = formatNumber(end, element.dataset.suffix || '');
+          clearInterval(timer);
+        } else {
+          element.textContent = formatNumber(Math.floor(current), element.dataset.suffix || '');
+        }
+      }, 16);
+    };
+    
+    const formatNumber = (num, suffix) => {
+      if (suffix.includes('K')) {
+        return Math.floor(num) + 'K+';
+      } else if (suffix.includes('$')) {
+        return '$' + Math.floor(num) + 'K+';
+      } else if (suffix.includes('+')) {
+        return Math.floor(num) + '+';
+      }
+      return Math.floor(num);
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const target = entry.target;
+          const text = target.textContent;
+          const numMatch = text.match(/\d+/);
+          
+          if (numMatch) {
+            const endValue = parseInt(numMatch[0]);
+            target.dataset.suffix = text;
+            animateValue(target, 0, endValue, 2000);
+          }
+          observer.unobserve(target);
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    counters.forEach(counter => observer.observe(counter));
+  }
+  
+  // Image lightbox functionality
+  function setupLightbox() {
+    // Create lightbox overlay
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox-overlay';
+    lightbox.innerHTML = `
+      <div class="lightbox-content">
+        <button class="lightbox-close" aria-label="Close">&times;</button>
+        <img src="" alt="Enlarged image">
+      </div>
+    `;
+    document.body.appendChild(lightbox);
+    
+    const lightboxImg = lightbox.querySelector('img');
+    const closeBtn = lightbox.querySelector('.lightbox-close');
+    
+    // Add click handlers to gallery images
+    const imageSelectors = '.photo-card img, .gallery-item img, .timeline-content-left img, .timeline-content-right img, .project-image-container img';
+    document.querySelectorAll(imageSelectors).forEach(img => {
+      img.style.cursor = 'pointer';
+      img.setAttribute('tabindex', '0');
+      img.addEventListener('click', (e) => {
+        e.stopPropagation();
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt || 'Enlarged image';
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+    
+    // Close lightbox
+    const closeLightbox = () => {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    };
+    
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+    
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        closeLightbox();
+      }
+    });
+  }
+  
+  // Smooth scroll for anchor links
   function setupSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const target = document.querySelector(href);
+        
         if (target) {
           target.scrollIntoView({
             behavior: 'smooth',
@@ -75,438 +181,23 @@
       });
     });
   }
-
-  // Add parallax effect to header
-  function setupParallax() {
-    const header = document.querySelector('header');
-    if (!header) return;
-
-    window.addEventListener('scroll', () => {
-      const scrolled = window.pageYOffset;
-      const rate = scrolled * 0.5;
-      header.style.transform = `translateY(${rate}px)`;
-    });
-  }
-
-  // Animate stats numbers
-  function animateStats() {
-    const statNumbers = document.querySelectorAll('.stat-number, .impact-number');
-    
-    const animateNumber = (element) => {
-      const target = element.getAttribute('data-target') || element.textContent;
-      const numericPart = parseInt(target.toString().replace(/\D/g, ''));
-      const suffix = target.toString().replace(/[\d,]/g, '');
-      
-      if (isNaN(numericPart)) return;
-      
-      let current = 0;
-      const increment = numericPart / 50;
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= numericPart) {
-          element.textContent = numericPart.toLocaleString() + suffix;
-          clearInterval(timer);
-        } else {
-          element.textContent = Math.floor(current).toLocaleString() + suffix;
-        }
-      }, 30);
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          animateNumber(entry.target);
-          observer.unobserve(entry.target);
-        }
-      });
-    });
-
-    statNumbers.forEach(stat => observer.observe(stat));
-  }
-
-  // Add interactive hover effects for project cards
-  function addProjectCardEffects() {
-    const projectCards = document.querySelectorAll('.project-card, .feature-card, .module-card');
-    
-    projectCards.forEach(card => {
-      card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-8px) scale(1.02)';
-      });
-      
-      card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0) scale(1)';
-      });
-    });
-  }
-
-  // Add progress bar animations for impact metrics
-  function animateProgressBars() {
-    const progressBars = document.querySelectorAll('[data-progress]');
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const bar = entry.target;
-          const progress = bar.getAttribute('data-progress');
-          bar.style.width = progress + '%';
-          observer.unobserve(bar);
-        }
-      });
-    }, { threshold: 0.5 });
-
-    progressBars.forEach(bar => {
-      bar.style.width = '0%';
-      bar.style.transition = 'width 1.5s ease-out';
-      observer.observe(bar);
-    });
-  }
-
-  // Add click-to-reveal sections
-  function setupRevealSections() {
-    const revealTriggers = document.querySelectorAll('[data-reveal-trigger]');
-    
-    revealTriggers.forEach(trigger => {
-      trigger.style.cursor = 'pointer';
-      trigger.addEventListener('click', function() {
-        const targetId = this.getAttribute('data-reveal-trigger');
-        const target = document.getElementById(targetId);
-        
-        if (target) {
-          target.classList.toggle('revealed');
-          const icon = this.querySelector('.reveal-icon');
-          if (icon) {
-            icon.style.transform = target.classList.contains('revealed') 
-              ? 'rotate(180deg)' 
-              : 'rotate(0deg)';
-          }
-        }
-      });
-    });
-  }
-
-  // Add floating animation to key elements
-  function addFloatingAnimation() {
-    const floatingElements = document.querySelectorAll('.floating-element');
-    
-    floatingElements.forEach((element, index) => {
-      element.style.animation = `float ${3 + index * 0.5}s ease-in-out infinite`;
-    });
-  }
-
-  // Add interactive tooltips
-  function setupTooltips() {
-    const tooltipElements = document.querySelectorAll('[data-tooltip]');
-    
-    tooltipElements.forEach(element => {
-      element.addEventListener('mouseenter', function(e) {
-        const tooltip = document.createElement('div');
-        tooltip.className = 'custom-tooltip';
-        tooltip.textContent = this.getAttribute('data-tooltip');
-        tooltip.style.position = 'absolute';
-        tooltip.style.background = 'rgba(0, 0, 0, 0.9)';
-        tooltip.style.color = 'white';
-        tooltip.style.padding = '0.5rem 1rem';
-        tooltip.style.borderRadius = '0.5rem';
-        tooltip.style.fontSize = '0.875rem';
-        tooltip.style.zIndex = '1000';
-        tooltip.style.pointerEvents = 'none';
-        tooltip.style.whiteSpace = 'nowrap';
-        
-        document.body.appendChild(tooltip);
-        
-        const rect = this.getBoundingClientRect();
-        tooltip.style.top = (rect.top - tooltip.offsetHeight - 10) + 'px';
-        tooltip.style.left = (rect.left + rect.width / 2 - tooltip.offsetWidth / 2) + 'px';
-        
-        this._tooltip = tooltip;
-      });
-      
-      element.addEventListener('mouseleave', function() {
-        if (this._tooltip) {
-          this._tooltip.remove();
-          this._tooltip = null;
-        }
-      });
-    });
-  }
-
-  // Add particle effect for celebration
-  function createParticleEffect(element) {
-    const colors = ['#2563eb', '#8b5cf6', '#22c55e', '#f59e0b'];
-    const particleCount = 30;
-    
-    for (let i = 0; i < particleCount; i++) {
-      const particle = document.createElement('div');
-      particle.style.position = 'absolute';
-      particle.style.width = '8px';
-      particle.style.height = '8px';
-      particle.style.background = colors[Math.floor(Math.random() * colors.length)];
-      particle.style.borderRadius = '50%';
-      particle.style.pointerEvents = 'none';
-      
-      const rect = element.getBoundingClientRect();
-      particle.style.left = (rect.left + rect.width / 2) + 'px';
-      particle.style.top = (rect.top + rect.height / 2) + 'px';
-      
-      document.body.appendChild(particle);
-      
-      const angle = (Math.PI * 2 * i) / particleCount;
-      const velocity = 100 + Math.random() * 100;
-      const tx = Math.cos(angle) * velocity;
-      const ty = Math.sin(angle) * velocity;
-      
-      particle.animate([
-        { transform: 'translate(0, 0) scale(1)', opacity: 1 },
-        { transform: `translate(${tx}px, ${ty}px) scale(0)`, opacity: 0 }
-      ], {
-        duration: 1000 + Math.random() * 500,
-        easing: 'cubic-bezier(0, .9, .57, 1)'
-      }).onfinish = () => particle.remove();
-    }
-  }
-
-  // Add celebration effect to high-impact metrics
-  function addCelebrationEffects() {
-    const celebrationElements = document.querySelectorAll('[data-celebrate]');
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setTimeout(() => createParticleEffect(entry.target), 500);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.8 });
-
-    celebrationElements.forEach(el => observer.observe(el));
-  }
-
-  // Add scroll to top button
-  function addScrollToTopButton() {
-    // Create button
-    const scrollBtn = document.createElement('button');
-    scrollBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    scrollBtn.className = 'scroll-to-top';
-    scrollBtn.setAttribute('aria-label', 'Scroll to top');
-    
-    // Style the button
-    scrollBtn.style.cssText = `
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--brand-navy), var(--brand-teal));
-      color: white;
-      border: none;
-      cursor: pointer;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
-      z-index: 1000;
-    `;
-    
-    document.body.appendChild(scrollBtn);
-    
-    // Show/hide button based on scroll position
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 300) {
-        scrollBtn.style.display = 'flex';
-        scrollBtn.style.animation = 'fadeInUp 0.3s ease';
-      } else {
-        scrollBtn.style.display = 'none';
-      }
-    });
-    
-    // Scroll to top on click
-    scrollBtn.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-    
-    // Hover effect
-    scrollBtn.addEventListener('mouseenter', function() {
-      this.style.transform = 'translateY(-5px) scale(1.1)';
-      this.style.boxShadow = '0 6px 20px rgba(0,0,0,0.3)';
-    });
-    
-    scrollBtn.addEventListener('mouseleave', function() {
-      this.style.transform = 'translateY(0) scale(1)';
-      this.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
-    });
-  }
-
-  // Enhance navigation links with active section highlighting
-  function enhanceNavigation() {
-    const sections = document.querySelectorAll('[id]');
-    const navLinks = document.querySelectorAll('a[href^="#"]');
-    
-    if (sections.length === 0) return;
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          navLinks.forEach(link => {
-            const href = link.getAttribute('href');
-            if (href === '#' + entry.target.id) {
-              link.style.background = 'linear-gradient(135deg, var(--accent-gold), var(--brand-teal))';
-              link.style.color = 'white';
-              link.style.transform = 'scale(1.05)';
-            } else if (link.style.background) {
-              link.style.background = '';
-              link.style.color = '';
-              link.style.transform = '';
-            }
-          });
-        }
-      });
-    }, { threshold: 0.3 });
-    
-    sections.forEach(section => observer.observe(section));
-  }
-
-  // Initialize all enhancements when DOM is ready
+  
+  // Initialize all enhancements
   function init() {
     highlightActiveNav();
     setupExternalLinks();
     animateOnScroll();
+    animateCounters();
+    setupLightbox();
     setupSmoothScroll();
-    // setupParallax(); // Commented out as it can affect readability
-    animateStats();
-    addProjectCardEffects();
-    animateProgressBars();
-    setupRevealSections();
-    addFloatingAnimation();
-    setupTooltips();
-    addCelebrationEffects();
-    addScrollToTopButton();
-    enhanceNavigation();
-    setupProjectViewToggle();
-    setupProjectFilters();
+    
+    console.log('Portfolio enhancements loaded successfully!');
   }
-
-  // Setup project view toggle (grid/list/timeline)
-  function setupProjectViewToggle() {
-    const viewButtons = document.querySelectorAll('.view-btn');
-    const projectsGrid = document.querySelector('.projects-grid');
-    
-    if (!viewButtons.length || !projectsGrid) return;
-    
-    viewButtons.forEach(btn => {
-      btn.addEventListener('click', function() {
-        // Remove active class from all buttons
-        viewButtons.forEach(b => b.classList.remove('active'));
-        
-        // Add active class to clicked button
-        this.classList.add('active');
-        
-        // Get view type
-        const viewType = this.getAttribute('data-view');
-        
-        // Remove all view classes
-        projectsGrid.classList.remove('list-view', 'timeline-view');
-        
-        // Add appropriate view class
-        if (viewType === 'list') {
-          projectsGrid.classList.add('list-view');
-        } else if (viewType === 'timeline') {
-          projectsGrid.classList.add('timeline-view');
-        }
-        
-        // Add animation
-        const cards = projectsGrid.querySelectorAll('.project-card-enhanced');
-        cards.forEach((card, index) => {
-          card.style.animation = 'none';
-          setTimeout(() => {
-            card.style.animation = `fadeInUp 0.5s ease-out ${index * 0.1}s backwards`;
-          }, 10);
-        });
-      });
-    });
-  }
-
-  // Setup project filters
-  function setupProjectFilters() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card-enhanced');
-    const categoryHeaders = document.querySelectorAll('.category-header');
-    
-    if (!filterButtons.length) return;
-    
-    filterButtons.forEach(btn => {
-      btn.addEventListener('click', function() {
-        // Remove active class from all buttons
-        filterButtons.forEach(b => b.classList.remove('active'));
-        
-        // Add active class to clicked button
-        this.classList.add('active');
-        
-        // Get filter type
-        const filterType = this.getAttribute('data-filter');
-        
-        // Filter projects
-        if (filterType === 'all') {
-          // Show all
-          categoryHeaders.forEach(header => {
-            header.style.display = 'block';
-            const nextGrid = header.nextElementSibling;
-            if (nextGrid && nextGrid.classList.contains('projects-grid')) {
-              nextGrid.style.display = 'grid';
-            }
-          });
-          projectCards.forEach(card => {
-            card.classList.remove('filtered-out');
-            card.classList.add('filtered-in');
-            card.style.display = 'flex';
-          });
-        } else {
-          // Filter by category
-          categoryHeaders.forEach(header => {
-            const categoryId = header.getAttribute('id');
-            const shouldShow = matchesFilter(categoryId, filterType);
-            
-            header.style.display = shouldShow ? 'block' : 'none';
-            const nextGrid = header.nextElementSibling;
-            if (nextGrid && nextGrid.classList.contains('projects-grid')) {
-              nextGrid.style.display = shouldShow ? 'grid' : 'none';
-            }
-          });
-        }
-        
-        // Smooth scroll to first visible section
-        setTimeout(() => {
-          const firstVisible = Array.from(categoryHeaders).find(h => h.style.display !== 'none');
-          if (firstVisible) {
-            firstVisible.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        }, 100);
-      });
-    });
-  }
-
-  // Helper function to match filter with category
-  function matchesFilter(categoryId, filterType) {
-    const filterMap = {
-      'ai': ['ai-innovation'],
-      'innovation': ['innovation-tech', 'ai-innovation'],
-      'education': ['education'],
-      'community': ['community']
-    };
-    
-    return filterMap[filterType] && filterMap[filterType].includes(categoryId);
-  }
-
-  // Run initialization
+  
+  // Run when DOM is ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
     init();
   }
-
 })();
