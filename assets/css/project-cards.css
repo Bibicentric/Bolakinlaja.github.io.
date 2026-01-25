@@ -254,8 +254,8 @@
   .project-image-container img,
   .metric-badge,
   * {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
+    animation-duration: 0s !important;
+    transition-duration: 0s !important;
   }
 }
 

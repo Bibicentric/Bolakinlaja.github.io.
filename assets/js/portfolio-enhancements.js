@@ -240,7 +240,7 @@
     
     // Update progress on scroll
     window.addEventListener('scroll', () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
       const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const progress = (scrollTop / scrollHeight) * 100;
       
@@ -349,10 +349,10 @@
     const images = document.querySelectorAll('.project-image-container img, .hero img');
     
     window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY;
       images.forEach(img => {
         const rect = img.getBoundingClientRect();
         if (rect.top < window.innerHeight && rect.bottom > 0) {
-          const scrolled = window.pageYOffset;
           const rate = scrolled * 0.3;
           img.style.transform = `translateY(${rate * 0.1}px)`;
         }
@@ -373,9 +373,6 @@
     setupRippleEffect();
     setupProjectFilters();
     setupParallaxEffect();
-    
-    console.log('Portfolio enhancements loaded successfully!');
-    console.log('✨ Interactive features activated: 3D tilt, scroll progress, ripple effects, parallax');
   }
   
   // Run when DOM is ready
