@@ -258,3 +258,64 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Photo Gallery Grid Styles */
+.photo-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.photo-card {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: pointer;
+  position: relative;
+  background: white;
+}
+
+.photo-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.photo-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.5s ease;
+}
+
+.photo-card:hover img {
+  transform: scale(1.15);
+  filter: brightness(1.1);
+}
+
+.photo-card-content {
+  padding: 1rem;
+  background: white;
+  position: relative;
+  z-index: 2;
+}
+
+.photo-card-content h4 {
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.photo-card:hover .photo-card-content h4 {
+  color: var(--accent-color);
+}
+
+.photo-card-content p {
+  margin: 0.5rem 0 0;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
