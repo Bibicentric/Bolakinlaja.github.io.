@@ -95,7 +95,7 @@
   padding: 2px;
   background: linear-gradient(135deg, var(--featured-gold), var(--featured-teal));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
+  -webkit-mask-composite: exclude;
   mask-composite: exclude;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -305,4 +305,16 @@
   .projects-grid-featured {
     max-width: 1600px;
   }
+}
+
+/* Footer */
+.featured-footer {
+  text-align: center;
+  padding: 2rem;
+  background: var(--featured-navy);
+  color: var(--featured-white);
+}
+
+.featured-footer p {
+  margin: 0;
 }
