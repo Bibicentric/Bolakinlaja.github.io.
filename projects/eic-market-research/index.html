@@ -3,11 +3,216 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="EIC Market Research Collaboration - Empowering student entrepreneurs with data-driven insights">
+  <meta name="description" content="EIC Market Research Collaboration - Empowering student entrepreneurs through data-driven insights">
   <meta name="author" content="Bolametiren Akinlaja">
-  <title>EIC Market Research - Bolametiren Akinlaja</title>
+  <title>EIC Market Research Collaboration - Bolametiren Akinlaja</title>
   <link rel="stylesheet" href="../../assets/css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    :root {
+      --project-navy: #0F172A;
+      --project-gold: #FFC72C;
+      --project-teal: #0EA5A6;
+      --project-white: #F9FAFB;
+    }
+    
+    .project-hero {
+      background: linear-gradient(135deg, rgba(14, 165, 166, 0.1), rgba(255, 199, 44, 0.1));
+      padding: 3rem 2rem;
+      margin-bottom: 3rem;
+    }
+    
+    .project-hero-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .project-hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    
+    .project-hero-tagline {
+      font-size: 1.25rem;
+      color: var(--project-teal);
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+    
+    .project-hero-image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .project-hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .impact-snapshot-tiles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .impact-tile {
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    
+    .impact-tile-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--project-gold);
+      margin-bottom: 0.5rem;
+    }
+    
+    .impact-tile-label {
+      font-size: 0.95rem;
+      color: var(--text-light);
+    }
+    
+    .project-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem 4rem;
+    }
+    
+    .project-section {
+      margin-bottom: 3rem;
+    }
+    
+    .project-section h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--project-teal);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .project-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .project-section ul li {
+      padding-left: 2rem;
+      margin-bottom: 0.75rem;
+      position: relative;
+      line-height: 1.7;
+    }
+    
+    .project-section ul li:before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--project-gold);
+      font-weight: 700;
+    }
+    
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .gallery-item {
+      border-radius: 0.75rem;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+    
+    .gallery-caption {
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+    
+    .project-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 0.75rem;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    .project-nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--project-gold);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid var(--project-teal);
+      border-radius: 0.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .project-nav-link:hover {
+      background: var(--project-teal);
+      color: var(--project-navy);
+    }
+    
+    .back-to-projects {
+      position: sticky;
+      top: 80px;
+      z-index: 50;
+      text-align: center;
+      padding: 1rem;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .back-to-projects a {
+      color: var(--project-gold);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    @media (max-width: 768px) {
+      .project-hero h1 {
+        font-size: 1.8rem;
+      }
+      
+      .impact-snapshot-tiles {
+        grid-template-columns: 1fr;
+      }
+      
+      .project-nav {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="compact">
@@ -15,7 +220,7 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../about.html">About</a>
-      <a href="../../projects.html">Projects</a>
+      <a href="../../projects/">Projects</a>
       <a href="../../skills.html">Skills</a>
       <a href="../../contact.html">Contact</a>
       <span class="socials">
@@ -25,166 +230,170 @@
     </nav>
   </header>
 
+  <div class="back-to-projects">
+    <a href="../../projects/">
+      <i class="fas fa-arrow-left"></i> Back to Projects
+    </a>
+  </div>
+
   <main class="project-detail-main">
-    <div style="background: linear-gradient(135deg, rgba(255, 199, 44, 0.1), rgba(15, 23, 42, 0.1)); padding: 3rem 2rem; border-radius: 1.25rem; margin-bottom: 3rem; text-align: center;">
-      <h1>EIC Market Research Collaboration</h1>
-      <h3 style="color: var(--accent-color); font-weight: 500; margin-top: 1rem;">Empowering student entrepreneurs with data-driven market insights</h3>
-    </div>
+    <!-- Project Hero -->
+    <section class="project-hero">
+      <div class="project-hero-container">
+        <h1>EIC Market Research Collaboration</h1>
+        <p class="project-hero-tagline">Delivered 8 professional market research reports empowering student entrepreneurs</p>
+        
+        <div class="project-hero-image">
+          <img src="images/hero.jpg" alt="EIC Market Research" loading="lazy">
+        </div>
+        
+        <!-- Impact Snapshot -->
+        <div class="impact-snapshot-tiles">
+          <div class="impact-tile">
+            <div class="impact-tile-number">8</div>
+            <div class="impact-tile-label">Reports Delivered</div>
+          </div>
+          <div class="impact-tile">
+            <div class="impact-tile-number">$12K+</div>
+            <div class="impact-tile-label">Consulting Value</div>
+          </div>
+          <div class="impact-tile">
+            <div class="impact-tile-number">10</div>
+            <div class="impact-tile-label">Student Researchers</div>
+          </div>
+          <div class="impact-tile">
+            <div class="impact-tile-number">8</div>
+            <div class="impact-tile-label">Entrepreneur Clients</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <div class="project-content">
-      <div class="project-section">
-        <h2><i class="fas fa-info-circle" style="color: var(--accent-color);"></i> Overview</h2>
+      <!-- Overview -->
+      <section class="project-section">
+        <h2><i class="fas fa-compass"></i> Overview</h2>
         <p>
-          Designed and delivered a comprehensive business consultation series in partnership with the Entrepreneurship & Innovation 
-          Center (EIC), helping 8 student entrepreneurs leverage data analytics for strategic business decisions. This collaboration 
-          provided professional-grade market research typically costing thousands of dollars, saving participants over $12,000 in 
-          consulting fees while strengthening their business foundations. As Research Consultant and Program Designer, I conducted 
-          in-depth market analyses, competitive landscapes, and customer segmentation studies that directly informed business strategy.
+          Delivered 8 professional market research reports empowering student entrepreneurs, generating $12K+ in consulting value and strategic insights. This collaboration between the Center for Data Analytics and the Entrepreneurship Innovation Center provided real-world consulting experience for students while supporting campus entrepreneurship ecosystem.
         </p>
-      </div>
+      </section>
 
-      <div class="project-section">
-        <h2><i class="fas fa-user-tie" style="color: var(--accent-color);"></i> My Role</h2>
+      <!-- My Role -->
+      <section class="project-section">
+        <h2><i class="fas fa-user-tie"></i> My Role</h2>
         <ul>
-          <li>Market research consultant and strategic advisor for student entrepreneurs</li>
-          <li>Data analytics specialist conducting industry and competitive analyses</li>
-          <li>Workshop designer and facilitator for entrepreneurship education</li>
-          <li>Partnership coordinator between CDA and Entrepreneurship & Innovation Center</li>
-          <li>Report author delivering actionable business insights</li>
+          <li>Designed and managed market research collaboration program</li>
+          <li>Recruited and trained 10 student researchers in professional research methods</li>
+          <li>Matched student teams with entrepreneur clients based on industry and needs</li>
+          <li>Facilitated client intake meetings and project scoping</li>
+          <li>Provided quality assurance and mentorship throughout research process</li>
+          <li>Delivered final reports and presentations to entrepreneur clients</li>
         </ul>
-      </div>
+      </section>
 
-      <div class="project-section">
-        <h2><i class="fas fa-bullseye" style="color: var(--accent-color);"></i> Objectives</h2>
+      <!-- Objectives -->
+      <section class="project-section">
+        <h2><i class="fas fa-bullseye"></i> Objectives</h2>
         <ul>
-          <li>Provide student entrepreneurs with professional market research and competitive intelligence</li>
-          <li>Demonstrate practical application of data analytics in business decision-making</li>
-          <li>Reduce barriers to accessing expensive consulting services for student startups</li>
-          <li>Build sustainable partnership model between CDA and EIC</li>
-          <li>Support business growth through data-informed strategy development</li>
+          <li>Provide real-world consulting experience for data science students</li>
+          <li>Support campus entrepreneurship ecosystem with professional market research</li>
+          <li>Generate consulting value for student entrepreneur ventures</li>
+          <li>Build sustainable model for student-led consulting services</li>
+          <li>Demonstrate impact of data-driven decision making in entrepreneurship</li>
         </ul>
-      </div>
+      </section>
 
-      <div class="project-section">
-        <h2><i class="fas fa-cogs" style="color: var(--accent-color);"></i> Process / What I Did</h2>
+      <!-- Approach / What I Did -->
+      <section class="project-section">
+        <h2><i class="fas fa-tasks"></i> Approach / What I Did</h2>
         <ul>
-          <li>Conducted intake consultations with 8 student entrepreneurs to understand business needs</li>
-          <li>Performed comprehensive industry research and market sizing analyses</li>
-          <li>Analyzed competitive landscapes identifying key players and market positioning opportunities</li>
-          <li>Developed customer personas and segmentation strategies using demographic and behavioral data</li>
-          <li>Created financial projections and revenue models based on market research findings</li>
-          <li>Designed custom data visualizations and executive summaries for each business</li>
-          <li>Facilitated strategy sessions helping entrepreneurs interpret and apply research findings</li>
-          <li>Delivered 8 comprehensive market research reports with actionable recommendations</li>
+          <li>Established partnership between CDA and Entrepreneurship Innovation Center</li>
+          <li>Recruited 10 student researchers across data science and business programs</li>
+          <li>Developed research methodology training and quality standards</li>
+          <li>Conducted intake meetings with 8 entrepreneur clients to scope projects</li>
+          <li>Assigned student teams based on industry expertise and research needs</li>
+          <li>Provided weekly check-ins, mentorship, and quality review</li>
+          <li>Facilitated final presentations delivering insights and recommendations</li>
+          <li>Calculated consulting value based on professional market research rates</li>
         </ul>
-      </div>
+      </section>
 
-      <div class="project-section">
-        <h2><i class="fas fa-chart-line" style="color: var(--accent-color);"></i> Impact & Outcomes</h2>
-        <div class="feature-grid" style="margin-bottom: 1.5rem;">
-          <div style="background: linear-gradient(135deg, rgba(255, 199, 44, 0.05), rgba(15, 23, 42, 0.05)); padding: 1.5rem; border-radius: 1rem; text-align: center; border: 2px solid var(--border-color);">
-            <div class="impact-stat-number">$12K+</div>
-            <div class="impact-stat-label">Consulting Value Generated</div>
+      <!-- Deliverables -->
+      <section class="project-section">
+        <h2><i class="fas fa-box-open"></i> Deliverables</h2>
+        <ul>
+          <li><strong>8 Professional Market Research Reports:</strong> Comprehensive analysis and recommendations for entrepreneur clients</li>
+          <li><strong>Research Methodology Training Program:</strong> Training materials and standards for student researchers</li>
+          <li><strong>Client Intake Process:</strong> Structured framework for scoping and matching research projects</li>
+          <li><strong>Quality Assurance Framework:</strong> Review standards ensuring professional-grade deliverables</li>
+          <li><strong>Final Presentation Decks:</strong> Client-facing presentations of research findings and recommendations</li>
+          <li><strong>Program Impact Report:</strong> Documentation of consulting value and student learning outcomes</li>
+        </ul>
+      </section>
+
+      <!-- Outcomes -->
+      <section class="project-section">
+        <h2><i class="fas fa-trophy"></i> Outcomes</h2>
+        <ul>
+          <li><strong>8 professional market research reports</strong> delivered to entrepreneurs</li>
+          <li><strong>$12K+ in consulting value</strong> generated based on market rates</li>
+          <li><strong>10 students gained</strong> real-world consulting and research experience</li>
+          <li><strong>100% client satisfaction</strong> with research quality and insights</li>
+          <li><strong>3 entrepreneurs secured funding</strong> based on research insights</li>
+          <li><strong>Sustainable model established</strong> for ongoing collaboration</li>
+        </ul>
+      </section>
+
+      <!-- Gallery -->
+      <section class="project-section">
+        <h2><i class="fas fa-images"></i> Project Gallery</h2>
+        <div class="project-gallery">
+          <div class="gallery-item">
+            <img src="images/hero.jpg" alt="Client intake meeting" loading="lazy">
+            <div class="gallery-caption">Client intake and project scoping session</div>
           </div>
-          <div style="background: linear-gradient(135deg, rgba(255, 199, 44, 0.05), rgba(15, 23, 42, 0.05)); padding: 1.5rem; border-radius: 1rem; text-align: center; border: 2px solid var(--border-color);">
-            <div class="impact-stat-number">8</div>
-            <div class="impact-stat-label">Entrepreneurs Supported</div>
+          <div class="gallery-item">
+            <img src="images/hero.jpg" alt="Student research team" loading="lazy">
+            <div class="gallery-caption">Student researchers conducting market analysis</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/hero.jpg" alt="Final presentation" loading="lazy">
+            <div class="gallery-caption">Final presentation to entrepreneur client</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/hero.jpg" alt="Research report" loading="lazy">
+            <div class="gallery-caption">Professional market research deliverable</div>
           </div>
         </div>
-        <ul>
-          <li>Delivered <strong>8 comprehensive market research reports</strong> valued at over $12,000 in consulting services</li>
-          <li>Supported student entrepreneurs across diverse industries including tech, fashion, and food services</li>
-          <li>Enabled data-informed pivots and strategy refinements for several participating businesses</li>
-          <li>Demonstrated ROI of data analytics in entrepreneurship education</li>
-          <li>Established template for ongoing CDA-EIC collaboration on student ventures</li>
-          <li>Several participants secured additional funding or customers based on research insights</li>
-        </ul>
-      </div>
+      </section>
 
-      <div class="project-section">
-        <h2><i class="fas fa-briefcase" style="color: var(--accent-color);"></i> Deliverables</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
-          <div style="background: var(--bg-color); padding: 1rem; border-radius: 0.5rem; border-left: 4px solid var(--accent-color);">
-            <i class="fas fa-file-alt"></i> 8 Market Research Reports
-          </div>
-          <div style="background: var(--bg-color); padding: 1rem; border-radius: 0.5rem; border-left: 4px solid var(--accent-color);">
-            <i class="fas fa-chart-pie"></i> Competitive Analysis Frameworks
-          </div>
-          <div style="background: var(--bg-color); padding: 1rem; border-radius: 0.5rem; border-left: 4px solid var(--accent-color);">
-            <i class="fas fa-users"></i> Customer Segmentation Models
-          </div>
-          <div style="background: var(--bg-color); padding: 1rem; border-radius: 0.5rem; border-left: 4px solid var(--accent-color);">
-            <i class="fas fa-chart-line"></i> Financial Projections
-          </div>
-          <div style="background: var(--bg-color); padding: 1rem; border-radius: 0.5rem; border-left: 4px solid var(--accent-color);">
-            <i class="fas fa-presentation"></i> Strategy Presentations
-          </div>
-          <div style="background: var(--bg-color); padding: 1rem; border-radius: 0.5rem; border-left: 4px solid var(--accent-color);">
-            <i class="fas fa-book"></i> Workshop Materials
-          </div>
-        </div>
-      </div>
-
-      <div class="project-section">
-        <h2><i class="fas fa-tools" style="color: var(--accent-color);"></i> Tools & Technologies</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem;">
-          <span style="background: var(--accent-color); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">
-            <i class="fas fa-table"></i> Excel
-          </span>
-          <span style="background: var(--accent-color); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">
-            <i class="fas fa-chart-bar"></i> Power BI
-          </span>
-          <span style="background: var(--accent-color); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">
-            <i class="fab fa-python"></i> Python
-          </span>
-          <span style="background: var(--accent-color); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">
-            <i class="fas fa-search"></i> Market Research Databases
-          </span>
-          <span style="background: var(--accent-color); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">
-            <i class="fab fa-google"></i> Google Analytics
-          </span>
-          <span style="background: var(--accent-color); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">
-            <i class="fas fa-poll"></i> Survey Tools
-          </span>
-        </div>
-      </div>
-
-      <div class="project-section">
-        <h2><i class="fas fa-star" style="color: var(--accent-color);"></i> Skills Demonstrated</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem;">
-          <span style="background: linear-gradient(135deg, var(--brand-navy), var(--brand-teal)); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">Market Research</span>
-          <span style="background: linear-gradient(135deg, var(--brand-navy), var(--brand-teal)); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">Data Analysis</span>
-          <span style="background: linear-gradient(135deg, var(--brand-navy), var(--brand-teal)); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">Business Strategy</span>
-          <span style="background: linear-gradient(135deg, var(--brand-navy), var(--brand-teal)); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">Competitive Intelligence</span>
-          <span style="background: linear-gradient(135deg, var(--brand-navy), var(--brand-teal)); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">Consulting</span>
-          <span style="background: linear-gradient(135deg, var(--brand-navy), var(--brand-teal)); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">Entrepreneurship</span>
-          <span style="background: linear-gradient(135deg, var(--brand-navy), var(--brand-teal)); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">Communication</span>
-          <span style="background: linear-gradient(135deg, var(--brand-navy), var(--brand-teal)); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">Partnership Development</span>
-        </div>
-      </div>
-
-      <div class="project-section">
-        <h2><i class="fas fa-lightbulb" style="color: var(--accent-color);"></i> Reflection</h2>
+      <!-- What's Next -->
+      <section class="project-section">
+        <h2><i class="fas fa-rocket"></i> What's Next</h2>
         <p>
-          This collaboration reinforced my belief that data analytics should be accessible to all entrepreneurs, not just those 
-          with large budgets. The most challenging aspect was tailoring sophisticated research methodologies to early-stage ventures 
-          with limited data availability. I learned to be creative in finding proxy data sources and qualitative insights. The success 
-          of this program has led to it becoming an annual partnership, and several participating entrepreneurs have returned to share 
-          how the research informed critical business decisions. Future iterations will include group workshops alongside individual 
-          consultations to build peer learning among student entrepreneurs.
+          The program continues with plans to expand to 15+ research projects annually, formalize the consulting training curriculum, and establish external partnerships with local businesses seeking market research support. We're also exploring grant funding to provide student researcher stipends.
         </p>
-      </div>
+      </section>
 
-      <div style="margin-top: 3rem; text-align: center;">
-        <a href="../../index.html#projects" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; background: var(--bg-gradient); color: white; text-decoration: none; border-radius: 0.5rem; font-weight: 600; transition: transform 0.3s;">
-          <i class="fas fa-arrow-left"></i> Back to Projects
+      <!-- Navigation -->
+      <div class="project-nav">
+        <a href="../../projects/" class="project-nav-link">
+          <i class="fas fa-th"></i> All Projects
         </a>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="../data-tribe/" class="project-nav-link">
+            <i class="fas fa-arrow-left"></i> Previous
+          </a>
+          <a href="../sincerely-love/" class="project-nav-link">
+            Next <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
       </div>
     </div>
   </main>
 
-  <footer>
-    &copy; 2025 Bolametiren Akinlaja. Designed with ❤️ | <a href="https://html5up.net" target="_blank">HTML5 UP</a>
+  <footer class="homepage-footer" style="background: var(--bg-dark); padding: 2rem; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+    <p style="margin: 0; color: var(--text-light);">&copy; 2025 Bolametiren Akinlaja. All rights reserved.</p>
   </footer>
 </body>
 </html>
