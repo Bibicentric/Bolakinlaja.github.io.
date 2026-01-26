@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bolametiren Akinlaja - Program Manager, Data & Innovation Strategist. Transforming data into opportunity and empowering people to thrive in a digital-first world.">
+  <meta name="keywords" content="Program Manager, Data Analytics, Innovation Strategy, Workforce Development, Portfolio">
+  <meta name="author" content="Bolametiren Akinlaja">
+  <meta property="og:title" content="Bolametiren Akinlaja - Portfolio">
+  <meta property="og:description" content="Program Manager & Data Innovation Strategist - Empowering people and institutions through data-driven programs.">
+  <meta property="og:type" content="website">
+  <title>Bolametiren Akinlaja - Portfolio</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/project-cards.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <script defer src="assets/js/portfolio-enhancements.js"></script>
+</head>
+<body>
+  <header>
+    <img src="images/Image (14).jpg" alt="Bolametiren Akinlaja">
+    <h1>Bolametiren Akinlaja</h1>
+    <p>Building scalable data programs that drive institutional impact, workforce readiness, and sustainable innovation ecosystems</p>
+    <p>Program Manager | Strategic Data & AI Leader | Workforce Pipeline Architect</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">Leadership</a>
+      <a href="projects.html">Portfolio</a>
+      <a href="skills.html">Capabilities</a>
+      <a href="contact.html">Connect</a>
+      <span class="socials">
+        <a href="https://www.linkedin.com/in/bolametiren-akinlaja-497602213/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Bibicentric" title="GitHub"><i class="fab fa-github"></i></a>
+      </span>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Scalable Programs Driving Institutional Excellence & Workforce Innovation</h2>
+    <p style="font-size: 1.2rem; font-weight: 500; max-width: 950px; margin: 0 auto 2rem; line-height: 1.7;">
+      Program Manager at Bowie State University's Center for Data Analytics, leading evidence-based initiatives that advance institutional mission, demonstrate measurable outcomes for federal compliance and reporting, and create sustainable talent pipelines aligned with industry workforce needs.
+    </p>
+    <div class="hero-highlights">
+      <div class="highlight-item">
+        <i class="fas fa-university"></i>
+        <span>Institutional Impact & Mission Alignment</span>
+      </div>
+      <div class="highlight-item">
+        <i class="fas fa-chart-bar"></i>
+        <span>Evidence-Based Program Design</span>
+      </div>
+      <div class="highlight-item">
+        <i class="fas fa-handshake"></i>
+        <span>Industry-Academic Partnerships</span>
+      </div>
+      <div class="highlight-item">
+        <i class="fas fa-users-cog"></i>
+        <span>Scalable Workforce Solutions</span>
+      </div>
+    </div>
+    <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap;">
+      <a href="#strategic-impact" class="cta-button">View Program Outcomes <i class="fas fa-arrow-right"></i></a>
+      <a href="contact.html" class="cta-button" style="background: white; color: var(--primary-color); border: 2px solid var(--primary-color);">Explore Partnerships <i class="fas fa-handshake"></i></a>
+    </div>
+
+  </section>
+
+  <!-- Strategic Impact Overview -->
+  <section id="strategic-impact" style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(139, 92, 246, 0.05)); padding: 4rem 2rem; margin: 2rem 0;">
+    <div style="max-width: 1400px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <h2 style="font-size: 2.5rem; font-weight: 800; color: var(--text-color); margin-bottom: 1rem;">Program Outcomes & Institutional Impact</h2>
+        <p style="font-size: 1.2rem; color: var(--text-light); max-width: 850px; margin: 0 auto; line-height: 1.7;">
+          Evidence-based initiatives advancing institutional mission, generating measurable outcomes for stakeholder accountability, and creating scalable models for replication and sustainability.
+        </p>
+      </div>
+
+      <!-- Key Value Propositions -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+        <div style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: var(--shadow-md); border-left: 4px solid var(--primary-color);">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <i class="fas fa-graduation-cap" style="font-size: 1.75rem; color: white;"></i>
+            </div>
+            <h3 style="font-size: 1.3rem; color: var(--text-color); margin: 0;">Academic Excellence</h3>
+          </div>
+          <p style="color: var(--text-light); line-height: 1.7; margin-bottom: 1rem;">
+            <strong>15+ evidence-based programs</strong> supporting <strong>500+ students</strong> with documented learning outcomes, degree progression, and career placement aligned with institutional mission and HBCU excellence goals.
+          </p>
+          <div style="background: rgba(37, 99, 235, 0.05); padding: 0.75rem; border-radius: 0.5rem; margin-top: 1rem;">
+            <p style="margin: 0; font-size: 0.9rem; color: var(--text-color);"><strong>For Provosts:</strong> Cross-college collaboration, enhanced retention metrics, national conference presentations</p>
+          </div>
+        </div>
+
+        <div style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: var(--shadow-md); border-left: 4px solid var(--accent-color);">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--accent-color), var(--accent-pink)); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <i class="fas fa-file-contract" style="font-size: 1.75rem; color: white;"></i>
+            </div>
+            <h3 style="font-size: 1.3rem; color: var(--text-color); margin: 0;">Grant-Fundable Models</h3>
+          </div>
+          <p style="color: var(--text-light); line-height: 1.7; margin-bottom: 1rem;">
+            <strong>$387K+ in documented value</strong> through externally funded initiatives with clear evaluation frameworks, participant tracking systems, and outcome reporting aligned with federal compliance standards (NSF, DOL).
+          </p>
+          <div style="background: rgba(124, 58, 237, 0.05); padding: 0.75rem; border-radius: 0.5rem; margin-top: 1rem;">
+            <p style="margin: 0; font-size: 0.9rem; color: var(--text-color);"><strong>For Grant Officers:</strong> IRB-compliant data collection, quarterly reporting, sustainability plans, cost-per-participant analysis</p>
+          </div>
+        </div>
+
+        <div style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: var(--shadow-md); border-left: 4px solid var(--accent-gold);">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-light)); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <i class="fas fa-industry" style="font-size: 1.75rem; color: var(--brand-navy);"></i>
+            </div>
+            <h3 style="font-size: 1.3rem; color: var(--text-color); margin: 0;">Industry-Ready Talent</h3>
+          </div>
+          <p style="color: var(--text-light); line-height: 1.7; margin-bottom: 1rem;">
+            <strong>10+ corporate partnerships</strong> (T-Mobile, AWS, HPE, Truist, Northrop Grumman) with <strong>79% certification rate</strong>, creating qualified candidate pipelines and reducing employer time-to-productivity.
+          </p>
+          <div style="background: rgba(245, 158, 11, 0.05); padding: 0.75rem; border-radius: 0.5rem; margin-top: 1rem;">
+            <p style="margin: 0; font-size: 0.9rem; color: var(--text-color);"><strong>For Industry Partners:</strong> Pre-vetted talent pools, customizable curriculum alignment, internship-to-hire pathways, employer branding opportunities</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Credibility Statement -->
+      <div style="background: white; padding: 2.5rem; border-radius: 1rem; box-shadow: var(--shadow-lg); border: 2px solid var(--primary-color);">
+        <div style="text-align: center; margin-bottom: 1.5rem;">
+          <i class="fas fa-shield-alt" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+          <h3 style="font-size: 1.5rem; color: var(--text-color); margin: 0;">Transparency, Accountability & Scalability</h3>
+        </div>
+        <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-color); text-align: center; max-width: 900px; margin: 0 auto;">
+          All programs feature <strong>documented evaluation plans</strong>, <strong>participant consent protocols</strong>, <strong>outcome tracking systems</strong>, and <strong>replication frameworks</strong>. Designed for multi-year sustainability with clear pathways for institutional adoption, external funding, and partnership scaling.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section id="stats">
+    <div class="section-title">Impact & Achievements</div>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">500+</div>
+        <div class="stat-label">People Impacted</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">15+</div>
+        <div class="stat-label">Projects Led</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">10+</div>
+        <div class="stat-label">Strategic Partnerships</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">6+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+       <div class="stat-card">
+        <div class="stat-number">$387K+</div>
+        <div class="stat-label">Funding & Value Generated</div>
+    </div>
+  </section>
+
+  <!-- Vision 2026: Scalable Growth Strategy -->
+  <section style="padding: 4rem 2rem; background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(139, 92, 246, 0.05)); margin: 2rem 0;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <div style="display: inline-block; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); color: white; padding: 0.5rem 1.5rem; border-radius: 2rem; font-size: 0.85rem; font-weight: 700; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px;">
+          Institutional Roadmap
+        </div>
+        <h2 style="font-size: 2.5rem; font-weight: 800; color: var(--text-color); margin-bottom: 1rem;">Vision 2026: Scaling Evidence-Based Models</h2>
+        <p style="font-size: 1.15rem; color: var(--text-light); max-width: 850px; margin: 0 auto; line-height: 1.7;">
+          Building on proven outcomes to create replicable, sustainable frameworks that advance institutional priorities, secure competitive funding, and deliver qualified talent pipelines at scale.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+        <!-- Future Initiative 1 -->
+        <div style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: var(--shadow-md); border-top: 4px solid var(--primary-color);">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <i class="fas fa-university" style="font-size: 1.5rem; color: white;"></i>
+            </div>
+            <h3 style="font-size: 1.3rem; color: var(--text-color); margin: 0;">HBCU Consortium Model</h3>
+          </div>
+          <p style="color: var(--text-light); line-height: 1.7; margin-bottom: 1rem;">
+            <strong>Institutional Benefit:</strong> Transform CDA Match into a replicable consortium framework, positioning institution as lead convener with shared faculty resources, cross-institutional student mobility, and joint grant applications.
+          </p>
+          <p style="color: var(--text-light); line-height: 1.7; margin-bottom: 1rem;">
+            <strong>Funding Opportunity:</strong> NSF INCLUDES, DOL TAACCCT, foundation grants for collaborative models ($1-3M range).
+          </p>
+          <p style="color: var(--text-light); line-height: 1.7; margin-bottom: 1rem;">
+            <strong>Industry Value:</strong> Access to 500+ pre-trained candidates across 10 institutions with standardized competencies.
+          </p>
+          <div style="background: rgba(37, 99, 235, 0.08); padding: 1rem; border-radius: 0.5rem; border-left: 3px solid var(--primary-color); margin-top: 1rem;">
+            <p style="margin: 0; font-size: 0.9rem; color: var(--text-color);"><strong>2026 Target:</strong> 10 HBCU partners | 500+ students | $2M external funding</p>
+          </div>
+        </div>
+
+        <!-- Future Initiative 2 -->
+        <div style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: var(--shadow-md); border-top: 4px solid var(--accent-color);">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--accent-color), var(--accent-pink)); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <i class="fas fa-handshake" style="font-size: 1.5rem; color: white;"></i>
+            </div>
+            <h3 style="font-size: 1.3rem; color: var(--text-color); margin: 0;">Corporate Training Academies</h3>
+          </div>
+          <p style="color: var(--text-light); line-height: 1.7; margin-bottom: 1rem;">
+            <strong>Institutional Benefit:</strong> Multi-year corporate partnerships with guaranteed funding, faculty professional development, and equipment/software donations (T-Mobile, AWS models).
+          </p>
+          <p style="color: var(--text-light); line-height: 1.7; margin-bottom: 1rem;">
+            <strong>Sustainability Model:</strong> 3-5 year MOUs with renewal clauses, creating predictable revenue and enrollment pipelines.
+          </p>
+          <p style="color: var(--text-light); line-height: 1.7; margin-bottom: 1rem;">
+            <strong>Industry Value:</strong> Co-designed curriculum, direct recruitment pathways, reduced training costs ($5-10K savings per hire).
+          </p>
+          <div style="background: rgba(124, 58, 237, 0.08); padding: 1rem; border-radius: 0.5rem; border-left: 3px solid var(--accent-color); margin-top: 1rem;">
+            <p style="margin: 0; font-size: 0.9rem; color: var(--text-color);"><strong>2026 Target:</strong> 3 corporate academies | 200+ certifications | $500K annual revenue</p>
+          </div>
+        </div>
+
+        <!-- Future Initiative 3 -->
+        <div style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: var(--shadow-md); border-top: 4px solid var(--accent-gold);">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-light)); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <i class="fas fa-flask" style="font-size: 1.5rem; color: var(--brand-navy);"></i>
+            </div>
+            <h3 style="font-size: 1.3rem; color: var(--text-color); margin: 0;">AI Research Lab Network</h3>
+          </div>
+          <p style="color: var(--text-light); line-height: 1.7; margin-bottom: 1rem;">
+            <strong>Institutional Benefit:</strong> Enhance research profile with multi-institutional AI research center, elevating R2 aspirations and doctoral program development.
+          </p>
+          <p style="color: var(--text-light); line-height: 1.7; margin-bottom: 1rem;">
+            <strong>Grant Alignment:</strong> NSF CISE, DOE AI institutes, NIH BRIDGE programs with documented preliminary data from pilot projects.
+          </p>
+          <p style="color: var(--text-light); line-height: 1.7; margin-bottom: 1rem;">
+            <strong>Industry Value:</strong> Applied research partnerships, student capstone projects addressing real business problems, IP development opportunities.
+          </p>
+          <div style="background: rgba(245, 158, 11, 0.08); padding: 1rem; border-radius: 0.5rem; border-left: 3px solid var(--accent-gold); margin-top: 1rem;">
+            <p style="margin: 0; font-size: 0.9rem; color: var(--text-color);"><strong>2026 Target:</strong> 5 partner labs | $2M research funding | 50+ student projects</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Implementation Framework -->
+      <div style="background: white; padding: 2.5rem; border-radius: 1rem; box-shadow: var(--shadow-lg); border: 2px solid var(--primary-color);">
+        <h3 style="font-size: 1.8rem; color: var(--text-color); margin-bottom: 2rem; text-align: center;">Implementation & Accountability Framework</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+          <div style="text-align: center;">
+            <div style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 0.5rem;"><i class="fas fa-clipboard-check"></i></div>
+            <h4 style="font-size: 1.1rem; color: var(--text-color); margin-bottom: 0.5rem;">Evaluation Plans</h4>
+            <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.6;">Pre/post assessments, participant tracking, outcome reporting aligned with GPRA and federal standards</p>
+          </div>
+          <div style="text-align: center;">
+            <div style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 0.5rem;"><i class="fas fa-dollar-sign"></i></div>
+            <h4 style="font-size: 1.1rem; color: var(--text-color); margin-bottom: 0.5rem;">Sustainability Models</h4>
+            <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.6;">Diversified funding (grants, corporate, institutional), cost-recovery mechanisms, partnership renewal strategies</p>
+          </div>
+          <div style="text-align: center;">
+            <div style="font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 0.5rem;"><i class="fas fa-copy"></i></div>
+            <h4 style="font-size: 1.1rem; color: var(--text-color); margin-bottom: 0.5rem;">Replication Frameworks</h4>
+            <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.6;">Documented processes, training materials, technical assistance protocols for institutional adoption</p>
+          </div>
+          <div style="text-align: center;">
+            <div style="font-size: 2.5rem; color: var(--accent-teal); margin-bottom: 0.5rem;"><i class="fas fa-chart-line"></i></div>
+            <h4 style="font-size: 1.1rem; color: var(--text-color); margin-bottom: 0.5rem;">Performance Metrics</h4>
+            <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.6;">Enrollment, completion, certification, placement rates; cost-per-participant analysis; partner satisfaction surveys</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-title">Featured Projects</div>
+    <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; color: var(--text-light); font-size: 1.1rem;">
+      Showcasing impactful work across innovation, technology, community, workforce development, research, and entrepreneurship
+    </p>
+    
+    <!-- Projects Grid -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+      
+      <!-- CDA Match Program - FLAGSHIP -->
+      <div class="project-card-hover" style="background: white; border-radius: 0.5rem; overflow: hidden; box-shadow: var(--shadow-xl); transition: transform 0.3s, box-shadow 0.3s; border: 3px solid var(--primary-color); position: relative;">
+        <div style="position: absolute; top: 1rem; right: 1rem; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); color: white; padding: 0.4rem 1rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; z-index: 10;">
+          Flagship Program
+        </div>
+        <div class="project-image-container" style="height: 200px; margin: 0;">
+          <img src="https://github.com/user-attachments/assets/b2cb08a1-0d24-4f7b-96e7-6135f5306534" alt="CDA Match Program - Building Data Talent Pipelines" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        </div>
+        <div style="background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); padding: 1.5rem; text-align: center;">
+          <h3 style="color: white; margin: 0; font-size: 1.3rem;">CDA Match Program</h3>
+          <p style="color: white; opacity: 0.9; margin-top: 0.5rem; font-size: 0.9rem;">Mentorship & Research</p>
+        </div>
+        <div style="padding: 1.5rem;">
+          <p style="color: #000000; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">
+            <i class="fas fa-tag"></i> Workforce • Research • Mentorship
+          </p>
+          <p style="color: var(--text-color); margin-bottom: 1rem; line-height: 1.6;">
+            Center-led, cross-disciplinary mentor-matching and applied data analytics program connecting 25+ students with mentors on 13 real-world projects. A scalable model for experiential learning and workforce development.
+          </p>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+            <span style="background: rgba(37, 99, 235, 0.1); color: var(--primary-color); padding: 0.3rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600;">25+ Mentees</span>
+            <span style="background: rgba(37, 99, 235, 0.1); color: var(--primary-color); padding: 0.3rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600;">13 Projects</span>
+          </div>
+          <a href="projects/cda-match-program/" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-color); text-decoration: none; font-weight: 600; transition: gap 0.3s;">
+            View Program Details <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- AfroTech 2025 -->
+      <div class="project-card-hover" style="background: white; border-radius: 0.5rem; overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s, box-shadow 0.3s; border: 2px solid var(--border-color);">
+        <div class="project-image-container" style="height: 200px; margin: 0;">
+          <img src="images/Bowie State  T-Mobile 08.2025.jpeg" alt="AfroTech Innovation">
+        </div>
+        <div style="background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); padding: 1.5rem; text-align: center;">
+          <h3 style="color: white; margin: 0; font-size: 1.3rem;">AfroTech — National Industry Engagement</h3>
+        </div>
+        <div style="padding: 1.5rem;">
+          <p style="color: #000000; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">
+            <i class="fas fa-tag"></i> Innovation • Technology
+          </p>
+          <p style="color: var(--text-color); margin-bottom: 1rem; line-height: 1.6;">
+            Elevated HBCU data excellence at AfroTech 2025, engaging 300+ industry professionals and establishing strategic partnerships with Fortune 500 companies.
+          </p>
+          <a href="projects/digibibi-afrotech/" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-color); text-decoration: none; font-weight: 600; transition: gap 0.3s;">
+            View Project <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Smart DARTT Lab -->
+      <div class="project-card-hover" style="background: white; border-radius: 0.5rem; overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s, box-shadow 0.3s; border: 2px solid var(--border-color);">
+        <div class="project-image-container" style="height: 200px; margin: 0;">
+          <div class="project-image-placeholder">
+            <i class="fas fa-laptop-code image-placeholder-icon"></i>
+          </div>
+        </div>
+        <div style="background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); padding: 1.5rem; text-align: center;">
+          <h3 style="color: white; margin: 0; font-size: 1.3rem;">Smart DARTT Lab Modernization</h3>
+        </div>
+        <div style="padding: 1.5rem;">
+          <p style="color: #000000; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">
+            <i class="fas fa-tag"></i> Technology • Workforce
+          </p>
+          <p style="color: var(--text-color); margin-bottom: 1rem; line-height: 1.6;">
+            Led $350K+ lab modernization creating AI-ready data innovation hub supporting 80+ learners through strategic Truist Bank partnership.
+          </p>
+          <a href="projects/smart-dartt-lab/" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-color); text-decoration: none; font-weight: 600; transition: gap 0.3s;">
+            View Project <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Data Tribe -->
+      <div class="project-card-hover" style="background: white; border-radius: 0.5rem; overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s, box-shadow 0.3s; border: 2px solid var(--border-color);">
+        <div class="project-image-container" style="height: 200px; margin: 0;">
+          <div class="project-image-placeholder">
+            <i class="fas fa-users image-placeholder-icon"></i>
+          </div>
+        </div>
+        <div style="background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); padding: 1.5rem; text-align: center;">
+          <h3 style="color: white; margin: 0; font-size: 1.3rem;">Data Tribe — Student Leadership & Data Community</h3>
+        </div>
+        <div style="padding: 1.5rem;">
+          <p style="color: #000000; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">
+            <i class="fas fa-tag"></i> Student Leadership • Workforce Pipeline • Community
+          </p>
+          <p style="color: var(--text-color); margin-bottom: 1rem; line-height: 1.6;">
+            Student-owned leadership engine fostering applied data skills, professional development, and talent pipeline for 250+ participants through peer-led programming.
+          </p>
+          <a href="projects/data-tribe/" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-color); text-decoration: none; font-weight: 600; transition: gap 0.3s;">
+            View Program Details <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- EIC Market Research -->
+      <div class="project-card-hover" style="background: white; border-radius: 0.5rem; overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s, box-shadow 0.3s; border: 2px solid var(--border-color);">
+        <div class="project-image-container" style="height: 200px; margin: 0;">
+          <div class="project-image-placeholder">
+            <i class="fas fa-briefcase image-placeholder-icon"></i>
+          </div>
+        </div>
+        <div style="background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); padding: 1.5rem; text-align: center;">
+          <h3 style="color: white; margin: 0; font-size: 1.3rem;">EIC Market Research</h3>
+        </div>
+        <div style="padding: 1.5rem;">
+          <p style="color: #000000; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">
+            <i class="fas fa-tag"></i> Entrepreneurship • Research
+          </p>
+          <p style="color: var(--text-color); margin-bottom: 1rem; line-height: 1.6;">
+            Delivered 8 professional market research reports empowering student entrepreneurs, generating $12K+ in consulting value and strategic insights.
+          </p>
+          <a href="projects/eic-market-research/" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-color); text-decoration: none; font-weight: 600; transition: gap 0.3s;">
+            View Project <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Sincerely Love -->
+      <div class="project-card-hover" style="background: white; border-radius: 0.5rem; overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s, box-shadow 0.3s; border: 2px solid var(--border-color);">
+        <div class="project-image-container" style="height: 200px; margin: 0;">
+          <div class="project-image-placeholder">
+            <i class="fas fa-heart image-placeholder-icon"></i>
+          </div>
+        </div>
+        <div style="background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); padding: 1.5rem; text-align: center;">
+          <h3 style="color: white; margin: 0; font-size: 1.3rem;">Sincerely, Love Research</h3>
+        </div>
+        <div style="padding: 1.5rem;">
+          <p style="color: #000000; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">
+            <i class="fas fa-tag"></i> Community • Research
+          </p>
+          <p style="color: var(--text-color); margin-bottom: 1rem; line-height: 1.6;">
+            Founded research cohort employing 5 students exploring mental health and data, hosting summit with 100+ attendees for wellbeing conversations.
+          </p>
+          <a href="projects/sincerely-love/" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-color); text-decoration: none; font-weight: 600; transition: gap 0.3s;">
+            View Project <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Sports Analytics -->
+      <div class="project-card-hover" style="background: white; border-radius: 0.5rem; overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s, box-shadow 0.3s; border: 2px solid var(--border-color);">
+        <div class="project-image-container" style="height: 200px; margin: 0;">
+          <div class="project-image-placeholder">
+            <i class="fas fa-basketball-ball image-placeholder-icon"></i>
+          </div>
+        </div>
+        <div style="background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); padding: 1.5rem; text-align: center;">
+          <h3 style="color: white; margin: 0; font-size: 1.3rem;">Sports Analytics Camp</h3>
+        </div>
+        <div style="padding: 1.5rem;">
+          <p style="color: #000000; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">
+            <i class="fas fa-tag"></i> Workforce • Community
+          </p>
+          <p style="color: var(--text-color); margin-bottom: 1rem; line-height: 1.6;">
+            Co-designed camp introducing 18 high school students to data analytics through sports, sparking STEM interest among minority youth.
+          </p>
+          <a href="projects/sports-analytics/" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-color); text-decoration: none; font-weight: 600; transition: gap 0.3s;">
+            View Project <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- NSF Workshop -->
+      <div class="project-card-hover" style="background: white; border-radius: 0.5rem; overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s, box-shadow 0.3s; border: 2px solid var(--border-color);">
+        <div class="project-image-container" style="height: 200px; margin: 0;">
+          <div class="project-image-placeholder">
+            <i class="fas fa-chalkboard-teacher image-placeholder-icon"></i>
+          </div>
+        </div>
+        <div style="background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); padding: 1.5rem; text-align: center;">
+          <h3 style="color: white; margin: 0; font-size: 1.3rem;">NSF Discovery Workshop</h3>
+        </div>
+        <div style="padding: 1.5rem;">
+          <p style="color: #000000; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">
+            <i class="fas fa-tag"></i> Research • Workforce
+          </p>
+          <p style="color: var(--text-color); margin-bottom: 1rem; line-height: 1.6;">
+            Co-facilitated NSF-funded workshop with 60+ HBCU educators developing culturally relevant data science curricula for inclusive education.
+          </p>
+          <a href="projects/nsf-workshop/" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-color); text-decoration: none; font-weight: 600; transition: gap 0.3s;">
+            View Project <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Blue Roof Hotel -->
+      <div class="project-card-hover" style="background: white; border-radius: 0.5rem; overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s, box-shadow 0.3s; border: 2px solid var(--border-color);">
+        <div class="project-image-container" style="height: 200px; margin: 0;">
+          <div class="project-image-placeholder">
+            <i class="fas fa-hotel image-placeholder-icon"></i>
+          </div>
+        </div>
+        <div style="background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); padding: 1.5rem; text-align: center;">
+          <h3 style="color: white; margin: 0; font-size: 1.3rem;">Blue Roof Hotel Optimization</h3>
+        </div>
+        <div style="padding: 1.5rem;">
+          <p style="color: #000000; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">
+            <i class="fas fa-tag"></i> Innovation • Entrepreneurship
+          </p>
+          <p style="color: var(--text-color); margin-bottom: 1rem; line-height: 1.6;">
+            Led digital transformation in Nigeria implementing SEO, analytics, and reservation systems, increasing operational efficiency by 40%.
+          </p>
+          <a href="projects/blue-roof/" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-color); text-decoration: none; font-weight: 600; transition: gap 0.3s;">
+            View Project <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Middle Gates -->
+      <div class="project-card-hover" style="background: white; border-radius: 0.5rem; overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s, box-shadow 0.3s; border: 2px solid var(--border-color);">
+        <div class="project-image-container" style="height: 200px; margin: 0;">
+          <div class="project-image-placeholder">
+            <i class="fas fa-building image-placeholder-icon"></i>
+          </div>
+        </div>
+        <div style="background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); padding: 1.5rem; text-align: center;">
+          <h3 style="color: white; margin: 0; font-size: 1.3rem;">Middle Gates Ventures</h3>
+        </div>
+        <div style="padding: 1.5rem;">
+          <p style="color: #000000; font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem;">
+            <i class="fas fa-tag"></i> Entrepreneurship • Innovation
+          </p>
+          <p style="color: var(--text-color); margin-bottom: 1rem; line-height: 1.6;">
+            Founded multi-service business in logistics, events, and analytics consulting, serving 25+ clients through data-driven operations.
+          </p>
+          <a href="projects/middle-gates/" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-color); text-decoration: none; font-weight: 600; transition: gap 0.3s;">
+            View Project <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="text-align: center; margin-top: 3rem;">
+      <a href="projects.html" class="cta-button secondary">View All Projects <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <div class="section-title">What People Say</div>
+    <div class="testimonials">
+      <div class="testimonial-card">
+        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+        <p class="testimonial-text">
+          Bolametiren's dedication to student success and innovative approach to data analytics education 
+          has transformed our Center's impact. Her program management skills are exceptional.
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-author-info">
+            <div class="testimonial-name">Dr. Eona Harrison</div>
+            <div class="testimonial-role">Director, Center for Data Analytics</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+        <p class="testimonial-text">
+          Working with Bolametiren on strategic partnerships has been incredible. She brings creativity, 
+          professionalism, and a deep commitment to workforce development in every initiative.
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-author-info">
+            <div class="testimonial-name">Industry Partner</div>
+            <div class="testimonial-role">Strategic Partnerships Manager</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cta-section">
+    <div class="cta-container">
+      <h2>Let's Connect and Create Impact Together</h2>
+      <p>Interested in collaboration, speaking engagements, or learning more about my work?</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="cta-button">Get In Touch <i class="fas fa-envelope"></i></a>
+        <a href="about.html" class="cta-button secondary">Learn More About Me <i class="fas fa-user"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Bolametiren Akinlaja. Designed with ❤️ | <a href="https://html5up.net" target="_blank">HTML5 UP</a>
+  </footer>
+</body>
+</html>
