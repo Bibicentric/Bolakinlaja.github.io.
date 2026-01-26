@@ -3,11 +3,216 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sincerely, Love - Research cohort bridging mental health and data storytelling">
+  <meta name="description" content="Sincerely, Love Research Cohort - Mental health and data research initiative">
   <meta name="author" content="Bolametiren Akinlaja">
-  <title>Sincerely, Love Research - Bolametiren Akinlaja</title>
+  <title>Sincerely, Love Research Cohort - Bolametiren Akinlaja</title>
   <link rel="stylesheet" href="../../assets/css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    :root {
+      --project-navy: #0F172A;
+      --project-gold: #FFC72C;
+      --project-teal: #0EA5A6;
+      --project-white: #F9FAFB;
+    }
+    
+    .project-hero {
+      background: linear-gradient(135deg, rgba(14, 165, 166, 0.1), rgba(255, 199, 44, 0.1));
+      padding: 3rem 2rem;
+      margin-bottom: 3rem;
+    }
+    
+    .project-hero-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .project-hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    
+    .project-hero-tagline {
+      font-size: 1.25rem;
+      color: var(--project-teal);
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+    
+    .project-hero-image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .project-hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .impact-snapshot-tiles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .impact-tile {
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    
+    .impact-tile-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--project-gold);
+      margin-bottom: 0.5rem;
+    }
+    
+    .impact-tile-label {
+      font-size: 0.95rem;
+      color: var(--text-light);
+    }
+    
+    .project-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem 4rem;
+    }
+    
+    .project-section {
+      margin-bottom: 3rem;
+    }
+    
+    .project-section h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--project-teal);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .project-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .project-section ul li {
+      padding-left: 2rem;
+      margin-bottom: 0.75rem;
+      position: relative;
+      line-height: 1.7;
+    }
+    
+    .project-section ul li:before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--project-gold);
+      font-weight: 700;
+    }
+    
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .gallery-item {
+      border-radius: 0.75rem;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+    
+    .gallery-caption {
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+    
+    .project-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 0.75rem;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    .project-nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--project-gold);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid var(--project-teal);
+      border-radius: 0.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .project-nav-link:hover {
+      background: var(--project-teal);
+      color: var(--project-navy);
+    }
+    
+    .back-to-projects {
+      position: sticky;
+      top: 80px;
+      z-index: 50;
+      text-align: center;
+      padding: 1rem;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .back-to-projects a {
+      color: var(--project-gold);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    @media (max-width: 768px) {
+      .project-hero h1 {
+        font-size: 1.8rem;
+      }
+      
+      .impact-snapshot-tiles {
+        grid-template-columns: 1fr;
+      }
+      
+      .project-nav {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="compact">
@@ -15,7 +220,7 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../about.html">About</a>
-      <a href="../../projects.html">Projects</a>
+      <a href="../../projects/">Projects</a>
       <a href="../../skills.html">Skills</a>
       <a href="../../contact.html">Contact</a>
       <span class="socials">
@@ -25,167 +230,170 @@
     </nav>
   </header>
 
+  <div class="back-to-projects">
+    <a href="../../projects/">
+      <i class="fas fa-arrow-left"></i> Back to Projects
+    </a>
+  </div>
+
   <main class="project-detail-main">
-    <div style="background: linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(139, 92, 246, 0.1)); padding: 3rem 2rem; border-radius: 1.25rem; margin-bottom: 3rem; text-align: center;">
-      <h1>Sincerely, Love Research Cohort & Mental Health Summit</h1>
-      <h3 style="color: var(--accent-color); font-weight: 500; margin-top: 1rem;">Exploring emotional intelligence and mental health through data and community</h3>
-    </div>
+    <!-- Project Hero -->
+    <section class="project-hero">
+      <div class="project-hero-container">
+        <h1>Sincerely, Love Research Cohort</h1>
+        <p class="project-hero-tagline">Founded research cohort employing 5 students exploring mental health and data</p>
+        
+        <div class="project-hero-image">
+          <img src="images/hero.jpg" alt="Sincerely, Love Community Summit" loading="lazy">
+        </div>
+        
+        <!-- Impact Snapshot -->
+        <div class="impact-snapshot-tiles">
+          <div class="impact-tile">
+            <div class="impact-tile-number">5</div>
+            <div class="impact-tile-label">Student Researchers</div>
+          </div>
+          <div class="impact-tile">
+            <div class="impact-tile-number">100+</div>
+            <div class="impact-tile-label">Summit Attendees</div>
+          </div>
+          <div class="impact-tile">
+            <div class="impact-tile-number">3</div>
+            <div class="impact-tile-label">Research Projects</div>
+          </div>
+          <div class="impact-tile">
+            <div class="impact-tile-number">1</div>
+            <div class="impact-tile-label">Community Summit</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <div class="project-content">
-      <div class="project-section">
-        <h2><i class="fas fa-info-circle" style="color: var(--accent-color);"></i> Overview</h2>
+      <!-- Overview -->
+      <section class="project-section">
+        <h2><i class="fas fa-compass"></i> Overview</h2>
         <p>
-          Founded and managed <strong>Sincerely, Love</strong>, an innovative summer research program that employed 5 students to 
-          explore the intersection of data analytics and emotional intelligence in mental health. This initiative culminated in 
-          a community summit attracting 100+ participants for meaningful discussions about wellbeing, self-care, and the role of 
-          data in understanding mental health trends. As Program Founder and Research Director, I created a unique model that 
-          combined paid research opportunities with community impact, bridging academic inquiry and lived experiences.
+          Founded research cohort employing 5 students exploring mental health and data, hosting summit with 100+ attendees for wellbeing conversations. This initiative combines data science with mental health advocacy to create spaces for vulnerable conversations and research-driven insights on student wellbeing.
         </p>
-      </div>
+      </section>
 
-      <div class="project-section">
-        <h2><i class="fas fa-user-tie" style="color: var(--accent-color);"></i> My Role</h2>
+      <!-- My Role -->
+      <section class="project-section">
+        <h2><i class="fas fa-user-tie"></i> My Role</h2>
         <ul>
-          <li>Program founder and research director</li>
-          <li>Research team supervisor and mentor for 5 student researchers</li>
-          <li>Summit organizer and community engagement strategist</li>
-          <li>Curriculum designer for research training and methods</li>
-          <li>Budget manager coordinating student stipends and event costs</li>
+          <li>Founded Sincerely, Love research initiative combining data and mental health</li>
+          <li>Recruited and employed 5 student researchers exploring wellbeing topics</li>
+          <li>Designed research projects examining student mental health through data lens</li>
+          <li>Organized community summit with 100+ attendees for wellbeing conversations</li>
+          <li>Created safe spaces for vulnerable conversations about mental health</li>
+          <li>Developed research outputs including visualizations and reports</li>
         </ul>
-      </div>
+      </section>
 
-      <div class="project-section">
-        <h2><i class="fas fa-bullseye" style="color: var(--accent-color);"></i> Objectives</h2>
+      <!-- Objectives -->
+      <section class="project-section">
+        <h2><i class="fas fa-bullseye"></i> Objectives</h2>
         <ul>
-          <li>Create paid research opportunities for students exploring mental health and data analytics</li>
-          <li>Investigate how data can inform mental health awareness and interventions</li>
-          <li>Build community platform for authentic conversations about wellbeing</li>
-          <li>Develop students' research, data analysis, and storytelling skills</li>
-          <li>Bridge gap between quantitative data and qualitative lived experiences</li>
+          <li>Explore intersection of data science and mental health advocacy</li>
+          <li>Employ students to conduct meaningful research on wellbeing topics</li>
+          <li>Host community conversations destigmatizing mental health discussions</li>
+          <li>Generate data-driven insights on student mental health needs</li>
+          <li>Create sustainable model for student-led wellness research</li>
         </ul>
-      </div>
+      </section>
 
-      <div class="project-section">
-        <h2><i class="fas fa-cogs" style="color: var(--accent-color);"></i> Process / What I Did</h2>
+      <!-- Approach / What I Did -->
+      <section class="project-section">
+        <h2><i class="fas fa-tasks"></i> Approach / What I Did</h2>
         <ul>
-          <li>Designed research program structure and secured funding for 5 student stipends</li>
-          <li>Recruited and trained diverse student research team with various disciplinary backgrounds</li>
-          <li>Developed research protocols exploring mental health data, trends, and storytelling</li>
-          <li>Facilitated weekly research meetings with mentorship and skills development</li>
-          <li>Coordinated data collection efforts including surveys, interviews, and secondary research</li>
-          <li>Guided team in analyzing patterns and creating data visualizations</li>
-          <li>Planned and executed Sincerely Love Summit with panels, workshops, and networking</li>
-          <li>Created safe, inclusive environment for mental health discussions</li>
-          <li>Documented findings and developed recommendations for campus wellness initiatives</li>
+          <li>Founded research cohort with focus on mental health and wellbeing</li>
+          <li>Recruited 5 diverse student researchers passionate about mental health advocacy</li>
+          <li>Designed 3 research projects exploring student wellbeing through data</li>
+          <li>Conducted surveys, interviews, and data analysis on mental health topics</li>
+          <li>Organized Sincerely, Love Summit bringing together 100+ students for conversations</li>
+          <li>Created visual storytelling and reports sharing research insights</li>
+          <li>Built partnerships with campus counseling and wellness resources</li>
+          <li>Established foundation for ongoing research and community engagement</li>
         </ul>
-      </div>
+      </section>
 
-      <div class="project-section">
-        <h2><i class="fas fa-chart-line" style="color: var(--accent-color);"></i> Impact & Outcomes</h2>
-        <div class="feature-grid" style="margin-bottom: 1.5rem;">
-          <div style="background: linear-gradient(135deg, rgba(236, 72, 153, 0.05), rgba(139, 92, 246, 0.05)); padding: 1.5rem; border-radius: 1rem; text-align: center; border: 2px solid var(--border-color);">
-            <div class="impact-stat-number">100+</div>
-            <div class="impact-stat-label">Summit Attendees</div>
+      <!-- Deliverables -->
+      <section class="project-section">
+        <h2><i class="fas fa-box-open"></i> Deliverables</h2>
+        <ul>
+          <li><strong>3 Research Projects on Student Wellbeing:</strong> Data-driven exploration of mental health topics affecting students</li>
+          <li><strong>Community Summit Event:</strong> Sincerely, Love Summit bringing together 100+ students for wellness conversations</li>
+          <li><strong>Research Visualizations and Reports:</strong> Visual storytelling and written reports sharing research findings</li>
+          <li><strong>Survey Instruments:</strong> Validated survey tools for collecting mental health and wellbeing data</li>
+          <li><strong>Student Employment Opportunities:</strong> Paid research positions for 5 students exploring mental health topics</li>
+          <li><strong>Partnership Network:</strong> Connections with campus counseling, wellness, and support resources</li>
+        </ul>
+      </section>
+
+      <!-- Outcomes -->
+      <section class="project-section">
+        <h2><i class="fas fa-trophy"></i> Outcomes</h2>
+        <ul>
+          <li><strong>5 students employed</strong> as mental health and data researchers</li>
+          <li><strong>100+ attendees</strong> at Sincerely, Love Summit for wellbeing conversations</li>
+          <li><strong>3 research projects completed</strong> exploring student mental health</li>
+          <li><strong>200+ survey responses collected</strong> on wellbeing topics</li>
+          <li><strong>Safe spaces created</strong> for vulnerable mental health conversations</li>
+          <li><strong>Foundation established</strong> for ongoing wellness research and advocacy</li>
+        </ul>
+      </section>
+
+      <!-- Gallery -->
+      <section class="project-section">
+        <h2><i class="fas fa-images"></i> Project Gallery</h2>
+        <div class="project-gallery">
+          <div class="gallery-item">
+            <img src="images/hero.jpg" alt="Community summit" loading="lazy">
+            <div class="gallery-caption">Sincerely, Love Summit with 100+ attendees</div>
           </div>
-          <div style="background: linear-gradient(135deg, rgba(236, 72, 153, 0.05), rgba(139, 92, 246, 0.05)); padding: 1.5rem; border-radius: 1rem; text-align: center; border: 2px solid var(--border-color);">
-            <div class="impact-stat-number">5</div>
-            <div class="impact-stat-label">Paid Student Researchers</div>
+          <div class="gallery-item">
+            <img src="images/hero.jpg" alt="Research team" loading="lazy">
+            <div class="gallery-caption">Student researchers exploring mental health data</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/hero.jpg" alt="Data visualization" loading="lazy">
+            <div class="gallery-caption">Research visualizations on student wellbeing</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/hero.jpg" alt="Conversation circle" loading="lazy">
+            <div class="gallery-caption">Safe space for vulnerable wellness conversations</div>
           </div>
         </div>
-        <ul>
-          <li>Employed <strong>5 student researchers</strong> with paid stipends for summer research</li>
-          <li>Organized summit attracting <strong>100+ community members</strong> for mental health conversations</li>
-          <li>Generated valuable research insights on student mental health trends and needs</li>
-          <li>Created model for student-led research with community impact</li>
-          <li>Provided research experience strengthening students' graduate school and career applications</li>
-          <li>Informed campus wellness initiatives through data-driven recommendations</li>
-        </ul>
-      </div>
+      </section>
 
-      <div class="project-section">
-        <h2><i class="fas fa-briefcase" style="color: var(--accent-color);"></i> Deliverables</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
-          <div style="background: var(--bg-color); padding: 1rem; border-radius: 0.5rem; border-left: 4px solid var(--accent-color);">
-            <i class="fas fa-file-alt"></i> Research Report
-          </div>
-          <div style="background: var(--bg-color); padding: 1rem; border-radius: 0.5rem; border-left: 4px solid var(--accent-color);">
-            <i class="fas fa-chart-bar"></i> Data Visualizations
-          </div>
-          <div style="background: var(--bg-color); padding: 1rem; border-radius: 0.5rem; border-left: 4px solid var(--accent-color);">
-            <i class="fas fa-calendar-alt"></i> Summit Event
-          </div>
-          <div style="background: var(--bg-color); padding: 1rem; border-radius: 0.5rem; border-left: 4px solid var(--accent-color);">
-            <i class="fas fa-users"></i> Community Resources Guide
-          </div>
-          <div style="background: var(--bg-color); padding: 1rem; border-radius: 0.5rem; border-left: 4px solid var(--accent-color);">
-            <i class="fas fa-palette"></i> Event Branding Materials
-          </div>
-          <div style="background: var(--bg-color); padding: 1rem; border-radius: 0.5rem; border-left: 4px solid var(--accent-color);">
-            <i class="fas fa-lightbulb"></i> Policy Recommendations
-          </div>
-        </div>
-      </div>
-
-      <div class="project-section">
-        <h2><i class="fas fa-tools" style="color: var(--accent-color);"></i> Tools & Technologies</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem;">
-          <span style="background: var(--accent-color); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">
-            <i class="fas fa-table"></i> Excel
-          </span>
-          <span style="background: var(--accent-color); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">
-            <i class="fab fa-python"></i> Python
-          </span>
-          <span style="background: var(--accent-color); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">
-            <i class="fas fa-poll"></i> Qualtrics
-          </span>
-          <span style="background: var(--accent-color); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">
-            <i class="fas fa-chart-line"></i> Tableau
-          </span>
-          <span style="background: var(--accent-color); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">
-            <i class="fas fa-paint-brush"></i> Canva
-          </span>
-          <span style="background: var(--accent-color); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">
-            <i class="fas fa-video"></i> Zoom
-          </span>
-        </div>
-      </div>
-
-      <div class="project-section">
-        <h2><i class="fas fa-star" style="color: var(--accent-color);"></i> Skills Demonstrated</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem;">
-          <span style="background: linear-gradient(135deg, var(--brand-navy), var(--brand-teal)); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">Research Design</span>
-          <span style="background: linear-gradient(135deg, var(--brand-navy), var(--brand-teal)); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">Program Management</span>
-          <span style="background: linear-gradient(135deg, var(--brand-navy), var(--brand-teal)); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">Team Leadership</span>
-          <span style="background: linear-gradient(135deg, var(--brand-navy), var(--brand-teal)); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">Community Engagement</span>
-          <span style="background: linear-gradient(135deg, var(--brand-navy), var(--brand-teal)); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">Data Analysis</span>
-          <span style="background: linear-gradient(135deg, var(--brand-navy), var(--brand-teal)); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">Event Planning</span>
-          <span style="background: linear-gradient(135deg, var(--brand-navy), var(--brand-teal)); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">Mentorship</span>
-          <span style="background: linear-gradient(135deg, var(--brand-navy), var(--brand-teal)); color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem;">Budget Management</span>
-        </div>
-      </div>
-
-      <div class="project-section">
-        <h2><i class="fas fa-lightbulb" style="color: var(--accent-color);"></i> Reflection</h2>
+      <!-- What's Next -->
+      <section class="project-section">
+        <h2><i class="fas fa-rocket"></i> What's Next</h2>
         <p>
-          Sincerely, Love taught me that data analytics can serve deeply human purposes when approached with empathy and cultural 
-          awareness. The challenge of researching mental health required careful attention to privacy, consent, and the emotional 
-          wellbeing of our research team. I learned to balance rigorous methodology with compassionate inquiry. The summit's success 
-          demonstrated the community's hunger for spaces that honor both data and lived experiences. Several team members have 
-          continued pursuing mental health research in graduate programs. Future iterations would include longer research timelines 
-          and stronger partnerships with campus counseling services.
+          The initiative continues with plans to expand the research cohort, host biannual wellness summits, and develop mental health data dashboards for campus administrators. We're also partnering with counseling services to translate research insights into actionable support programs for students.
         </p>
-      </div>
+      </section>
 
-      <div style="margin-top: 3rem; text-align: center;">
-        <a href="../../index.html#projects" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; background: var(--bg-gradient); color: white; text-decoration: none; border-radius: 0.5rem; font-weight: 600; transition: transform 0.3s;">
-          <i class="fas fa-arrow-left"></i> Back to Projects
+      <!-- Navigation -->
+      <div class="project-nav">
+        <a href="../../projects/" class="project-nav-link">
+          <i class="fas fa-th"></i> All Projects
         </a>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="../eic-market-research/" class="project-nav-link">
+            <i class="fas fa-arrow-left"></i> Previous
+          </a>
+          <a href="../match/" class="project-nav-link">
+            Next <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
       </div>
     </div>
   </main>
 
-  <footer>
-    &copy; 2025 Bolametiren Akinlaja. Designed with ❤️ | <a href="https://html5up.net" target="_blank">HTML5 UP</a>
+  <footer class="homepage-footer" style="background: var(--bg-dark); padding: 2rem; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+    <p style="margin: 0; color: var(--text-light);">&copy; 2025 Bolametiren Akinlaja. All rights reserved.</p>
   </footer>
 </body>
 </html>
