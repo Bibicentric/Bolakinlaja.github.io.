@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CDA MATCH Program - Building Data Talent Pipelines through mentor-matching and applied analytics">
+  <meta name="author" content="Bolametiren Akinlaja">
+  <title>CDA MATCH Program - Bolametiren Akinlaja</title>
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    :root {
+      --project-navy: #0F172A;
+      --project-gold: #FFC72C;
+      --project-teal: #0EA5A6;
+      --project-white: #F9FAFB;
+    }
+    
+    .project-hero {
+      background: linear-gradient(135deg, rgba(14, 165, 166, 0.1), rgba(255, 199, 44, 0.1));
+      padding: 3rem 2rem;
+      margin-bottom: 3rem;
+    }
+    
+    .project-hero-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .project-hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    
+    .project-hero-tagline {
+      font-size: 1.25rem;
+      color: var(--project-teal);
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+    
+    .project-hero-image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .project-hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .impact-snapshot-tiles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .impact-tile {
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    
+    .impact-tile-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--project-gold);
+      margin-bottom: 0.5rem;
+    }
+    
+    .impact-tile-label {
+      font-size: 0.95rem;
+      color: var(--text-light);
+    }
+    
+    .project-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem 4rem;
+    }
+    
+    .project-section {
+      margin-bottom: 3rem;
+    }
+    
+    .project-section h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--project-teal);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .project-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .project-section ul li {
+      padding-left: 2rem;
+      margin-bottom: 0.75rem;
+      position: relative;
+      line-height: 1.7;
+    }
+    
+    .project-section ul li:before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--project-gold);
+      font-weight: 700;
+    }
+    
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .gallery-item {
+      border-radius: 0.75rem;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+    
+    .gallery-caption {
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+    
+    .project-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 0.75rem;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    .project-nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--project-gold);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid var(--project-teal);
+      border-radius: 0.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .project-nav-link:hover {
+      background: var(--project-teal);
+      color: var(--project-navy);
+    }
+    
+    .back-to-projects {
+      position: sticky;
+      top: 80px;
+      z-index: 50;
+      text-align: center;
+      padding: 1rem;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .back-to-projects a {
+      color: var(--project-gold);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    @media (max-width: 768px) {
+      .project-hero h1 {
+        font-size: 1.8rem;
+      }
+      
+      .impact-snapshot-tiles {
+        grid-template-columns: 1fr;
+      }
+      
+      .project-nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="compact">
+    <h1>Bolametiren Akinlaja</h1>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../about.html">About</a>
+      <a href="../../projects/">Projects</a>
+      <a href="../../skills.html">Skills</a>
+      <a href="../../contact.html">Contact</a>
+      <span class="socials">
+        <a href="https://www.linkedin.com/in/bolametiren-akinlaja-497602213/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Bibicentric" title="GitHub"><i class="fab fa-github"></i></a>
+      </span>
+    </nav>
+  </header>
+
+  <div class="back-to-projects">
+    <a href="../../projects/">
+      <i class="fas fa-arrow-left"></i> Back to Projects
+    </a>
+  </div>
+
+  <main class="project-detail-main">
+    <!-- Project Hero -->
+    <section class="project-hero">
+      <div class="project-hero-container">
+        <h1>CDA MATCH Program — Building Data Talent Pipelines</h1>
+        <p class="project-hero-tagline">Center-led, cross-disciplinary mentor-matching and applied analytics program connecting students with industry-aligned mentors</p>
+        
+        <div class="project-hero-image">
+          <img src="images/hero.jpg" alt="CDA MATCH Program" loading="lazy">
+        </div>
+        
+        <!-- Impact Snapshot -->
+        <div class="impact-snapshot-tiles">
+          <div class="impact-tile">
+            <div class="impact-tile-number">25+</div>
+            <div class="impact-tile-label">Student Mentees</div>
+          </div>
+          <div class="impact-tile">
+            <div class="impact-tile-number">13</div>
+            <div class="impact-tile-label">Active Projects</div>
+          </div>
+          <div class="impact-tile">
+            <div class="impact-tile-number">4</div>
+            <div class="impact-tile-label">College Disciplines</div>
+          </div>
+          <div class="impact-tile">
+            <div class="impact-tile-number">15+</div>
+            <div class="impact-tile-label">Mentors Engaged</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="project-content">
+      <!-- Overview -->
+      <section class="project-section">
+        <h2><i class="fas fa-compass"></i> Overview</h2>
+        <p>
+          The CDA MATCH Program represents a scalable, data-driven model for experiential learning and workforce development at Historically Black Colleges and Universities (HBCUs). By strategically connecting students with faculty, staff, and industry mentors, the program transforms academic learning into applied analytics experience, fostering workforce readiness, research productivity, and long-term professional relationships. This initiative serves as a pipeline for talent development, institutional growth, and external funding opportunities.
+        </p>
+      </section>
+
+      <!-- My Role -->
+      <section class="project-section">
+        <h2><i class="fas fa-user-tie"></i> My Role</h2>
+        <ul>
+          <li>Architected program framework, matching algorithms, and engagement protocols</li>
+          <li>Recruited and vetted 25+ student mentees across undergraduate and graduate levels</li>
+          <li>Engaged faculty, staff, and industry professionals as mentors</li>
+          <li>Coordinated 13 mentor-led research and applied analytics projects</li>
+          <li>Developed comprehensive onboarding materials and mentor/mentee guidelines</li>
+          <li>Collected and analyzed program data to measure engagement and outcomes</li>
+        </ul>
+      </section>
+
+      <!-- Objectives -->
+      <section class="project-section">
+        <h2><i class="fas fa-bullseye"></i> Objectives</h2>
+        <ul>
+          <li>Create a sustainable mentor-matching infrastructure connecting students with research and industry opportunities</li>
+          <li>Provide hands-on experience in data analytics, research methods, and professional development</li>
+          <li>Build cross-disciplinary collaborations spanning STEM, Business, Education, and Social Sciences</li>
+          <li>Establish a scalable model for workforce pipeline development at HBCUs</li>
+          <li>Generate measurable outcomes to attract external funding and institutional support</li>
+        </ul>
+      </section>
+
+      <!-- Approach / What I Did -->
+      <section class="project-section">
+        <h2><i class="fas fa-tasks"></i> Approach / What I Did</h2>
+        <ul>
+          <li>Designed comprehensive program framework including matching criteria, engagement protocols, and success metrics</li>
+          <li>Launched multi-channel recruitment campaign reaching students across four college disciplines</li>
+          <li>Conducted individual intake meetings to assess student skills, interests, and career goals</li>
+          <li>Identified and recruited 15+ faculty, staff, and industry mentors with diverse research portfolios</li>
+          <li>Implemented strategic matching process based on research alignment, skill development needs, and career aspirations</li>
+          <li>Facilitated kickoff sessions, regular check-ins, and conflict resolution between mentor-mentee pairs</li>
+          <li>Created resource hub with templates, guides, and best practices for effective mentorship</li>
+          <li>Tracked program metrics including engagement rates, project completion, and participant satisfaction</li>
+        </ul>
+      </section>
+
+      <!-- Deliverables -->
+      <section class="project-section">
+        <h2><i class="fas fa-box-open"></i> Deliverables</h2>
+        <ul>
+          <li><strong>Program Framework Document:</strong> Comprehensive guide outlining program structure, policies, and procedures</li>
+          <li><strong>Mentor-Mentee Matching System:</strong> Strategic matching algorithm based on research interests and career goals</li>
+          <li><strong>Onboarding Toolkit:</strong> Resources for mentors and mentees including expectations, communication templates, and success tips</li>
+          <li><strong>13 Active Research Projects:</strong> Ongoing mentor-led projects in data analytics, AI, social science, and business intelligence</li>
+          <li><strong>Program Dashboard:</strong> Real-time tracking of engagement metrics, project status, and participant feedback</li>
+          <li><strong>Impact Report:</strong> Comprehensive analysis of program outcomes, student growth, and institutional benefits</li>
+        </ul>
+      </section>
+
+      <!-- Outcomes -->
+      <section class="project-section">
+        <h2><i class="fas fa-trophy"></i> Outcomes</h2>
+        <ul>
+          <li><strong>25+ students</strong> actively engaged across undergraduate and graduate programs</li>
+          <li><strong>13 research and analytics projects</strong> launched spanning multiple disciplines</li>
+          <li><strong>Cross-college representation</strong> from STEM, Business, Education, and Social Sciences</li>
+          <li><strong>15+ mentors</strong> recruited including faculty, staff, and industry professionals</li>
+          <li><strong>High satisfaction rates</strong> from both mentors and mentees based on mid-program feedback</li>
+          <li><strong>Scalable model</strong> ready for expansion and replication at other institutions</li>
+          <li><strong>Foundation for external funding</strong> through demonstrated impact and institutional support</li>
+        </ul>
+      </section>
+
+      <!-- Gallery -->
+      <section class="project-section">
+        <h2><i class="fas fa-images"></i> Project Gallery</h2>
+        <div class="project-gallery">
+          <div class="gallery-item">
+            <img src="images/hero.jpg" alt="Program kickoff session" loading="lazy">
+            <div class="gallery-caption">Program kickoff and orientation session</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/hero.jpg" alt="Mentor-mentee matching" loading="lazy">
+            <div class="gallery-caption">Strategic mentor-mentee matching process</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/hero.jpg" alt="Research project showcase" loading="lazy">
+            <div class="gallery-caption">Student research project presentations</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/hero.jpg" alt="Cross-disciplinary collaboration" loading="lazy">
+            <div class="gallery-caption">Cross-disciplinary team collaboration</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What's Next -->
+      <section class="project-section">
+        <h2><i class="fas fa-rocket"></i> What's Next</h2>
+        <p>
+          The program continues to grow with plans to expand to 40+ students in the next cohort, establish industry partnerships for sponsored projects, and develop a formal certification program for participating students. We are also exploring grant opportunities to fund student stipends and create a sustainable long-term model.
+        </p>
+      </section>
+
+      <!-- Navigation -->
+      <div class="project-nav">
+        <a href="../../projects/" class="project-nav-link">
+          <i class="fas fa-th"></i> All Projects
+        </a>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="../nexaflow/" class="project-nav-link">
+            <i class="fas fa-arrow-left"></i> Previous
+          </a>
+          <a href="../afrotech-2025/" class="project-nav-link">
+            Next <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="homepage-footer" style="background: var(--bg-dark); padding: 2rem; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+    <p style="margin: 0; color: var(--text-light);">&copy; 2025 Bolametiren Akinlaja. All rights reserved.</p>
+  </footer>
+</body>
+</html>
