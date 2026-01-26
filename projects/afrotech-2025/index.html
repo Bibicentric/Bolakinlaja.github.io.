@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AfroTech Conference 2025 - National Industry Engagement showcasing HBCU data excellence">
+  <meta name="author" content="Bolametiren Akinlaja">
+  <title>AfroTech Conference 2025 - Bolametiren Akinlaja</title>
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    :root {
+      --project-navy: #0F172A;
+      --project-gold: #FFC72C;
+      --project-teal: #0EA5A6;
+      --project-white: #F9FAFB;
+    }
+    
+    .project-hero {
+      background: linear-gradient(135deg, rgba(14, 165, 166, 0.1), rgba(255, 199, 44, 0.1));
+      padding: 3rem 2rem;
+      margin-bottom: 3rem;
+    }
+    
+    .project-hero-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .project-hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    
+    .project-hero-tagline {
+      font-size: 1.25rem;
+      color: var(--project-teal);
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+    
+    .project-hero-image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .project-hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .impact-snapshot-tiles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .impact-tile {
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    
+    .impact-tile-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--project-gold);
+      margin-bottom: 0.5rem;
+    }
+    
+    .impact-tile-label {
+      font-size: 0.95rem;
+      color: var(--text-light);
+    }
+    
+    .project-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem 4rem;
+    }
+    
+    .project-section {
+      margin-bottom: 3rem;
+    }
+    
+    .project-section h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--project-teal);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .project-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .project-section ul li {
+      padding-left: 2rem;
+      margin-bottom: 0.75rem;
+      position: relative;
+      line-height: 1.7;
+    }
+    
+    .project-section ul li:before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--project-gold);
+      font-weight: 700;
+    }
+    
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .gallery-item {
+      border-radius: 0.75rem;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+    
+    .gallery-caption {
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+    
+    .project-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 0.75rem;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    .project-nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--project-gold);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid var(--project-teal);
+      border-radius: 0.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .project-nav-link:hover {
+      background: var(--project-teal);
+      color: var(--project-navy);
+    }
+    
+    .back-to-projects {
+      position: sticky;
+      top: 80px;
+      z-index: 50;
+      text-align: center;
+      padding: 1rem;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .back-to-projects a {
+      color: var(--project-gold);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    @media (max-width: 768px) {
+      .project-hero h1 {
+        font-size: 1.8rem;
+      }
+      
+      .impact-snapshot-tiles {
+        grid-template-columns: 1fr;
+      }
+      
+      .project-nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="compact">
+    <h1>Bolametiren Akinlaja</h1>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../about.html">About</a>
+      <a href="../../projects/">Projects</a>
+      <a href="../../skills.html">Skills</a>
+      <a href="../../contact.html">Contact</a>
+      <span class="socials">
+        <a href="https://www.linkedin.com/in/bolametiren-akinlaja-497602213/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Bibicentric" title="GitHub"><i class="fab fa-github"></i></a>
+      </span>
+    </nav>
+  </header>
+
+  <div class="back-to-projects">
+    <a href="../../projects/">
+      <i class="fas fa-arrow-left"></i> Back to Projects
+    </a>
+  </div>
+
+  <main class="project-detail-main">
+    <!-- Project Hero -->
+    <section class="project-hero">
+      <div class="project-hero-container">
+        <h1>AfroTech Conference 2025 — National Industry Engagement</h1>
+        <p class="project-hero-tagline">Elevating HBCU data excellence through strategic industry partnerships and Fortune 500 engagement</p>
+        
+        <div class="project-hero-image">
+          <img src="images/hero.jpg" alt="AfroTech Conference 2025" loading="lazy">
+        </div>
+        
+        <!-- Impact Snapshot -->
+        <div class="impact-snapshot-tiles">
+          <div class="impact-tile">
+            <div class="impact-tile-number">300+</div>
+            <div class="impact-tile-label">Industry Professionals</div>
+          </div>
+          <div class="impact-tile">
+            <div class="impact-tile-number">5+</div>
+            <div class="impact-tile-label">Fortune 500 Partners</div>
+          </div>
+          <div class="impact-tile">
+            <div class="impact-tile-number">3</div>
+            <div class="impact-tile-label">Days of Engagement</div>
+          </div>
+          <div class="impact-tile">
+            <div class="impact-tile-number">100+</div>
+            <div class="impact-tile-label">Strategic Connections</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="project-content">
+      <!-- Overview -->
+      <section class="project-section">
+        <h2><i class="fas fa-compass"></i> Overview</h2>
+        <p>
+          AfroTech Conference 2025 represented a pivotal opportunity to showcase HBCU data excellence on a national stage. By strategically engaging 300+ industry professionals and establishing partnerships with Fortune 500 companies, this initiative positioned Bowie State University's Center for Data Analytics as a leader in data innovation and workforce development. The conference served as a platform for industry collaboration, student recruitment, and institutional visibility in the competitive technology landscape.
+        </p>
+      </section>
+
+      <!-- My Role -->
+      <section class="project-section">
+        <h2><i class="fas fa-user-tie"></i> My Role</h2>
+        <ul>
+          <li>Led strategic planning and execution of the Center's presence at AfroTech 2025</li>
+          <li>Coordinated with university leadership to align messaging and showcase institutional excellence</li>
+          <li>Designed engaging booth experience highlighting student work, research, and program offerings</li>
+          <li>Facilitated networking sessions connecting students with industry professionals</li>
+          <li>Managed logistics including travel, materials, and on-site coordination</li>
+          <li>Captured data on engagement metrics, partnership leads, and recruitment opportunities</li>
+        </ul>
+      </section>
+
+      <!-- Objectives -->
+      <section class="project-section">
+        <h2><i class="fas fa-bullseye"></i> Objectives</h2>
+        <ul>
+          <li>Elevate visibility of HBCU data analytics programs in national technology community</li>
+          <li>Establish strategic partnerships with Fortune 500 companies for internships and funding</li>
+          <li>Engage 300+ industry professionals in meaningful conversations about HBCU talent</li>
+          <li>Showcase student work and research to attract recruitment and collaboration opportunities</li>
+          <li>Position Bowie State University as a leader in data innovation and AI-ready workforce development</li>
+        </ul>
+      </section>
+
+      <!-- Approach / What I Did -->
+      <section class="project-section">
+        <h2><i class="fas fa-tasks"></i> Approach / What I Did</h2>
+        <ul>
+          <li>Developed comprehensive conference strategy aligned with institutional goals and industry trends</li>
+          <li>Designed interactive booth experience featuring student projects, research posters, and live demonstrations</li>
+          <li>Coordinated with student ambassadors to represent the Center and engage conference attendees</li>
+          <li>Scheduled targeted meetings with Fortune 500 companies including Google, Microsoft, and Amazon</li>
+          <li>Facilitated panel discussions and networking sessions highlighting HBCU data talent pipeline</li>
+          <li>Captured engagement data through digital surveys, business cards, and follow-up forms</li>
+          <li>Created post-conference report with partnership leads, recruitment opportunities, and strategic recommendations</li>
+          <li>Followed up with key contacts to convert connections into tangible partnerships and opportunities</li>
+        </ul>
+      </section>
+
+      <!-- Deliverables -->
+      <section class="project-section">
+        <h2><i class="fas fa-box-open"></i> Deliverables</h2>
+        <ul>
+          <li><strong>Interactive Booth Experience:</strong> Engaging showcase of student work, research, and program offerings</li>
+          <li><strong>Student Project Portfolio:</strong> Curated collection of student work demonstrating technical excellence</li>
+          <li><strong>Partnership Leads Database:</strong> Comprehensive list of 100+ strategic contacts and opportunities</li>
+          <li><strong>Engagement Metrics Report:</strong> Data on booth traffic, conversation quality, and partnership potential</li>
+          <li><strong>Follow-Up Strategy:</strong> Structured plan for converting connections into partnerships and opportunities</li>
+          <li><strong>Conference Impact Report:</strong> Comprehensive analysis of outcomes, lessons learned, and recommendations</li>
+        </ul>
+      </section>
+
+      <!-- Outcomes -->
+      <section class="project-section">
+        <h2><i class="fas fa-trophy"></i> Outcomes</h2>
+        <ul>
+          <li><strong>300+ industry professionals</strong> engaged in meaningful conversations about HBCU talent</li>
+          <li><strong>5+ Fortune 500 partnerships</strong> established with companies including Google, Microsoft, and Amazon</li>
+          <li><strong>100+ strategic connections</strong> made with potential for internships, funding, and collaboration</li>
+          <li><strong>50+ student recruitment leads</strong> for graduate programs and professional opportunities</li>
+          <li><strong>Elevated institutional visibility</strong> positioning BSU as a leader in data innovation</li>
+          <li><strong>3 immediate partnership opportunities</strong> identified for follow-up and formalization</li>
+          <li><strong>Foundation for future conference presence</strong> and industry engagement strategy</li>
+        </ul>
+      </section>
+
+      <!-- Gallery -->
+      <section class="project-section">
+        <h2><i class="fas fa-images"></i> Project Gallery</h2>
+        <div class="project-gallery">
+          <div class="gallery-item">
+            <img src="images/hero.jpg" alt="AfroTech booth setup" loading="lazy">
+            <div class="gallery-caption">Interactive booth showcasing student work</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/hero.jpg" alt="Industry engagement" loading="lazy">
+            <div class="gallery-caption">Engaging with Fortune 500 representatives</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/hero.jpg" alt="Student ambassadors" loading="lazy">
+            <div class="gallery-caption">Student ambassadors representing the Center</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/hero.jpg" alt="Networking sessions" loading="lazy">
+            <div class="gallery-caption">Strategic networking with industry leaders</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What's Next -->
+      <section class="project-section">
+        <h2><i class="fas fa-rocket"></i> What's Next</h2>
+        <p>
+          Following the success of AfroTech 2025, we are converting partnership leads into formal agreements, expanding our conference presence to additional national events, and leveraging the visibility gained to attract additional funding and collaboration opportunities for the Center and our students.
+        </p>
+      </section>
+
+      <!-- Navigation -->
+      <div class="project-nav">
+        <a href="../../projects/" class="project-nav-link">
+          <i class="fas fa-th"></i> All Projects
+        </a>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="../match/" class="project-nav-link">
+            <i class="fas fa-arrow-left"></i> Previous
+          </a>
+          <a href="../dartt-lab/" class="project-nav-link">
+            Next <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="homepage-footer" style="background: var(--bg-dark); padding: 2rem; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+    <p style="margin: 0; color: var(--text-light);">&copy; 2025 Bolametiren Akinlaja. All rights reserved.</p>
+  </footer>
+</body>
+</html>
