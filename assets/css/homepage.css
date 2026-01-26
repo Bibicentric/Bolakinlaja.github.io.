@@ -424,6 +424,12 @@ body.homepage {
   color: var(--homepage-navy);
 }
 
+/* View All Projects CTA */
+.view-all-projects-cta {
+  text-align: center;
+  margin-top: 3rem;
+}
+
 /* Footer */
 .homepage-footer {
   background: rgba(0, 0, 0, 0.3);
