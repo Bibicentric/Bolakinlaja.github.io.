@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NexaFlow Analytics - AI-powered workflow optimization and predictive analytics platform">
+  <meta name="author" content="Bolametiren Akinlaja">
+  <title>NexaFlow Analytics - Bolametiren Akinlaja</title>
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    :root {
+      --project-navy: #0F172A;
+      --project-gold: #FFC72C;
+      --project-teal: #0EA5A6;
+      --project-white: #F9FAFB;
+    }
+    
+    .project-hero {
+      background: linear-gradient(135deg, rgba(14, 165, 166, 0.1), rgba(255, 199, 44, 0.1));
+      padding: 3rem 2rem;
+      margin-bottom: 3rem;
+    }
+    
+    .project-hero-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .project-hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    
+    .project-hero-tagline {
+      font-size: 1.25rem;
+      color: var(--project-teal);
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+    
+    .project-hero-image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .project-hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .impact-snapshot-tiles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .impact-tile {
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    
+    .impact-tile-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--project-gold);
+      margin-bottom: 0.5rem;
+    }
+    
+    .impact-tile-label {
+      font-size: 0.95rem;
+      color: var(--text-light);
+    }
+    
+    .project-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem 4rem;
+    }
+    
+    .project-section {
+      margin-bottom: 3rem;
+    }
+    
+    .project-section h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--project-teal);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .project-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .project-section ul li {
+      padding-left: 2rem;
+      margin-bottom: 0.75rem;
+      position: relative;
+      line-height: 1.7;
+    }
+    
+    .project-section ul li:before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--project-gold);
+      font-weight: 700;
+    }
+    
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .gallery-item {
+      border-radius: 0.75rem;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+    
+    .gallery-caption {
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+    
+    .project-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 0.75rem;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    .project-nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--project-gold);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid var(--project-teal);
+      border-radius: 0.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .project-nav-link:hover {
+      background: var(--project-teal);
+      color: var(--project-navy);
+    }
+    
+    .back-to-projects {
+      position: sticky;
+      top: 80px;
+      z-index: 50;
+      text-align: center;
+      padding: 1rem;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .back-to-projects a {
+      color: var(--project-gold);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .in-progress-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #fbbf24, #f59e0b);
+      color: #0F172A;
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    
+    @media (max-width: 768px) {
+      .project-hero h1 {
+        font-size: 1.8rem;
+      }
+      
+      .impact-snapshot-tiles {
+        grid-template-columns: 1fr;
+      }
+      
+      .project-nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="compact">
+    <h1>Bolametiren Akinlaja</h1>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../about.html">About</a>
+      <a href="../../projects/">Projects</a>
+      <a href="../../skills.html">Skills</a>
+      <a href="../../contact.html">Contact</a>
+      <span class="socials">
+        <a href="https://www.linkedin.com/in/bolametiren-akinlaja-497602213/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Bibicentric" title="GitHub"><i class="fab fa-github"></i></a>
+      </span>
+    </nav>
+  </header>
+
+  <div class="back-to-projects">
+    <a href="../../projects/">
+      <i class="fas fa-arrow-left"></i> Back to Projects
+    </a>
+  </div>
+
+  <main class="project-detail-main">
+    <!-- Project Hero -->
+    <section class="project-hero">
+      <div class="project-hero-container">
+        <span class="in-progress-badge"><i class="fas fa-clock"></i> In Progress</span>
+        <h1>NexaFlow Analytics</h1>
+        <p class="project-hero-tagline">Building next-generation AI-powered workflow optimization and predictive analytics platform</p>
+        
+        <div class="project-hero-image">
+          <img src="images/hero.jpg" alt="NexaFlow Analytics Platform" loading="lazy">
+        </div>
+        
+        <!-- Impact Snapshot -->
+        <div class="impact-snapshot-tiles">
+          <div class="impact-tile">
+            <div class="impact-tile-number">In Progress</div>
+            <div class="impact-tile-label">Active Development</div>
+          </div>
+          <div class="impact-tile">
+            <div class="impact-tile-number">AI-Powered</div>
+            <div class="impact-tile-label">Predictive Analytics</div>
+          </div>
+          <div class="impact-tile">
+            <div class="impact-tile-number">Enterprise</div>
+            <div class="impact-tile-label">Workflow Platform</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="project-content">
+      <!-- Overview -->
+      <section class="project-section">
+        <h2><i class="fas fa-compass"></i> Overview</h2>
+        <p>
+          NexaFlow Analytics is an ambitious project to build an enterprise-grade workflow optimization platform that leverages artificial intelligence and machine learning to predict bottlenecks, automate task routing, and provide real-time insights for operational excellence. The platform combines advanced analytics, natural language processing, and predictive modeling to help organizations streamline their operations and make data-driven decisions at scale.
+        </p>
+      </section>
+
+      <!-- My Role -->
+      <section class="project-section">
+        <h2><i class="fas fa-user-tie"></i> My Role</h2>
+        <ul>
+          <li>Leading product vision and strategy for the NexaFlow analytics platform</li>
+          <li>Designing system architecture and data pipeline infrastructure</li>
+          <li>Developing machine learning models for workflow prediction and optimization</li>
+          <li>Building interactive dashboards and visualization components</li>
+          <li>Conducting user research with potential enterprise customers</li>
+          <li>Collaborating with technical team on platform development</li>
+        </ul>
+      </section>
+
+      <!-- Objectives -->
+      <section class="project-section">
+        <h2><i class="fas fa-bullseye"></i> Objectives</h2>
+        <ul>
+          <li>Create an AI-powered platform that predicts and prevents workflow bottlenecks</li>
+          <li>Automate intelligent task routing based on team capacity and expertise</li>
+          <li>Provide real-time analytics and actionable insights for operations managers</li>
+          <li>Enable seamless integration with existing enterprise tools and systems</li>
+          <li>Deliver measurable ROI through reduced cycle times and improved resource utilization</li>
+        </ul>
+      </section>
+
+      <!-- Approach / What I Did -->
+      <section class="project-section">
+        <h2><i class="fas fa-tasks"></i> Approach / What I Did</h2>
+        <ul>
+          <li>Conducting extensive market research and competitive analysis in workflow automation space</li>
+          <li>Interviewing potential users across various industries to identify pain points and requirements</li>
+          <li>Designing scalable data architecture supporting real-time analytics and machine learning</li>
+          <li>Prototyping core features including task prioritization and predictive analytics modules</li>
+          <li>Developing machine learning models for workflow pattern recognition and anomaly detection</li>
+          <li>Creating intuitive user interface with focus on actionable insights and ease of use</li>
+          <li>Building API integrations with popular project management and collaboration tools</li>
+          <li>Establishing data security and privacy frameworks for enterprise deployment</li>
+        </ul>
+      </section>
+
+      <!-- Deliverables -->
+      <section class="project-section">
+        <h2><i class="fas fa-box-open"></i> Deliverables</h2>
+        <ul>
+          <li><strong>Platform Architecture:</strong> Comprehensive system design for scalable analytics infrastructure</li>
+          <li><strong>Predictive Models:</strong> Machine learning algorithms for workflow optimization and bottleneck prediction</li>
+          <li><strong>Interactive Dashboard:</strong> Real-time visualization of workflow metrics and recommendations</li>
+          <li><strong>API Documentation:</strong> Integration guides for connecting with enterprise systems</li>
+          <li><strong>User Research Report:</strong> Insights from interviews with target users and stakeholders</li>
+          <li><strong>Product Roadmap:</strong> Phased development plan with feature priorities and timelines</li>
+        </ul>
+      </section>
+
+      <!-- Current Status & Next Steps -->
+      <section class="project-section">
+        <h2><i class="fas fa-rocket"></i> Current Status & Next Steps</h2>
+        <p>
+          The project is currently in active development with core infrastructure and prototype features being built. Key next steps include completing the predictive analytics engine, conducting beta testing with select enterprise partners, refining the user interface based on feedback, and preparing for initial market launch. The platform is on track for beta release in the coming months.
+        </p>
+      </section>
+
+      <!-- Navigation -->
+      <div class="project-nav">
+        <a href="../../" class="project-nav-link">
+          <i class="fas fa-home"></i> Back to Home
+        </a>
+        <a href="../" class="project-nav-link">
+          <i class="fas fa-th"></i> Back to Projects
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="homepage-footer" style="background: var(--bg-dark); padding: 2rem; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+    <p style="margin: 0; color: var(--text-light);">&copy; 2025 Bolametiren Akinlaja. All rights reserved.</p>
+  </footer>
+</body>
+</html>

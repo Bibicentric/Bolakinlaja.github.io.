@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NSF Discovery Workshop - Research infrastructure and data science education for HBCU faculty">
+  <meta name="author" content="Bolametiren Akinlaja">
+  <title>NSF Discovery Workshop - Bolametiren Akinlaja</title>
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    :root {
+      --project-navy: #0F172A;
+      --project-gold: #FFC72C;
+      --project-teal: #0EA5A6;
+      --project-white: #F9FAFB;
+    }
+    
+    .project-hero {
+      background: linear-gradient(135deg, rgba(14, 165, 166, 0.1), rgba(255, 199, 44, 0.1));
+      padding: 3rem 2rem;
+      margin-bottom: 3rem;
+    }
+    
+    .project-hero-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .project-hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    
+    .project-hero-tagline {
+      font-size: 1.25rem;
+      color: var(--project-teal);
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+    
+    .project-hero-image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .project-hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .impact-snapshot-tiles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .impact-tile {
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    
+    .impact-tile-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--project-gold);
+      margin-bottom: 0.5rem;
+    }
+    
+    .impact-tile-label {
+      font-size: 0.95rem;
+      color: var(--text-light);
+    }
+    
+    .project-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem 4rem;
+    }
+    
+    .project-section {
+      margin-bottom: 3rem;
+    }
+    
+    .project-section h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--project-teal);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .project-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .project-section ul li {
+      padding-left: 2rem;
+      margin-bottom: 0.75rem;
+      position: relative;
+      line-height: 1.7;
+    }
+    
+    .project-section ul li:before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--project-gold);
+      font-weight: 700;
+    }
+    
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .gallery-item {
+      border-radius: 0.75rem;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+    
+    .gallery-caption {
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+    
+    .project-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 0.75rem;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    .project-nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--project-gold);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid var(--project-teal);
+      border-radius: 0.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .project-nav-link:hover {
+      background: var(--project-teal);
+      color: var(--project-navy);
+    }
+    
+    .back-to-projects {
+      position: sticky;
+      top: 80px;
+      z-index: 50;
+      text-align: center;
+      padding: 1rem;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .back-to-projects a {
+      color: var(--project-gold);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    @media (max-width: 768px) {
+      .project-hero h1 {
+        font-size: 1.8rem;
+      }
+      
+      .impact-snapshot-tiles {
+        grid-template-columns: 1fr;
+      }
+      
+      .project-nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="compact">
+    <h1>Bolametiren Akinlaja</h1>
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../../about.html">About</a>
+      <a href="../../projects/">Projects</a>
+      <a href="../../skills.html">Skills</a>
+      <a href="../../contact.html">Contact</a>
+      <span class="socials">
+        <a href="https://www.linkedin.com/in/bolametiren-akinlaja-497602213/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Bibicentric" title="GitHub"><i class="fab fa-github"></i></a>
+      </span>
+    </nav>
+  </header>
+
+  <div class="back-to-projects">
+    <a href="../../projects/">
+      <i class="fas fa-arrow-left"></i> Back to Projects
+    </a>
+  </div>
+
+  <main class="project-detail-main">
+    <!-- Project Hero -->
+    <section class="project-hero">
+      <div class="project-hero-container">
+        <h1>NSF Discovery Workshop</h1>
+        <p class="project-hero-tagline">National Science Foundation-supported professional development workshop advancing data science education at HBCUs</p>
+        
+        <div class="project-hero-image">
+          <img src="images/hero.jpg" alt="NSF Discovery Workshop" loading="lazy">
+        </div>
+        
+        <!-- Impact Snapshot -->
+        <div class="impact-snapshot-tiles">
+          <div class="impact-tile">
+            <div class="impact-tile-number">60+</div>
+            <div class="impact-tile-label">Educators Trained</div>
+          </div>
+          <div class="impact-tile">
+            <div class="impact-tile-number">NSF-Funded</div>
+            <div class="impact-tile-label">National Program</div>
+          </div>
+          <div class="impact-tile">
+            <div class="impact-tile-number">HBCU</div>
+            <div class="impact-tile-label">Research Focus</div>
+          </div>
+          <div class="impact-tile">
+            <div class="impact-tile-number">Multi-Day</div>
+            <div class="impact-tile-label">Intensive Training</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="project-content">
+      <!-- Overview -->
+      <section class="project-section">
+        <h2><i class="fas fa-compass"></i> Overview</h2>
+        <p>
+          The NSF Discovery Workshop was a National Science Foundation-supported professional development initiative designed to strengthen data science research infrastructure and pedagogical approaches at Historically Black Colleges and Universities (HBCUs). This multi-day intensive workshop brought together faculty, researchers, and administrators to explore cutting-edge data science methodologies, collaborative research opportunities, and strategies for building sustainable data science programs that serve diverse student populations.
+        </p>
+      </section>
+
+      <!-- My Role -->
+      <section class="project-section">
+        <h2><i class="fas fa-user-tie"></i> My Role</h2>
+        <ul>
+          <li>Coordinated workshop logistics including venue, materials, and technology setup</li>
+          <li>Managed participant registration, communications, and travel arrangements</li>
+          <li>Facilitated workshop sessions on data analytics tools and methodologies</li>
+          <li>Supported faculty in developing data science curriculum and research proposals</li>
+          <li>Coordinated with NSF program officers and external facilitators</li>
+          <li>Compiled workshop outcomes and impact assessments for NSF reporting</li>
+        </ul>
+      </section>
+
+      <!-- Objectives -->
+      <section class="project-section">
+        <h2><i class="fas fa-bullseye"></i> Objectives</h2>
+        <ul>
+          <li>Build capacity for data science research and education at HBCU institutions</li>
+          <li>Provide hands-on training in advanced analytics tools and methodologies</li>
+          <li>Foster collaborative networks among HBCU faculty and researchers</li>
+          <li>Support development of competitive NSF research proposals</li>
+          <li>Establish sustainable infrastructure for ongoing data science program development</li>
+        </ul>
+      </section>
+
+      <!-- Approach / What I Did -->
+      <section class="project-section">
+        <h2><i class="fas fa-tasks"></i> Approach / What I Did</h2>
+        <ul>
+          <li>Designed comprehensive workshop agenda covering data science fundamentals, research methods, and grant writing</li>
+          <li>Recruited expert facilitators from academia, industry, and NSF program management</li>
+          <li>Organized hands-on sessions using real datasets and research scenarios relevant to HBCU contexts</li>
+          <li>Facilitated networking sessions connecting participants across institutions and disciplines</li>
+          <li>Created resource repository with templates, tools, and best practices for participants</li>
+          <li>Conducted pre- and post-workshop assessments to measure learning outcomes and satisfaction</li>
+          <li>Coordinated follow-up activities including mentorship circles and proposal review support</li>
+          <li>Documented workshop proceedings and outcomes for NSF reporting and future program improvement</li>
+        </ul>
+      </section>
+
+      <!-- Deliverables -->
+      <section class="project-section">
+        <h2><i class="fas fa-box-open"></i> Deliverables</h2>
+        <ul>
+          <li><strong>Workshop Curriculum:</strong> Comprehensive training materials covering data science pedagogy and research methods</li>
+          <li><strong>Resource Repository:</strong> Curated collection of tools, templates, and best practices for data science education</li>
+          <li><strong>Participant Network:</strong> Connected community of HBCU faculty and researchers for ongoing collaboration</li>
+          <li><strong>Grant Proposal Templates:</strong> NSF-aligned frameworks and examples for research funding applications</li>
+          <li><strong>Impact Assessment Report:</strong> Comprehensive evaluation of workshop outcomes and participant feedback</li>
+          <li><strong>NSF Program Report:</strong> Detailed documentation of activities, outcomes, and recommendations for program officers</li>
+        </ul>
+      </section>
+
+      <!-- Outcomes -->
+      <section class="project-section">
+        <h2><i class="fas fa-trophy"></i> Outcomes</h2>
+        <ul>
+          <li><strong>60+ educators trained</strong> including faculty, researchers, and administrators from multiple HBCUs</li>
+          <li><strong>High satisfaction ratings</strong> with 95% of participants rating the workshop as excellent or very good</li>
+          <li><strong>Research collaborations initiated</strong> among participants across institutions and disciplines</li>
+          <li><strong>NSF proposals submitted</strong> by workshop participants leveraging learned frameworks and methodologies</li>
+          <li><strong>Sustainable network established</strong> through ongoing mentorship circles and collaboration channels</li>
+          <li><strong>Best practices documented</strong> for future workshops and professional development initiatives</li>
+          <li><strong>Institutional capacity strengthened</strong> for data science program development at participating HBCUs</li>
+        </ul>
+      </section>
+
+      <!-- What's Next -->
+      <section class="project-section">
+        <h2><i class="fas fa-rocket"></i> What's Next</h2>
+        <p>
+          Building on the success of this workshop, plans are underway for additional professional development sessions, virtual follow-up workshops, and a community of practice platform where participants can continue collaboration. The program is also exploring opportunities to expand the workshop model to other minority-serving institutions and develop advanced training tracks for experienced data science educators.
+        </p>
+      </section>
+
+      <!-- Navigation -->
+      <div class="project-nav">
+        <a href="../../" class="project-nav-link">
+          <i class="fas fa-home"></i> Back to Home
+        </a>
+        <a href="../" class="project-nav-link">
+          <i class="fas fa-th"></i> Back to Projects
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="homepage-footer" style="background: var(--bg-dark); padding: 2rem; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+    <p style="margin: 0; color: var(--text-light);">&copy; 2025 Bolametiren Akinlaja. All rights reserved.</p>
+  </footer>
+</body>
+</html>

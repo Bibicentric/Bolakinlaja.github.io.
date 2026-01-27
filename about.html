@@ -3,570 +3,155 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn about Bolametiren Akinlaja - Program Manager and Data Innovation Strategist with 6+ years of experience in workforce development and data analytics.">
+  <meta name="description" content="About Bolametiren 'Bibi' Akinlaja - Data Analytics Program Manager, Program Builder, and Innovation Strategist designing data-driven programs and communities that expand workforce pipelines.">
   <meta name="author" content="Bolametiren Akinlaja">
   <title>About Me - Bolametiren Akinlaja</title>
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <script defer src="assets/js/portfolio-enhancements.js"></script>
   <style>
-    /* Enhanced About Page Styles - Maximized Design */
+    /* About Page - Executive Narrative Style */
     
-    /* Hero Section with Split Layout */
-    .about-hero {
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(139, 92, 246, 0.1));
-      padding: 5rem 3rem;
-      margin: -2rem -3rem 4rem -3rem;
-      border-radius: 0 0 2rem 2rem;
-    }
-    
-    .about-hero-content {
-      max-width: 1600px;
+    .about-page {
+      max-width: 900px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
+      padding: 3rem 2rem;
+      line-height: 1.8;
     }
     
-    .about-hero-text h1 {
-      font-size: 3.5rem;
+    .about-page h1 {
+      font-size: 2.75rem;
       font-weight: 800;
-      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 1.5rem;
-      line-height: 1.2;
+      color: #0F172A;
+      margin-bottom: 1rem;
+      line-height: 1.3;
     }
     
-    .about-hero-text .tagline {
-      font-size: 1.5rem;
-      color: var(--text-light);
-      margin-bottom: 2rem;
+    .about-page h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #0F172A;
+      margin-top: 3.5rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 3px solid #0EA5A6;
+      line-height: 1.4;
+    }
+    
+    .about-page h3 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: #0F172A;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .about-page p {
+      font-size: 1.1rem;
+      color: #374151;
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+    }
+    
+    .about-page ul {
+      margin: 1.5rem 0;
+      padding-left: 2rem;
+    }
+    
+    .about-page ul li {
+      font-size: 1.1rem;
+      color: #374151;
+      margin-bottom: 0.75rem;
+      line-height: 1.7;
+    }
+    
+    .pull-quote {
+      background: linear-gradient(135deg, rgba(14, 165, 166, 0.08), rgba(255, 199, 44, 0.08));
+      border-left: 4px solid #0EA5A6;
+      padding: 2rem 2.5rem;
+      margin: 3rem 0;
+      font-size: 1.25rem;
+      font-style: italic;
+      color: #0F172A;
+      line-height: 1.7;
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
+    
+    .section-divider {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #e5e7eb, transparent);
+      margin: 3rem 0;
+    }
+    
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    
+    .skills-grid .skill-item {
+      background: #f9fafb;
+      padding: 1rem 1.5rem;
+      border-radius: 0.5rem;
+      border: 1px solid #e5e7eb;
+      font-size: 1rem;
+      color: #374151;
+      text-align: center;
       font-weight: 500;
     }
     
-    .about-hero-text .description {
-      font-size: 1.15rem;
-      line-height: 1.8;
-      color: var(--text-light);
-      margin-bottom: 2rem;
+    .cert-list {
+      background: #f9fafb;
+      padding: 2rem;
+      border-radius: 0.75rem;
+      border: 1px solid #e5e7eb;
     }
     
-    .about-hero-image {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .about-hero-image img {
-      width: 350px;
-      height: 350px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 8px solid white;
-      box-shadow: var(--shadow-xl);
-      transition: transform 0.3s ease;
-    }
-    
-    .about-hero-image img:hover {
-      transform: scale(1.05);
-    }
-    
-    .about-hero-image::before {
-      content: '';
-      position: absolute;
-      width: 400px;
-      height: 400px;
-      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-      border-radius: 50%;
-      opacity: 0.1;
-      z-index: -1;
-      animation: pulse 3s infinite;
-    }
-    
-    @keyframes pulse {
-      0%, 100% {
-        transform: scale(1);
-        opacity: 0.1;
-      }
-      50% {
-        transform: scale(1.1);
-        opacity: 0.15;
-      }
-    }
-    
-    /* Quote Box - Maximized */
-    .about-quote-box {
-      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-      color: white;
-      padding: 4rem 3rem;
-      border-radius: 2rem;
-      margin: 4rem auto;
-      max-width: 1400px;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .about-quote-box::before {
-      content: '"';
-      position: absolute;
-      font-size: 15rem;
-      opacity: 0.1;
-      top: -3rem;
-      left: 2rem;
-      font-family: Georgia, serif;
-    }
-    
-    .about-quote-box p {
-      font-size: 1.8rem;
-      line-height: 1.6;
-      position: relative;
-      z-index: 1;
-      text-align: center;
+    .cert-list ul {
       margin: 0;
-      font-weight: 300;
-      font-style: italic;
+      padding-left: 1.5rem;
     }
     
-    .about-quote-box strong {
-      font-weight: 700;
-      display: block;
+    .cert-list li {
       margin-bottom: 1rem;
-      font-size: 1.3rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-    
-    /* Stats Row - Maximized */
-    .stats-row-enhanced {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 2rem;
-      margin: 4rem auto;
-      max-width: 1600px;
-    }
-    
-    .stat-item-enhanced {
-      text-align: center;
-      padding: 2.5rem 1.5rem;
-      background: var(--card-bg);
-      border-radius: 1.5rem;
-      box-shadow: var(--shadow-md);
-      border: 2px solid var(--border-color);
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .stat-item-enhanced::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 5px;
-      background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-      transform: scaleX(0);
-      transition: transform 0.3s ease;
-    }
-    
-    .stat-item-enhanced:hover::before {
-      transform: scaleX(1);
-    }
-    
-    .stat-item-enhanced:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-xl);
-      border-color: var(--primary-color);
-    }
-    
-    .stat-item-enhanced .icon {
-      font-size: 3rem;
-      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 1rem;
-    }
-    
-    .stat-item-enhanced .number {
-      font-size: 3rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 1;
-    }
-    
-    .stat-item-enhanced .label {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--text-color);
-      margin-top: 0.5rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    
-    /* Expertise Grid - Maximized 3x3 */
-    .expertise-grid-max {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 3rem;
-      margin: 4rem auto;
-      max-width: 1600px;
-    }
-    
-    .expertise-card-max {
-      background: var(--card-bg);
-      padding: 3rem;
-      border-radius: 1.5rem;
-      box-shadow: var(--shadow-md);
-      border: 2px solid transparent;
-      transition: all 0.4s ease;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .expertise-card-max::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(45deg, transparent, rgba(37, 99, 235, 0.05), transparent);
-      transform: rotate(45deg);
-      transition: all 0.5s ease;
-    }
-    
-    .expertise-card-max:hover::before {
-      left: 100%;
-    }
-    
-    .expertise-card-max:hover {
-      transform: translateY(-10px);
-      box-shadow: var(--shadow-xl);
-      border-color: var(--primary-color);
-    }
-    
-    .expertise-card-max .icon-box {
-      width: 100px;
-      height: 100px;
-      margin: 0 auto 2rem;
-      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.5rem;
-      color: white;
-      transition: all 0.4s ease;
-      position: relative;
-      z-index: 1;
-    }
-    
-    .expertise-card-max:hover .icon-box {
-      transform: rotateY(360deg) scale(1.1);
-    }
-    
-    .expertise-card-max h3 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      color: var(--text-color);
-      font-weight: 700;
-      position: relative;
-      z-index: 1;
-    }
-    
-    .expertise-card-max p {
-      color: var(--text-light);
-      line-height: 1.7;
-      font-size: 1.05rem;
-      position: relative;
-      z-index: 1;
-    }
-    
-    /* Timeline Enhanced */
-    .timeline-enhanced {
-      max-width: 1400px;
-      margin: 4rem auto;
-      position: relative;
-    }
-    
-    .timeline-enhanced::before {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 0;
-      bottom: 0;
-      width: 4px;
-      background: linear-gradient(180deg, var(--primary-color), var(--accent-color));
-      transform: translateX(-50%);
-    }
-    
-    .timeline-item-enhanced {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      margin-bottom: 4rem;
-      position: relative;
-    }
-    
-    .timeline-item-enhanced:nth-child(even) .timeline-content-left {
-      order: 2;
-    }
-    
-    .timeline-item-enhanced:nth-child(even) .timeline-content-right {
-      order: 1;
-      text-align: right;
-    }
-    
-    .timeline-marker-center {
-      position: absolute;
-      left: 50%;
-      top: 2rem;
-      transform: translateX(-50%);
-      width: 30px;
-      height: 30px;
-      background: white;
-      border: 5px solid var(--primary-color);
-      border-radius: 50%;
-      box-shadow: 0 0 0 8px rgba(37, 99, 235, 0.1);
-      z-index: 2;
-      transition: all 0.3s ease;
-    }
-    
-    .timeline-item-enhanced:hover .timeline-marker-center {
-      transform: translateX(-50%) scale(1.5);
-      box-shadow: 0 0 0 12px rgba(37, 99, 235, 0.2);
-    }
-    
-    .timeline-content-box {
-      background: var(--card-bg);
-      padding: 2.5rem;
-      border-radius: 1.5rem;
-      box-shadow: var(--shadow-md);
-      border: 2px solid var(--border-color);
-      transition: all 0.3s ease;
-    }
-    
-    .timeline-item-enhanced:hover .timeline-content-box {
-      box-shadow: var(--shadow-xl);
-      border-color: var(--primary-color);
-    }
-    
-    .timeline-badge {
-      display: inline-block;
-      padding: 0.5rem 1.5rem;
-      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-      color: white;
-      border-radius: 2rem;
-      font-size: 0.9rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 1.5rem;
-    }
-    
-    .timeline-content-box h3 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--text-color);
-      margin-bottom: 0.5rem;
-    }
-    
-    .timeline-content-box h4 {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: var(--primary-color);
-      margin-bottom: 1.5rem;
-    }
-    
-    .timeline-content-box p {
-      color: var(--text-light);
-      line-height: 1.8;
       font-size: 1.05rem;
     }
     
-    /* Skills Cloud */
-    .skills-cloud {
-      max-width: 1600px;
-      margin: 4rem auto;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .skill-tag {
-      padding: 1rem 2rem;
-      background: var(--card-bg);
-      border: 2px solid var(--border-color);
-      border-radius: 3rem;
+    .emphasis {
       font-weight: 600;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      font-size: 1.1rem;
-    }
-    
-    .skill-tag:hover {
-      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-      color: white;
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-lg);
-      border-color: transparent;
-    }
-    
-    .skill-tag.featured {
-      font-size: 1.3rem;
-      padding: 1.2rem 2.5rem;
-    }
-    
-    /* CTA Section Enhanced */
-    .cta-section-max {
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(139, 92, 246, 0.05));
-      padding: 5rem 3rem;
-      margin: 4rem -3rem -2rem -3rem;
-      border-radius: 2rem 2rem 0 0;
-      text-align: center;
-    }
-    
-    .cta-section-max h2 {
-      font-size: 3rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 1.5rem;
-    }
-    
-    .cta-section-max p {
-      font-size: 1.3rem;
-      color: var(--text-light);
-      max-width: 800px;
-      margin: 0 auto 3rem;
-      line-height: 1.8;
-    }
-    
-    .cta-buttons {
-      display: flex;
-      gap: 2rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    
-    .cta-button-primary {
-      padding: 1.2rem 3rem;
-      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-      color: white;
-      border: none;
-      border-radius: 3rem;
-      font-size: 1.2rem;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      transition: all 0.3s ease;
-      box-shadow: var(--shadow-lg);
-    }
-    
-    .cta-button-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-xl);
-    }
-    
-    .cta-button-secondary {
-      padding: 1.2rem 3rem;
-      background: white;
-      color: var(--primary-color);
-      border: 2px solid var(--primary-color);
-      border-radius: 3rem;
-      font-size: 1.2rem;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      transition: all 0.3s ease;
-    }
-    
-    .cta-button-secondary:hover {
-      background: var(--primary-color);
-      color: white;
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-lg);
-    }
-    
-    /* Responsive Design */
-    @media (max-width: 1400px) {
-      .expertise-grid-max {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      color: #0EA5A6;
     }
     
     @media (max-width: 768px) {
-      .about-hero-content {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        text-align: center;
+      .about-page {
+        padding: 2rem 1.5rem;
       }
       
-      .about-hero-text h1 {
-        font-size: 2.5rem;
+      .about-page h1 {
+        font-size: 2rem;
       }
       
-      .about-hero-text .tagline {
+      .about-page h2 {
+        font-size: 1.5rem;
+        margin-top: 2.5rem;
+      }
+      
+      .about-page h3 {
         font-size: 1.2rem;
       }
       
-      .about-hero-image img {
-        width: 250px;
-        height: 250px;
+      .about-page p,
+      .about-page ul li {
+        font-size: 1rem;
       }
       
-      .stats-row-enhanced {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+      .pull-quote {
+        font-size: 1.1rem;
+        padding: 1.5rem 1.75rem;
       }
       
-      .expertise-grid-max {
+      .skills-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-      
-      .timeline-enhanced::before {
-        left: 30px;
-      }
-      
-      .timeline-item-enhanced {
-        grid-template-columns: 1fr;
-        padding-left: 60px;
-      }
-      
-      .timeline-marker-center {
-        left: 30px;
-      }
-      
-      .timeline-item-enhanced:nth-child(even) .timeline-content-left,
-      .timeline-item-enhanced:nth-child(even) .timeline-content-right {
-        order: initial;
-        text-align: left;
-      }
-      
-      .about-quote-box p {
-        font-size: 1.3rem;
-      }
-      
-      .cta-section-max h2 {
-        font-size: 2rem;
       }
     }
   </style>
@@ -587,275 +172,139 @@
     </nav>
   </header>
 
-  <!-- Hero Section with Split Layout -->
-  <section class="about-hero">
-    <div class="about-hero-content">
-      <div class="about-hero-text">
-        <h1>Building Bridges Between Data & Opportunity</h1>
-        <p class="tagline">Program Manager | Data Innovation Strategist | Global Impact Leader</p>
-        <p class="description">
-          I'm Bolametiren "Bibi" Akinlaja — a visionary program manager and data strategist passionate about transforming complex data into actionable insights that empower people and drive institutional success. With over six years of cross-continental experience, I bridge the gap between innovation and accessibility.
-        </p>
-        <div style="display: flex; gap: 1rem; margin-top: 2rem;">
-          <a href="#my-journey" style="padding: 0.8rem 2rem; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); color: white; text-decoration: none; border-radius: 2rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
-            Explore My Journey <i class="fas fa-arrow-down"></i>
-          </a>
-          <a href="contact.html" style="padding: 0.8rem 2rem; background: white; color: var(--primary-color); text-decoration: none; border-radius: 2rem; font-weight: 600; border: 2px solid var(--primary-color);">
-            Let's Connect
-          </a>
-        </div>
-      </div>
-      <div class="about-hero-image">
-        <img src="images/Image (14).jpg" alt="Bolametiren Akinlaja">
-      </div>
-    </div>
-  </section>
+  <main class="about-page">
+    <h1>About Me</h1>
+    
+    <p>I'm Bolametiren "Bibi" Akinlaja, a Data Analytics Program Manager, Program Builder, and Innovation Strategist with professional experience spanning Nigeria and the United States. My work centers on designing data-driven programs, communities, and systems that expand workforce pipelines, support research, and help institutions turn analytics into meaningful, real-world impact.</p>
+    
+    <p>Rather than focusing solely on data outputs, my career has been shaped by building the infrastructure around data—the programs, partnerships, and learning environments that allow data to be understood, applied, and sustained.</p>
 
-  <section>
-    <!-- Stats Row -->
-    <div class="stats-row-enhanced">
-      <div class="stat-item-enhanced">
-        <div class="icon"><i class="fas fa-briefcase"></i></div>
-        <div class="number">6+</div>
-        <div class="label">Years Experience</div>
-      </div>
-      <div class="stat-item-enhanced">
-        <div class="icon"><i class="fas fa-users"></i></div>
-        <div class="number">500+</div>
-        <div class="label">People Impacted</div>
-      </div>
-      <div class="stat-item-enhanced">
-        <div class="icon"><i class="fas fa-lightbulb"></i></div>
-        <div class="number">20+</div>
-        <div class="label">Projects Led</div>
-      </div>
-      <div class="stat-item-enhanced">
-        <div class="icon"><i class="fas fa-handshake"></i></div>
-        <div class="number">10+</div>
-        <div class="label">Partnerships</div>
-      </div>
-      <div class="stat-item-enhanced">
-        <div class="icon"><i class="fas fa-dollar-sign"></i></div>
-        <div class="number">$387K+</div>
-        <div class="label">Value Generated</div>
-      </div>
+    <h2>Building Programs and Systems That Scale</h2>
+    
+    <p>At Bowie State University's Center for Data Analytics (CDA), I lead initiatives across program design, project execution, research support, and industry engagement. My responsibilities span strategy and operations: shaping program models, managing timelines and resources, coordinating cross-functional teams, and ensuring outcomes are measurable and repeatable.</p>
+    
+    <p>Over time, my role evolved from project coordination into program leadership, including:</p>
+    
+    <ul>
+      <li>Managing multi-phase analytics and workforce initiatives from concept to delivery</li>
+      <li>Overseeing operations and modernization efforts within the Truist Data Analytics Research, Trading, and Technology (DARTT) Lab</li>
+      <li>Designing and delivering analytics training programs that build practical skills in data analysis, modeling, and visualization</li>
+      <li>Supporting faculty and student research through applied analytics, reporting, and data storytelling</li>
+    </ul>
+    
+    <p>I have also served as an assistant facilitator for an NSF-funded workshop on Data and the African Diaspora, contributing to national conversations around culturally relevant data science education and inclusive research practices.</p>
+
+    <h2>Founding the Data Tribe: Building a Culture of Data</h2>
+    
+    <p>A defining milestone in my work has been the creation and founding of the <span class="emphasis">Data Tribe</span>, a student-centered data community housed within the Center for Data Analytics. I founded the Data Tribe to address a gap I consistently observed: students had access to tools and courses, but lacked a sense of belonging, continuity, and community around data.</p>
+    
+    <p>From concept to execution, I:</p>
+    
+    <ul>
+      <li>Designed the vision, structure, and operating model for the Data Tribe</li>
+      <li>Built its brand identity, recruitment strategy, and engagement framework</li>
+      <li>Created peer-led programming that blends technical learning, storytelling, and professional development</li>
+      <li>Integrated industry conversations, mentorship, and experiential learning into the community</li>
+    </ul>
+    
+    <p>Under my leadership, the Data Tribe grew into a student-owned leadership engine that:</p>
+    
+    <ul>
+      <li>Engaged 250+ participants across workshops, panels, and community events</li>
+      <li>Supported workforce readiness through industry engagements, including conversations with partners such as Northrop Grumman</li>
+      <li>Created a welcoming entry point into analytics for students across majors and skill levels</li>
+    </ul>
+    
+    <div class="pull-quote">
+      The Data Tribe reflects my belief that data education is strongest when it is communal, human-centered, and accessible—not isolated to classrooms or labs.
     </div>
 
-    <!-- Philosophy Quote -->
-    <div class="about-quote-box">
-      <p>
-        <strong>My Guiding Philosophy</strong>
-        "Data is more than numbers — it's a language of connection, equity, and empowerment. My work centers on translating that language into solutions that help people and organizations grow."
-      </p>
+    <h2>Leadership Through Mentorship and Engagement</h2>
+    
+    <p>Beyond formal programs, I've focused on pipeline building—creating pathways that connect learners to mentors, applied projects, and professional networks. This work includes designing mentorship models, facilitating student leadership development, and creating experiences that allow participants to practice skills in real contexts.</p>
+    
+    <p>Earlier in my career, I served as President of the International Business Club, where I led globally focused programming including cultural exchange events, guest speaker sessions, and mentorship initiatives. These experiences reinforced my approach to leadership: learning thrives when it is experiential, relational, and globally informed.</p>
+
+    <h2>A Global Foundation in Strategy and Execution</h2>
+    
+    <p>Before transitioning to the United States, I worked as a Project Manager in Nigeria within the hospitality sector. In that role, I led market research, business planning, digital optimization, and cross-functional execution—often working with limited resources and tight timelines.</p>
+    
+    <p>This experience grounded me in practical execution and adaptability, shaping how I approach program design today: prioritizing clarity, flexibility, and outcomes that matter to stakeholders.</p>
+
+    <h2>Expanding Into AI and Strategic Decision-Making</h2>
+    
+    <p>To strengthen my ability to align analytics with leadership and organizational strategy, I am currently completing a Certificate in AI Business Strategy from Johns Hopkins University. This program is expanding my understanding of:</p>
+    
+    <ul>
+      <li>Responsible and ethical AI adoption</li>
+      <li>AI governance and decision-making frameworks</li>
+      <li>Translating analytics into executive-level strategy</li>
+      <li>Aligning technology investments with mission-driven outcomes</li>
+    </ul>
+    
+    <p>This step represents a shift toward data-informed leadership, ensuring that emerging technologies are implemented thoughtfully and sustainably.</p>
+
+    <h2>How I Work</h2>
+    
+    <p>Across roles and contexts, my approach is defined by:</p>
+    
+    <ul>
+      <li><strong>Systems thinking:</strong> designing programs that connect people, tools, and processes</li>
+      <li><strong>Clarity:</strong> translating complexity into structures others can follow</li>
+      <li><strong>Collaboration:</strong> working across disciplines and institutions</li>
+      <li><strong>Impact:</strong> prioritizing outcomes that can be measured, communicated, and scaled</li>
+    </ul>
+
+    <h2>Core Areas of Focus</h2>
+    
+    <ul>
+      <li>Program & Project Management</li>
+      <li>Data Analytics & Visualization</li>
+      <li>Workforce & Talent Pipeline Development</li>
+      <li>Community & Ecosystem Building</li>
+      <li>Research Support & Applied Analytics</li>
+      <li>AI & Innovation Strategy</li>
+      <li>Stakeholder & Partnership Management</li>
+    </ul>
+
+    <h2>Tools & Skills</h2>
+    
+    <div class="skills-grid">
+      <div class="skill-item">Power BI</div>
+      <div class="skill-item">Tableau</div>
+      <div class="skill-item">Excel</div>
+      <div class="skill-item">SQL</div>
+      <div class="skill-item">Python</div>
+      <div class="skill-item">Microsoft Teams</div>
+      <div class="skill-item">Project Documentation</div>
+      <div class="skill-item">Data Storytelling</div>
+      <div class="skill-item">Cross-Functional Coordination</div>
     </div>
-  </section>
 
-  <!-- Core Expertise - Maximized 3x3 Grid -->
-  <section id="expertise">
-    <div class="section-title">Core Areas of Expertise</div>
-    <div class="expertise-grid-max">
-      <div class="expertise-card-max">
-        <div class="icon-box">
-          <i class="fas fa-project-diagram"></i>
-        </div>
-        <h3>Program & Project Management</h3>
-        <p>Strategic development, execution, and evaluation. I turn ideas into sustainable systems that deliver continuous value and outlast individual events.</p>
-      </div>
-      <div class="expertise-card-max">
-        <div class="icon-box">
-          <i class="fas fa-chart-line"></i>
-        </div>
-        <h3>Data Analytics & Visualization</h3>
-        <p>Expert in Power BI, Tableau, SQL, Python, and Excel. I transform complex datasets into compelling visual stories and actionable insights.</p>
-      </div>
-      <div class="expertise-card-max">
-        <div class="icon-box">
-          <i class="fas fa-robot"></i>
-        </div>
-        <h3>AI & Digital Innovation</h3>
-        <p>Integrating accessible AI tools into learning and research ecosystems, shaping conversations on AI ethics, IoT applications, and digital equity.</p>
-      </div>
-      <div class="expertise-card-max">
-        <div class="icon-box">
-          <i class="fas fa-users"></i>
-        </div>
-        <h3>Workforce Development</h3>
-        <p>Designing curricula, mentorship programs, and industry partnerships that prepare professionals for success in the data-driven economy.</p>
-      </div>
-      <div class="expertise-card-max">
-        <div class="icon-box">
-          <i class="fas fa-search-dollar"></i>
-        </div>
-        <h3>Business & Market Research</h3>
-        <p>Consumer analytics, competitive intelligence, and data storytelling that inform strategic decisions and drive organizational growth.</p>
-      </div>
-      <div class="expertise-card-max">
-        <div class="icon-box">
-          <i class="fas fa-people-arrows"></i>
-        </div>
-        <h3>Leadership & Community Building</h3>
-        <p>Fostering communities of practice through data literacy initiatives, collaborative innovation, and inclusive engagement strategies.</p>
-      </div>
+    <h2>Certifications & Professional Development</h2>
+    
+    <div class="cert-list">
+      <ul>
+        <li><strong>AI Business Strategy Certificate</strong> — Johns Hopkins University (in progress)</li>
+        <li><strong>Bloomberg Client Engagement Job Simulation</strong> — Forage</li>
+        <li><strong>Excel Essentials for Data Analytics</strong> — Coursera</li>
+        <li><strong>Data Analytics with Python</strong> — IBM</li>
+        <li><strong>Amazon Kinesis Analytics</strong> — AWS</li>
+        <li><strong>Advanced Excel / CRM / CompTIA Project+</strong> — New Horizons</li>
+        <li><strong>Association of Public Data Users (APDU)</strong> — Member</li>
+      </ul>
     </div>
-  </section>
 
-  <!-- Technical Skills Cloud -->
-  <section id="skills-tech">
-    <div class="section-title">Technical Toolkit & Competencies</div>
-    <div class="skills-cloud">
-      <span class="skill-tag featured">Power BI</span>
-      <span class="skill-tag featured">Tableau</span>
-      <span class="skill-tag">Python</span>
-      <span class="skill-tag">SQL</span>
-      <span class="skill-tag featured">Microsoft Excel</span>
-      <span class="skill-tag">Data Visualization</span>
-      <span class="skill-tag">Project Management</span>
-      <span class="skill-tag">Strategic Planning</span>
-      <span class="skill-tag">Curriculum Design</span>
-      <span class="skill-tag">Market Research</span>
-      <span class="skill-tag">SEO Strategy</span>
-      <span class="skill-tag">Digital Marketing</span>
-      <span class="skill-tag">AI Integration</span>
-      <span class="skill-tag">IoT Applications</span>
-      <span class="skill-tag">Grant Writing</span>
-      <span class="skill-tag">Partnership Development</span>
-      <span class="skill-tag">Data Storytelling</span>
-      <span class="skill-tag">Business Analytics</span>
-      <span class="skill-tag">Risk Management</span>
-      <span class="skill-tag">Community Engagement</span>
+    <div class="section-divider"></div>
+    
+    <div class="pull-quote" style="font-style: normal; font-weight: 600;">
+      From founding the Data Tribe to leading institution-wide analytics initiatives, my work is driven by a single goal: building data ecosystems that empower people, strengthen institutions, and create lasting impact.
     </div>
-  </section>
 
-  <!-- Professional Journey - Enhanced Timeline -->
-  <section id="my-journey">
-    <div class="section-title">My Professional Journey</div>
-    <div class="timeline-enhanced">
-      <div class="timeline-item-enhanced">
-        <div class="timeline-marker-center"></div>
-        <div class="timeline-content-left">
-          <div class="timeline-content-box">
-            <span class="timeline-badge">Present</span>
-            <h3>Program Manager & Data Strategist</h3>
-            <h4>Bowie State University - Center for Data Analytics</h4>
-            <p>Leading transformative programs that blend data education, applied research, and community empowerment. Flagship initiative: <strong>CDA Match (Mentorship & Research) Program</strong>—a center-led, cross-disciplinary mentor-matching and applied data analytics program connecting 25+ students with faculty, staff, and industry mentors on 13 real-world projects. Managing 15+ major initiatives including Smart DARTT Lab Modernization ($350K+ Truist funding), Sincerely Love Research Cohort, EIC Market Research ($12K+ value), and Data Tribe community. Representing BSU nationally at T-Mobile's Curiosity Lab and presenting at the Hawaii International Conference on Education, driving conversations on AI, workforce development, and digital equity.</p>
-          </div>
-        </div>
-        <div class="timeline-content-right">
-          <img src="images/Bowie State  T-Mobile 08.2025.jpeg" alt="T-Mobile Curiosity Lab" style="width: 100%; border-radius: 1.5rem; box-shadow: var(--shadow-lg);">
-        </div>
-      </div>
-
-      <div class="timeline-item-enhanced">
-        <div class="timeline-marker-center"></div>
-        <div class="timeline-content-left">
-          <img src="images/Image (14).jpg" alt="Middle Gates Ventures" style="width: 100%; border-radius: 1.5rem; box-shadow: var(--shadow-lg);">
-        </div>
-        <div class="timeline-content-right">
-          <div class="timeline-content-box">
-            <span class="timeline-badge">Ongoing</span>
-            <h3>Founder & Principal Consultant</h3>
-            <h4>Middle Gates Ventures</h4>
-            <p>Building an integrated platform that combines logistics optimization, data consulting, and event management systems to help small businesses operate smarter. Advancing data-driven risk management and business resilience frameworks through ongoing research and EB-2 NIW initiative.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="timeline-item-enhanced">
-        <div class="timeline-marker-center"></div>
-        <div class="timeline-content-left">
-          <div class="timeline-content-box">
-            <span class="timeline-badge">Foundation - Nigeria</span>
-            <h3>Digital Transformation Leader</h3>
-            <h4>Hospitality Sector</h4>
-            <p>Spearheaded comprehensive digital transformation initiatives including a reservation tracking system that improved operational efficiency by 40%. Designed and executed SEO and customer engagement strategies that significantly elevated brand visibility and market positioning. Gained foundational insights that meaningful innovation starts with deep understanding of people and their challenges.</p>
-          </div>
-        </div>
-        <div class="timeline-content-right">
-          <div style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(139, 92, 246, 0.1)); padding: 3rem; border-radius: 1.5rem; text-align: center;">
-            <i class="fas fa-hotel" style="font-size: 5rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
-            <p style="color: var(--text-light); font-size: 1.1rem;">Digital Innovation in Hospitality</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Education -->
-  <section id="education">
-    <div class="section-title">Academic Foundation</div>
-    <div class="expertise-grid-max" style="grid-template-columns: repeat(2, 1fr);">
-      <div class="expertise-card-max">
-        <div class="icon-box">
-          <i class="fas fa-graduation-cap"></i>
-        </div>
-        <h3>Master of Business Administration (MBA)</h3>
-        <h4 style="color: var(--primary-color); font-size: 1.2rem; margin-bottom: 1rem;">Bowie State University, Maryland, USA</h4>
-        <p><strong>Concentration:</strong> Business Analytics, Strategic Management, and Project Leadership</p>
-        <p style="margin-top: 1rem; font-style: italic; color: var(--text-lighter);">Equipped with advanced frameworks for data-driven decision making and organizational strategy.</p>
-      </div>
-      <div class="expertise-card-max">
-        <div class="icon-box">
-          <i class="fas fa-shield-alt"></i>
-        </div>
-        <h3>B.Sc. Insurance and Risk Management</h3>
-        <h4 style="color: var(--primary-color); font-size: 1.2rem; margin-bottom: 1rem;">Redeemer's University, Nigeria</h4>
-        <p><strong>Foundation:</strong> Risk Analysis, Management Principles, and Business Operations</p>
-        <p style="margin-top: 1rem; font-style: italic; color: var(--text-lighter);">Built strong analytical foundations in risk assessment and strategic planning.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- What Defines My Approach -->
-  <section id="approach">
-    <div class="section-title">What Defines My Approach</div>
-    <div class="expertise-grid-max" style="grid-template-columns: repeat(2, 1fr);">
-      <div class="expertise-card-max">
-        <div class="icon-box">
-          <i class="fas fa-heart"></i>
-        </div>
-        <h3>Human Empathy & Technical Precision</h3>
-        <p>I balance deep understanding of human needs with rigorous analytical methods, ensuring every solution is both technically sound and genuinely accessible to diverse users.</p>
-      </div>
-      <div class="expertise-card-max">
-        <div class="icon-box">
-          <i class="fas fa-rocket"></i>
-        </div>
-        <h3>Innovation & Accessibility</h3>
-        <p>Driving cutting-edge solutions while maintaining a commitment to accessibility—ensuring technology empowers everyone, not just technical experts.</p>
-      </div>
-      <div class="expertise-card-max">
-        <div class="icon-box">
-          <i class="fas fa-link"></i>
-        </div>
-        <h3>Connecting People to Possibility</h3>
-        <p>Whether building workforce programs, leading workshops, or analyzing markets—my ultimate goal is connecting people to opportunities through the power of data.</p>
-      </div>
-      <div class="expertise-card-max">
-        <div class="icon-box">
-          <i class="fas fa-cogs"></i>
-        </div>
-        <h3>Systems That Deliver Continuous Value</h3>
-        <p>I design sustainable structures that outlast individual events—transforming one-time initiatives into enduring systems that create lasting organizational impact.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Call to Action -->
-  <section class="cta-section-max">
-    <h2>Let's Create Impact Together</h2>
-    <p>I'm always excited to collaborate on projects that empower people, drive innovation in data and technology, and create meaningful change in education and workforce development. Let's connect and explore how we can work together.</p>
-    <div class="cta-buttons">
-      <a href="contact.html" class="cta-button-primary">
-        Get In Touch <i class="fas fa-arrow-right"></i>
-      </a>
-      <a href="projects.html" class="cta-button-secondary">
-        View My Projects <i class="fas fa-folder-open"></i>
-      </a>
-    </div>
-  </section>
+  </main>
 
   <footer>
-    &copy; 2025 Bolametiren Akinlaja. Designed with ❤️ | <a href="https://html5up.net" target="_blank">HTML5 UP</a>
+    &copy; 2025 Bolametiren Akinlaja. All rights reserved.
   </footer>
 </body>
 </html>
