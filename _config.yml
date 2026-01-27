@@ -1,14 +1,28 @@
 # Site settings
 title: Bolametiren Akinlaja - Portfolio
 description: Program Manager | Data Analytics | Project Management | Workforce Development
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+baseurl: "/Bolakinlaja.github.io." # the subpath of your site, e.g. /blog
+url: "https://bibicentric.github.io" # the base hostname & protocol for your site
+author: Bolametiren Akinlaja
+email: bibicentric@gmail.com
+
+# Social links
+linkedin_url: https://www.linkedin.com/in/bolametiren-akinlaja-497602213/
+github_url: https://github.com/Bibicentric
 
 # Build settings
 markdown: kramdown
 permalink: /:title.html
 
+# SEO settings
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
 # Exclude files from processing
 exclude:
   - README.md
   - LICENSE.txt
+  - "*.old"
+  - "*_old.html"
+  - .backup

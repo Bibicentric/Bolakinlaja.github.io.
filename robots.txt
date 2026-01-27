@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://bibicentric.github.io/Bolakinlaja.github.io./sitemap.xml
+
+# Disallow old or backup files
+Disallow: /*.old$
+Disallow: /*_old.html$
+Disallow: /.backup/
