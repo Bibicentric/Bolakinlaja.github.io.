@@ -1,24 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="About Bolametiren 'Bibi' Akinlaja - Data Analytics Program Manager & Innovation Strategist transforming data into opportunity. Architect of the Data Tribe, leader of $350K+ lab modernization, and builder of programs impacting 500+ learners across two continents.">
+    <meta name="author" content="Bolametiren Akinlaja">
     <title>About | Bolametiren "Bibi" Akinlaja</title>
 
-    <!-- Keep your existing stylesheet path -->
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/homepage.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <!-- Optional: improves font rendering -->
     <meta name="color-scheme" content="light dark" />
+    <style>
+      .skip-to-content {
+        position: absolute;
+        left: -9999px;
+        z-index: 999;
+        padding: 1em;
+        background-color: #667eea;
+        color: white;
+        text-decoration: none;
+      }
+      .skip-to-content:focus {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+      }
+    </style>
   </head>
 
   <body class="is-preload">
+    <a href="#main" class="skip-to-content">Skip to main content</a>
     <div id="wrapper" class="custom">
 
       <!-- =========================
-           NAV (Copied from index.html)
+           NAV (Adapted from index.html)
            =========================
       -->
       <header class="homepage-header">
@@ -257,17 +276,10 @@
     </div>
 
     <script>
-      // Optional: year
-      document.getElementById("year").textContent = new Date().getFullYear();
-
-      // Optional: mobile nav toggle (only if your homepage uses it; adjust selectors to match)
-      const btn = document.querySelector(".nav-toggle");
-      const nav = document.querySelector(".site-nav");
-      if (btn && nav) {
-        btn.addEventListener("click", () => {
-          const open = nav.classList.toggle("open");
-          btn.setAttribute("aria-expanded", String(open));
-        });
+      // Set current year in footer
+      const yearElement = document.getElementById("year");
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
       }
     </script>
   </body>
