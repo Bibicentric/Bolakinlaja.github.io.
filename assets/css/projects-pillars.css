@@ -68,6 +68,71 @@
   transform: translateY(0);
 }
 
+/* Project Image Container */
+.project-image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+}
+
+.project-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.5s ease;
+}
+
+.project-card:hover .project-image-container img {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* Image Placeholder */
+.project-image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+  transition: all 0.4s ease;
+}
+
+.project-image-placeholder i {
+  font-size: 3.5rem;
+  color: rgba(37, 99, 235, 0.4);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.project-card:hover .project-image-placeholder {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.15) 0%, rgba(124, 58, 237, 0.15) 100%);
+}
+
+.project-card:hover .project-image-placeholder i {
+  transform: scale(1.15) rotateY(180deg);
+  color: rgba(37, 99, 235, 0.6);
+}
+
+/* Overlay effect on image */
+.project-image-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(124, 58, 237, 0.2));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.project-card:hover .project-image-container::after {
+  opacity: 1;
+}
+
 .project-card::before {
   content: '';
   position: absolute;
@@ -218,7 +283,7 @@
     font-size: 0.85rem;
   }
 
-  .filter-pill span {
+  .filter-pill .pill-text {
     display: none;
   }
 
@@ -244,6 +309,10 @@
     font-size: 0.9rem;
   }
 
+  .project-image-container {
+    height: 180px;
+  }
+
   .summary-callout {
     padding: 1.5rem 2rem;
     margin: 3rem auto 1.5rem;
@@ -265,12 +334,16 @@
     width: 100%;
   }
 
-  .filter-pill span {
+  .filter-pill .pill-text {
     display: inline;
   }
 
   .project-card-content {
     padding: 1.25rem;
+  }
+
+  .project-image-container {
+    height: 160px;
   }
 }
 

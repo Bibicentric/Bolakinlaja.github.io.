@@ -45,6 +45,13 @@
     clickedButton.classList.add('active');
     clickedButton.setAttribute('aria-pressed', 'true');
 
+    // Update URL hash
+    if (filterValue !== 'all') {
+      history.replaceState(null, null, `#${filterValue}`);
+    } else {
+      history.replaceState(null, null, window.location.pathname);
+    }
+
     // Filter projects
     filterProjects(filterValue, projectCards);
 
@@ -54,19 +61,21 @@
 
   function filterProjects(filterValue, projectCards) {
     let visibleCount = 0;
+    let visibleIndex = 0;
 
-    projectCards.forEach((card, index) => {
+    projectCards.forEach((card) => {
       const category = card.getAttribute('data-category');
       
       // Show/hide based on filter
       if (filterValue === 'all' || category === filterValue) {
         card.classList.remove('hidden');
-        // Stagger animation
+        // Stagger animation with consistent timing for visible cards only
         setTimeout(() => {
           card.style.opacity = '1';
           card.style.transform = 'translateY(0)';
-        }, index * 50);
+        }, visibleIndex * 50);
         visibleCount++;
+        visibleIndex++;
       } else {
         card.classList.add('hidden');
         card.style.opacity = '0';
@@ -139,20 +148,6 @@
     liveRegion.textContent = message;
   }
 
-  // Smooth scroll to projects section when filter is clicked (if needed)
-  function scrollToProjects() {
-    const projectsSection = document.querySelector('.projects-grid-container');
-    if (projectsSection) {
-      const headerHeight = document.querySelector('header')?.offsetHeight || 0;
-      const targetPosition = projectsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
-      
-      window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-      });
-    }
-  }
-
   // Optional: Add URL hash support for deep linking
   function initializeHashSupport() {
     const hash = window.location.hash.substring(1);
@@ -164,19 +159,6 @@
         targetButton.click();
       }
     }
-
-    // Update hash when filter changes
-    const filterButtons = document.querySelectorAll('.filter-pill');
-    filterButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        const filter = this.getAttribute('data-filter');
-        if (filter !== 'all') {
-          history.replaceState(null, null, `#${filter}`);
-        } else {
-          history.replaceState(null, null, window.location.pathname);
-        }
-      });
-    });
   }
 
   // Initialize hash support after DOM is loaded
