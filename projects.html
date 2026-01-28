@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore Bolametiren Akinlaja's featured projects in data analytics, program management, community engagement, and digital transformation.">
+  <meta name="description" content="Explore Bolametiren Akinlaja's featured projects organized by functional impact: workforce, research, innovation, and community engagement.">
   <meta name="author" content="Bolametiren Akinlaja">
   <title>Featured Projects - Bolametiren Akinlaja</title>
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/project-cards.css">
+  <link rel="stylesheet" href="assets/css/projects-pillars.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <script defer src="assets/js/portfolio-enhancements.js"></script>
+  <script defer src="assets/js/projects-filter.js"></script>
 </head>
 <body>
   <header class="compact">
@@ -35,484 +36,240 @@
       <!-- Overview Section -->
       <div class="projects-overview">
         <p class="overview-text">
-          Explore a comprehensive portfolio of data-driven initiatives spanning AI innovation, technology leadership, 
-          workforce development, and community engagement. Each project demonstrates strategic program management, 
-          stakeholder collaboration, and measurable impact across education, entrepreneurship, and social innovation.
+          Explore a portfolio of strategic initiatives organized by functional impact. Each project demonstrates measurable outcomes, 
+          cross-sector collaboration, and sustainable solutions across workforce development, research, technology, and community engagement.
         </p>
       </div>
       
-      <!-- Project Stats Overview -->
-      <div class="project-stats-bar">
-        <div class="stat-item">
-          <i class="fas fa-project-diagram"></i>
-          <div>
-            <span class="stat-count">15+</span>
-            <span class="stat-label">Projects</span>
-          </div>
-        </div>
-        <div class="stat-item">
-          <i class="fas fa-users"></i>
-          <div>
-            <span class="stat-count">500+</span>
-            <span class="stat-label">People Impacted</span>
-          </div>
-        </div>
-        <div class="stat-item">
-          <i class="fas fa-dollar-sign"></i>
-          <div>
-            <span class="stat-count">$387K+</span>
-            <span class="stat-label">Value Generated</span>
-          </div>
-        </div>
-        <div class="stat-item">
-          <i class="fas fa-handshake"></i>
-          <div>
-            <span class="stat-count">10+</span>
-            <span class="stat-label">Partnerships</span>
-          </div>
-        </div>
+      <!-- Filter Pills for Pillar Navigation -->
+      <div class="filter-pills" role="navigation" aria-label="Project category filters">
+        <button class="filter-pill active" data-filter="all" aria-pressed="true">
+          <i class="fas fa-th"></i> All Projects
+        </button>
+        <button class="filter-pill" data-filter="workforce" aria-pressed="false">
+          <i class="fas fa-users"></i> Workforce & Talent Pipelines
+        </button>
+        <button class="filter-pill" data-filter="research" aria-pressed="false">
+          <i class="fas fa-lightbulb"></i> Research, Insight & Knowledge Creation
+        </button>
+        <button class="filter-pill" data-filter="innovation" aria-pressed="false">
+          <i class="fas fa-rocket"></i> Innovation, Technology & Infrastructure
+        </button>
+        <button class="filter-pill" data-filter="community" aria-pressed="false">
+          <i class="fas fa-handshake"></i> Community, Partnerships & Industry Engagement
+        </button>
       </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="projects-grid-container">
       
-      <!-- Quick Jump Navigation -->
-      <div class="quick-nav-pills">
-        <a href="#ai-innovation" class="nav-pill">AI Innovation</a>
-        <a href="#innovation-tech" class="nav-pill">Innovation & Tech</a>
-        <a href="#education" class="nav-pill">Education</a>
-        <a href="#community" class="nav-pill">Community</a>
-        <a href="#entrepreneurship" class="nav-pill">Entrepreneurship</a>
-      </div>
-    </div>
-
-    <!-- CATEGORY 0: AI Innovation & Strategy Projects -->
-    <div class="category-header" id="ai-innovation">
-      <h2>AI Innovation & Strategy Projects</h2>
-    </div>
-    
-    <div class="projects-grid">
-      <div class="project-card-enhanced" onclick="window.location.href='ai-innovation.html'" style="cursor: pointer;">
-        <div class="project-header">
-          <h3 class="project-name">AI Innovation & Strategy Portfolio</h3>
-        </div>
-        <div class="project-body">
-          <div class="project-description">
-            <ul>
-              <li>Comprehensive portfolio of AI initiatives spanning <strong>strategic implementation, AI literacy & education, GenAI-driven program design</strong>, and <strong>ethical AI adoption</strong>.</li>
-              <li>Leading AI integration across <strong>higher education, research, and community empowerment</strong>.</li>
-            </ul>
+      <!-- Workforce & Talent Pipelines Projects -->
+      <div class="project-card" data-category="workforce">
+        <div class="project-card-content">
+          <h3 class="project-title">CDA MATCH Program</h3>
+          <p class="project-outcome">Center-led mentorship program connecting 25+ students with faculty on 13 real-world data projects</p>
+          <div class="project-tags">
+            <span class="tag">Mentorship</span>
+            <span class="tag">Applied Learning</span>
+            <span class="tag">Workforce Development</span>
           </div>
-          <div class="impact-metrics">
-            <strong>Featured Projects:</strong>
-            <ul style="margin-top: 0.5rem;">
-              <li>Johns Hopkins AI Business Strategy Certificate Program</li>
-              <li>DigiBibi AI Learning & Support Assistant</li>
-              <li>CDA AI Initiatives & Innovation Pipeline</li>
-              <li>Applied AI Research & Project Work</li>
-              <li>AI Dashboards, Automation & Predictive Insights</li>
-              <li>Upcoming AI Projects (Resource Hub, Summer Research Cohort)</li>
-            </ul>
-          </div>
-          <div style="margin-top: 1rem;">
-            <a href="ai-innovation.html" style="color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.3s ease;">
-              Explore All AI Projects <i class="fas fa-arrow-right" style="transition: transform 0.3s;"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- CATEGORY 1: Innovation & Technology Leadership -->
-    <div class="category-header" id="innovation-tech">
-      <h2>Innovation & Technology Leadership</h2>
-    </div>
-    
-    <div class="projects-grid">
-      <!-- DigiBibi Project -->
-      <div class="project-card-enhanced" onclick="window.location.href='projects/digibibi-afrotech/'" style="cursor: pointer;">
-        <div class="project-image-container" style="height: 180px; margin: 0; border-radius: 0.75rem 0.75rem 0 0;">
-          <img src="images/Bowie State  T-Mobile 08.2025.jpeg" alt="DigiBibi AfroTech Innovation">
-        </div>
-        <div class="project-header">
-          <h3 class="project-name">DigiBibi: AfroTech Innovation Experience</h3>
-        </div>
-        <div class="project-body">
-          <div class="project-description">
-            <ul>
-              <li>Created <strong>DigiBibi</strong>, a digital storytelling and innovation brand representing Bowie State University and the Center for Data Analytics (CDA) at <strong>AfroTech 2025</strong>.</li>
-              <li>Showcased the pipeline of data talent and cultural innovation emerging from HBCUs.</li>
-            </ul>
-          </div>
-          <div class="impact-metrics">
-            <strong>Impact:</strong>
-            <p>Engaged <strong>300+ industry professionals</strong>, forged partnerships with <strong>T-Mobile, AWS, and HPE</strong>, and positioned CDA as a leader in digital equity and AI.</p>
-          </div>
-          <div style="margin-top: 1rem;">
-            <a href="projects/digibibi-afrotech/" style="color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
-              View Project Details <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
+          <a href="projects/cda-match-program/" class="view-case-study">
+            View Case Study <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
       </div>
 
-      <!-- Smart DARTT Lab -->
-      <div class="project-card-enhanced" onclick="window.location.href='projects/smart-dartt-lab/'" style="cursor: pointer;">
-        <div class="project-image-container" style="height: 180px; margin: 0; border-radius: 0.75rem 0.75rem 0 0;">
-          <div class="project-image-placeholder">
-            <i class="fas fa-laptop-code image-placeholder-icon"></i>
+      <div class="project-card" data-category="workforce">
+        <div class="project-card-content">
+          <h3 class="project-title">Data Tribe (Founder)</h3>
+          <p class="project-outcome">Student-led analytics community engaging 250+ participants through data challenges and professional development</p>
+          <div class="project-tags">
+            <span class="tag">Student Leadership</span>
+            <span class="tag">Community Building</span>
+            <span class="tag">Data Literacy</span>
           </div>
-        </div>
-        <div class="project-header">
-          <h3 class="project-name">Smart DARTT Lab Modernization (CDA × Truist Bank)</h3>
-        </div>
-        <div class="project-body">
-          <div class="project-description">
-            <ul>
-              <li>Led the modernization of BSU's Data Analytics Research, Trading & Technology (DARTT) Lab.</li>
-              <li>Secured <strong>$350K+</strong> in funding, integrating AI-powered analytics tools and cloud systems.</li>
-            </ul>
-          </div>
-          <div class="impact-metrics">
-            <strong>Impact:</strong>
-            <p>Supported <strong>80+ learners</strong> and established an AI-ready data innovation hub.</p>
-            <div>
-              <span class="metric-badge"><i class="fas fa-dollar-sign"></i> $350K+ Funding</span>
-              <span class="metric-badge"><i class="fas fa-users"></i> 80+ Learners</span>
-            </div>
-          </div>
-          <div style="margin-top: 1rem;">
-            <a href="projects/smart-dartt-lab/" style="color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
-              View Project Details <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
+          <a href="projects/data-tribe/" class="view-case-study">
+            View Case Study <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
       </div>
 
-      <!-- T-Mobile Curiosity Lab -->
-      <div class="project-card-enhanced" style="cursor: pointer;">
-        <div class="project-header">
-          <h3 class="project-name">T-Mobile Curiosity Lab Executive Briefing</h3>
-        </div>
-        <div class="project-body">
-          <div class="project-description">
-            <ul>
-              <li>Represented <strong>Bowie State University</strong> at T-Mobile's Innovation Campus in Atlanta.</li>
-              <li>Participated in high-level sessions on <strong>5G, AI, and IoT-powered education</strong>.</li>
-            </ul>
+      <div class="project-card" data-category="workforce">
+        <div class="project-card-content">
+          <h3 class="project-title">Sports Analytics Camp</h3>
+          <p class="project-outcome">Introduced 18 high school students to sports analytics and data visualization through hands-on workshop</p>
+          <div class="project-tags">
+            <span class="tag">Youth Engagement</span>
+            <span class="tag">STEM Education</span>
+            <span class="tag">Data Visualization</span>
           </div>
-          <div class="impact-metrics">
-            <strong>Impact:</strong>
-            <p>Strengthened CDA's national profile and built long-term partnerships for workforce innovation.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- CATEGORY 2: Data Education & Workforce Development -->
-    <div class="category-header" id="education">
-      <h2>Data Education & Workforce Development</h2>
-    </div>
-    
-    <div class="projects-grid">
-      <!-- CDA Match Program - FLAGSHIP -->
-      <div class="project-card-enhanced" onclick="window.location.href='projects/cda-match-program/'" style="cursor: pointer; border: 3px solid var(--primary-color); position: relative; background: linear-gradient(135deg, rgba(37, 99, 235, 0.03), rgba(139, 92, 246, 0.03));">
-        <div style="position: absolute; top: 1rem; right: 1rem; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); color: white; padding: 0.4rem 1rem; border-radius: 1rem; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; z-index: 10;">
-          Flagship Program
-        </div>
-        <div class="project-header">
-          <h3 class="project-name" style="color: var(--primary-color);">CDA Match (Mentorship & Research) Program</h3>
-        </div>
-        <div class="project-body">
-          <div class="project-description">
-            <ul>
-              <li><strong>Center-led, cross-disciplinary mentor-matching and applied data analytics program</strong> at Bowie State University.</li>
-              <li>Connecting undergraduate and graduate students with faculty, staff, and industry-aligned mentors on <strong>real-world data and research projects</strong>.</li>
-              <li>Program Lead and Architect responsible for design, recruitment, matching, onboarding, assessment, and stakeholder coordination.</li>
-              <li>Emphasis on <strong>workforce readiness, applied learning, and data-driven problem solving</strong>.</li>
-            </ul>
-          </div>
-          <div class="impact-metrics">
-            <strong>Impact:</strong>
-            <p>Engaged <strong>25+ mentees</strong> across undergraduate and graduate levels in <strong>13 mentor-led projects</strong> spanning STEM, Business, Education, and Social Sciences. Leveraging <strong>Python, Power BI, Tableau, Excel, SPSS, and Google Colab</strong>.</p>
-            <p style="margin-top: 0.75rem;"><strong>Outcomes:</strong> Job placements, conference presentations, publishable research, professional dashboards, and sustained mentor-mentee relationships.</p>
-            <div>
-              <span class="metric-badge"><i class="fas fa-users"></i> 25+ Mentees</span>
-              <span class="metric-badge"><i class="fas fa-project-diagram"></i> 13 Projects</span>
-              <span class="metric-badge"><i class="fas fa-university"></i> Cross-College</span>
-            </div>
-          </div>
-          <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(37, 99, 235, 0.08); border-radius: 0.5rem; border-left: 4px solid var(--primary-color);">
-            <p style="font-weight: 600; margin-bottom: 0.5rem; color: var(--primary-color);"><i class="fas fa-lightbulb"></i> Why This Matters</p>
-            <p style="line-height: 1.7; font-size: 0.95rem;">
-              Bridges gaps between academic learning, applied analytics, and workforce readiness—particularly at an HBCU. Scalable model for experiential learning, workforce pipelines, and sponsored partnerships with implications for institutional growth and external funding.
-            </p>
-          </div>
-          <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(139, 92, 246, 0.08); border-radius: 0.5rem; border-left: 4px solid var(--accent-color);">
-            <p style="font-weight: 600; margin-bottom: 0.5rem; color: var(--accent-color);"><i class="fas fa-globe-americas"></i> Featured Conference Presentation</p>
-            <p style="line-height: 1.7; font-size: 0.95rem;">
-              Presented insights at the <strong>Hawaii International Conference on Education</strong> on data-driven mentorship, experiential learning, and workforce development—elevating visibility for program and institution.
-            </p>
-          </div>
-          <div style="margin-top: 1rem;">
-            <a href="projects/cda-match-program/" style="color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.3s ease;">
-              View Full Program Details <i class="fas fa-arrow-right" style="transition: transform 0.3s;"></i>
-            </a>
-          </div>
+          <a href="projects/sports-analytics/" class="view-case-study">
+            View Case Study <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
       </div>
 
-      <!-- Data Analytics Training Program -->
-      <div class="project-card-enhanced" style="cursor: pointer;">
-        <div class="project-header">
-          <h3 class="project-name">Data Analytics Training Program (CDA)</h3>
-        </div>
-        <div class="project-body">
-          <div class="project-description">
-            <ul>
-              <li>Designed multi-tool analytics workshops covering <strong>Power BI, SQL, Python, and Tableau</strong>.</li>
-              <li>Integrated certification pathways and hands-on business data projects.</li>
-            </ul>
+      <div class="project-card" data-category="workforce">
+        <div class="project-card-content">
+          <h3 class="project-title">Data Analytics Training Programs</h3>
+          <p class="project-outcome">Trained 100+ learners in Power BI, SQL, Python, and Tableau with 79% Microsoft Azure certification pass rate</p>
+          <div class="project-tags">
+            <span class="tag">Professional Training</span>
+            <span class="tag">Certification</span>
+            <span class="tag">Multi-Tool Skills</span>
           </div>
-          <div class="impact-metrics">
-            <strong>Impact:</strong>
-            <p>Trained <strong>100+ learners</strong> with a <strong>79% Microsoft Azure certification pass rate</strong>.</p>
-            <div>
-              <span class="metric-badge"><i class="fas fa-graduation-cap"></i> 100+ Trained</span>
-              <span class="metric-badge"><i class="fas fa-certificate"></i> 79% Pass Rate</span>
-            </div>
-          </div>
+          <a href="projects/cda-match-program/" class="view-case-study">
+            View Case Study <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
       </div>
 
-      <!-- NSF Discovery Workshop -->
-      <div class="project-card-enhanced" onclick="window.location.href='projects/nsf-workshop/'" style="cursor: pointer;">
-        <div class="project-header">
-          <h3 class="project-name">NSF Discovery Workshop: Data & the African Diaspora</h3>
-        </div>
-        <div class="project-body">
-          <div class="project-description">
-            <ul>
-              <li>Co-facilitated an <strong>NSF-funded national workshop</strong> with 60+ HBCU educators.</li>
-              <li>Developed culturally relevant data science curricula.</li>
-            </ul>
+      <!-- Research, Insight & Knowledge Creation Projects -->
+      <div class="project-card" data-category="research">
+        <div class="project-card-content">
+          <h3 class="project-title">Sincerely, Love Research Cohort</h3>
+          <p class="project-outcome">Founded summer research program exploring mental health data with 5 paid researchers and 100+ summit attendees</p>
+          <div class="project-tags">
+            <span class="tag">Mental Health</span>
+            <span class="tag">Research Management</span>
+            <span class="tag">Data Storytelling</span>
           </div>
-          <div class="impact-metrics">
-            <strong>Impact:</strong>
-            <p>Advanced inclusive education and cross-institutional collaboration.</p>
-            <div>
-              <span class="metric-badge"><i class="fas fa-chalkboard-teacher"></i> 60+ Educators</span>
-            </div>
-          </div>
-          <div style="margin-top: 1rem;">
-            <a href="projects/nsf-workshop/" style="color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
-              View Project Details <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- CATEGORY 3: Community Engagement & Student Empowerment -->
-    <div class="category-header" id="community">
-      <h2>Community Engagement & Student Empowerment</h2>
-    </div>
-    
-    <div class="projects-grid">
-      <!-- Data Tribe -->
-      <div class="project-card-enhanced" onclick="window.location.href='projects/data-tribe/'" style="cursor: pointer;">
-        <div class="project-header">
-          <h3 class="project-name">Data Tribe: Building a Culture of Data & Belonging</h3>
-        </div>
-        <div class="project-body">
-          <div class="project-description">
-            <ul>
-              <li>Founded <strong>Data Tribe</strong>, a student-led community under CDA promoting data literacy, creativity, and collaboration.</li>
-              <li>Organized large-scale events including:
-                <ul>
-                  <li><em>Phantom Keepers (Whodunit)</em> – a data mystery-solving challenge.</li>
-                  <li><em>Get Comfortable with AI (CDA Chat Series)</em> – an interactive AI discussion.</li>
-                  <li><em>Momentum Fellowship & Mentorship Integration</em> – leadership development.</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="impact-metrics">
-            <strong>Impact:</strong>
-            <p>Engaged <strong>250+ participants</strong>, <strong>30+ active members</strong>, and built a sustainable analytics culture on campus.</p>
-            <div>
-              <span class="metric-badge"><i class="fas fa-users"></i> 250+ Engaged</span>
-              <span class="metric-badge"><i class="fas fa-user-check"></i> 30+ Members</span>
-            </div>
-          </div>
-          <div style="margin-top: 1rem;">
-            <a href="projects/data-tribe/" style="color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
-              View Project Details <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
+          <a href="projects/sincerely-love/" class="view-case-study">
+            View Case Study <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
       </div>
 
-      <!-- Conversation with Northrop Grumman -->
-      <div class="project-card-enhanced" style="cursor: pointer;">
-        <div class="project-header">
-          <h3 class="project-name">Conversation with Northrop Grumman</h3>
-        </div>
-        <div class="project-body">
-          <div class="project-description">
-            <ul>
-              <li>Organized by <strong>Data Tribe</strong> and CDA featuring <strong>Keith Brewer, Sr. Technology Manager</strong> at Northrop Grumman.</li>
-              <li>Included Q&A, networking, and a case challenge for students.</li>
-            </ul>
+      <div class="project-card" data-category="research">
+        <div class="project-card-content">
+          <h3 class="project-title">EIC Market Research Collaboration</h3>
+          <p class="project-outcome">Delivered 8 market research reports for student entrepreneurs, generating $12K+ in consulting value</p>
+          <div class="project-tags">
+            <span class="tag">Market Analysis</span>
+            <span class="tag">Entrepreneurship</span>
+            <span class="tag">Strategic Insights</span>
           </div>
-          <div class="impact-metrics">
-            <strong>Impact:</strong>
-            <p>Connected <strong>50+ students</strong> with defense technology leaders and expanded CDA's industry engagement portfolio.</p>
-            <div>
-              <span class="metric-badge"><i class="fas fa-handshake"></i> 50+ Connected</span>
-            </div>
-          </div>
+          <a href="projects/eic-market-research/" class="view-case-study">
+            View Case Study <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
       </div>
 
-      <!-- Sincerely, Love Research Cohort -->
-      <div class="project-card-enhanced" onclick="window.location.href='projects/sincerely-love/'" style="cursor: pointer;">
-        <div class="project-header">
-          <h3 class="project-name">Sincerely, Love Research Cohort & Mental Health Summit</h3>
-        </div>
-        <div class="project-body">
-          <div class="project-description">
-            <ul>
-              <li>Founded and managed a <strong>summer research program</strong> exploring data and emotional intelligence.</li>
-              <li>Employed 5 paid researchers and hosted the <strong>Sincerely Love Summit</strong> with 100+ participants.</li>
-            </ul>
+      <div class="project-card" data-category="research">
+        <div class="project-card-content">
+          <h3 class="project-title">NSF Discovery Workshop</h3>
+          <p class="project-outcome">Co-facilitated NSF-funded workshop with 60+ HBCU educators on culturally relevant data science curricula</p>
+          <div class="project-tags">
+            <span class="tag">Curriculum Development</span>
+            <span class="tag">HBCU Collaboration</span>
+            <span class="tag">NSF-Funded</span>
           </div>
-          <div class="impact-metrics">
-            <strong>Impact:</strong>
-            <p>Bridged mental health research and data storytelling.</p>
-            <div>
-              <span class="metric-badge"><i class="fas fa-brain"></i> 100+ Summit Attendees</span>
-            </div>
-          </div>
-          <div style="margin-top: 1rem;">
-            <a href="projects/sincerely-love/" style="color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
-              View Project Details <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
+          <a href="projects/nsf-workshop/" class="view-case-study">
+            View Case Study <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
       </div>
 
-      <!-- Sports Analytics Camp -->
-      <div class="project-card-enhanced" onclick="window.location.href='projects/sports-analytics/'" style="cursor: pointer;">
-        <div class="project-header">
-          <h3 class="project-name">Sports Analytics Camp (Brian Westbrook Foundation x CDA)</h3>
-        </div>
-        <div class="project-body">
-          <div class="project-description">
-            <ul>
-              <li>Introduced <strong>18 high school students</strong> to sports analytics and data visualization.</li>
-            </ul>
+      <!-- Innovation, Technology & Infrastructure Projects -->
+      <div class="project-card" data-category="innovation">
+        <div class="project-card-content">
+          <h3 class="project-title">Smart DARTT Lab Management</h3>
+          <p class="project-outcome">Led $350K+ lab modernization creating AI-ready innovation hub supporting 80+ learners</p>
+          <div class="project-tags">
+            <span class="tag">Infrastructure</span>
+            <span class="tag">AI Integration</span>
+            <span class="tag">Partnership</span>
           </div>
-          <div class="impact-metrics">
-            <strong>Impact:</strong>
-            <p>Sparked early interest in data and STEM fields for minority youth.</p>
-            <div>
-              <span class="metric-badge"><i class="fas fa-football-ball"></i> 18 Students</span>
-            </div>
-          </div>
-          <div style="margin-top: 1rem;">
-            <a href="projects/sports-analytics/" style="color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
-              View Project Details <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- CATEGORY 4: Entrepreneurship & Applied Data Projects -->
-    <div class="category-header" id="entrepreneurship">
-      <h2>Entrepreneurship & Applied Data Projects</h2>
-    </div>
-    
-    <div class="projects-grid">
-      <!-- EIC Market Research -->
-      <div class="project-card-enhanced" onclick="window.location.href='projects/eic-market-research/'" style="cursor: pointer;">
-        <div class="project-header">
-          <h3 class="project-name">EIC Market Research Collaboration</h3>
-        </div>
-        <div class="project-body">
-          <div class="project-description">
-            <ul>
-              <li>Delivered <strong>8 market research reports</strong> for student entrepreneurs.</li>
-            </ul>
-          </div>
-          <div class="impact-metrics">
-            <strong>Impact:</strong>
-            <p>Generated <strong>$12K+</strong> in consulting value and supported startup growth.</p>
-            <div>
-              <span class="metric-badge"><i class="fas fa-chart-line"></i> $12K+ Value</span>
-              <span class="metric-badge"><i class="fas fa-file-alt"></i> 8 Reports</span>
-            </div>
-          </div>
-          <div style="margin-top: 1rem;">
-            <a href="projects/eic-market-research/" style="color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
-              View Project Details <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
+          <a href="projects/smart-dartt-lab/" class="view-case-study">
+            View Case Study <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
       </div>
 
-      <!-- Middle Gates Ventures -->
-      <div class="project-card-enhanced" onclick="window.location.href='projects/middle-gates/'" style="cursor: pointer;">
-        <div class="project-header">
-          <h3 class="project-name">Middle Gates Ventures</h3>
-        </div>
-        <div class="project-body">
-          <div class="project-description">
-            <ul>
-              <li>Founded a multi-service business in logistics, events, and analytics consulting.</li>
-            </ul>
+      <div class="project-card" data-category="innovation">
+        <div class="project-card-content">
+          <h3 class="project-title">Blue Roof Hotel Optimization (Nigeria)</h3>
+          <p class="project-outcome">Digital transformation implementing SEO and analytics, increasing operational efficiency by 40%</p>
+          <div class="project-tags">
+            <span class="tag">Digital Transformation</span>
+            <span class="tag">SEO Strategy</span>
+            <span class="tag">International</span>
           </div>
-          <div class="impact-metrics">
-            <strong>Impact:</strong>
-            <p>Scaled services through operational analytics and performance tracking.</p>
-          </div>
-          <div style="margin-top: 1rem;">
-            <a href="projects/middle-gates/" style="color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
-              View Project Details <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
+          <a href="projects/blue-roof/" class="view-case-study">
+            View Case Study <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
       </div>
 
-      <!-- Blue Roof Hotel -->
-      <div class="project-card-enhanced" onclick="window.location.href='projects/blue-roof/'" style="cursor: pointer;">
-        <div class="project-header">
-          <h3 class="project-name">Blue Roof Hotel Digital Optimization (Nigeria)</h3>
-        </div>
-        <div class="project-body">
-          <div class="project-description">
-            <ul>
-              <li>Led a <strong>digital transformation project</strong> implementing SEO, analytics, and a reservation tracking system.</li>
-            </ul>
+      <div class="project-card" data-category="innovation">
+        <div class="project-card-content">
+          <h3 class="project-title">Reservation & SEO Systems (Nigeria)</h3>
+          <p class="project-outcome">Implemented reservation tracking and search optimization systems expanding customer reach and efficiency</p>
+          <div class="project-tags">
+            <span class="tag">System Design</span>
+            <span class="tag">Operations</span>
+            <span class="tag">Analytics</span>
           </div>
-          <div class="impact-metrics">
-            <strong>Impact:</strong>
-            <p>Increased operational efficiency by <strong>40%</strong> and expanded customer reach.</p>
-            <div>
-              <span class="metric-badge"><i class="fas fa-percent"></i> 40% Efficiency Increase</span>
-            </div>
-          </div>
-          <div style="margin-top: 1rem;">
-            <a href="projects/blue-roof/" style="color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
-              View Project Details <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
+          <a href="projects/blue-roof/" class="view-case-study">
+            View Case Study <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
       </div>
+
+      <!-- Community, Partnerships & Industry Engagement Projects -->
+      <div class="project-card" data-category="community">
+        <div class="project-card-content">
+          <h3 class="project-title">AfroTech Conference 2025</h3>
+          <p class="project-outcome">Elevated HBCU data excellence, engaging 300+ industry professionals and establishing Fortune 500 partnerships</p>
+          <div class="project-tags">
+            <span class="tag">Industry Engagement</span>
+            <span class="tag">Brand Strategy</span>
+            <span class="tag">Networking</span>
+          </div>
+          <a href="projects/digibibi-afrotech/" class="view-case-study">
+            View Case Study <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="community">
+        <div class="project-card-content">
+          <h3 class="project-title">T-Mobile Curiosity Lab Engagement</h3>
+          <p class="project-outcome">Represented Bowie State at T-Mobile Innovation Campus strengthening national profile and building partnerships</p>
+          <div class="project-tags">
+            <span class="tag">Strategic Partnership</span>
+            <span class="tag">5G & AI</span>
+            <span class="tag">Innovation</span>
+          </div>
+          <a href="projects/digibibi-afrotech/" class="view-case-study">
+            View Case Study <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="community">
+        <div class="project-card-content">
+          <h3 class="project-title">International Business Club Leadership</h3>
+          <p class="project-outcome">Led student organization fostering global business perspectives and cross-cultural professional development</p>
+          <div class="project-tags">
+            <span class="tag">Student Leadership</span>
+            <span class="tag">Global Perspective</span>
+            <span class="tag">Professional Development</span>
+          </div>
+          <a href="projects/data-tribe/" class="view-case-study">
+            View Case Study <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
     </div>
 
     <!-- Summary Callout -->
     <div class="summary-callout">
       <blockquote>
-        <p><em>Each project represents a step toward building a more data-informed, inclusive, and innovative world — connecting analytics, education, and entrepreneurship across continents.</em></p>
+        <p><em>Each project represents a strategic investment in building data-informed, inclusive, and innovative ecosystems — 
+          connecting analytics, education, and entrepreneurship to create lasting impact.</em></p>
       </blockquote>
     </div>
   </section>
