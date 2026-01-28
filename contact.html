@@ -9,6 +9,22 @@
   <link rel="stylesheet" href="assets/css/homepage.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
+    /* Skip to content for accessibility */
+    .skip-to-content {
+      position: absolute;
+      left: -9999px;
+      z-index: 999;
+      padding: 1em;
+      background-color: #667eea;
+      color: white;
+      text-decoration: none;
+    }
+    .skip-to-content:focus {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+    }
+    
     /* Contact Page Styles - Consistent with Homepage */
     .contact-page {
       background: var(--homepage-navy);
@@ -96,6 +112,7 @@
   </style>
 </head>
 <body class="homepage contact-page">
+  <a href="#contact" class="skip-to-content">Skip to main content</a>
   <header class="homepage-header">
     <div class="homepage-header-content">
       <h1>Bolametiren Akinlaja</h1>
@@ -105,7 +122,7 @@
         <a href="projects.html" aria-label="View all projects">Projects</a>
         <a href="capabilities-expertise.html" aria-label="Capabilities and expertise">Capabilities</a>
         <a href="contact.html" aria-label="Contact information">Contact</a>
-        <span class="socials" role="complementary" aria-label="Social media links">
+        <span class="socials" aria-label="Social media links">
           <a href="https://www.linkedin.com/in/bolametiren-akinlaja-497602213/" title="LinkedIn" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
           <a href="https://github.com/Bibicentric" title="GitHub" aria-label="GitHub Profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
         </span>
