@@ -3628,3 +3628,30 @@ section {
     padding: 0.4rem 0.8rem;
   }
 }
+
+/* ===================================
+   Override for About Page Header
+   =================================== */
+
+/* Ensure the about page body stays white/light */
+body.is-preload {
+  background: #ffffff;
+  color: #0F172A;
+}
+
+/* Make sure wrapper doesn't interfere with layout */
+#wrapper.custom {
+  background: transparent;
+}
+
+/* Adjust header for about page if needed - keep sticky but adjust colors for readability */
+body.is-preload .homepage-header {
+  background: rgba(15, 23, 42, 0.98);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Ensure proper spacing after header */
+body.is-preload #main {
+  margin-top: 0;
+}
