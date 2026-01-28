@@ -6,24 +6,128 @@
   <meta name="description" content="Get in touch with Bolametiren Akinlaja - Program Manager and Data Innovation Strategist.">
   <meta name="author" content="Bolametiren Akinlaja">
   <title>Contact - Bolametiren Akinlaja</title>
-  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/homepage.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <script defer src="assets/js/portfolio-enhancements.js"></script>
+  <style>
+    /* Skip to content for accessibility */
+    .skip-to-content {
+      position: absolute;
+      left: -9999px;
+      z-index: 999;
+      padding: 1em;
+      background-color: #667eea;
+      color: white;
+      text-decoration: none;
+    }
+    .skip-to-content:focus {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+    }
+    
+    /* Contact Page Styles - Consistent with Homepage */
+    .contact-page {
+      background: var(--homepage-navy);
+      color: var(--homepage-white);
+    }
+    
+    #contact {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    
+    .section-title {
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: var(--homepage-white);
+      margin-bottom: 1.5rem;
+    }
+    
+    #contact > p {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      color: var(--homepage-text-light);
+      margin-bottom: 3rem;
+    }
+    
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .contact-item {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-item:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--homepage-teal);
+      transform: translateY(-3px);
+    }
+    
+    .contact-item i {
+      font-size: 2.5rem;
+      color: var(--homepage-teal);
+    }
+    
+    .contact-item strong {
+      font-size: 1.1rem;
+      color: var(--homepage-white);
+      font-weight: 600;
+    }
+    
+    .contact-item a {
+      color: var(--homepage-gold);
+      text-decoration: none;
+      font-size: 1.05rem;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-item a:hover {
+      color: var(--homepage-white);
+    }
+    
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 2rem;
+      }
+      
+      #contact {
+        padding: 3rem 1.5rem;
+      }
+    }
+  </style>
 </head>
-<body>
-  <header class="compact">
-    <h1>Bolametiren Akinlaja</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="capabilities-expertise.html">Capabilities</a>
-      <a href="contact.html">Contact</a>
-      <span class="socials">
-        <a href="https://www.linkedin.com/in/bolametiren-akinlaja-497602213/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/Bibicentric" title="GitHub"><i class="fab fa-github"></i></a>
-      </span>
-    </nav>
+<body class="homepage contact-page">
+  <a href="#contact" class="skip-to-content">Skip to main content</a>
+  <header class="homepage-header">
+    <div class="homepage-header-content">
+      <h1>Bolametiren Akinlaja</h1>
+      <nav class="homepage-nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html" aria-label="Home page">Home</a>
+        <a href="about.html" aria-label="About me">About</a>
+        <a href="projects.html" aria-label="View all projects">Projects</a>
+        <a href="capabilities-expertise.html" aria-label="Capabilities and expertise">Capabilities</a>
+        <a href="contact.html" aria-label="Contact information">Contact</a>
+        <span class="socials" aria-label="Social media links">
+          <a href="https://www.linkedin.com/in/bolametiren-akinlaja-497602213/" title="LinkedIn" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Bibicentric" title="GitHub" aria-label="GitHub Profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+        </span>
+      </nav>
+    </div>
   </header>
 
   <section id="contact">
@@ -42,8 +146,8 @@
     </div>
   </section>
 
-  <footer>
-    &copy; 2025 Bolametiren Akinlaja. Designed with ❤️ | <a href="https://html5up.net" target="_blank">HTML5 UP</a>
+  <footer class="homepage-footer">
+    <p>&copy; 2025 Bolametiren Akinlaja. All rights reserved.</p>
   </footer>
 </body>
 </html>
