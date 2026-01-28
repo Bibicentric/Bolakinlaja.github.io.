@@ -1,619 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="About Bolametiren 'Bibi' Akinlaja - Data Analytics Program Manager & Innovation Strategist transforming data into opportunity. Architect of the Data Tribe, leader of $350K+ lab modernization, and builder of programs impacting 500+ learners across two continents.">
-  <meta name="author" content="Bolametiren Akinlaja">
-  <title>About Me - Bolametiren Akinlaja | Data Program Architect & Innovation Strategist</title>
-  <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <style>
-    /* About Page - Executive Narrative Style */
-    
-    .about-page {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 3rem 2rem;
-      line-height: 1.8;
-    }
-    
-    .about-page h1 {
-      font-size: 2.75rem;
-      font-weight: 800;
-      color: #0F172A;
-      margin-bottom: 1rem;
-      line-height: 1.3;
-    }
-    
-    .about-page h2 {
-      font-size: 1.75rem;
-      font-weight: 700;
-      color: #0F172A;
-      margin-top: 3.5rem;
-      margin-bottom: 1.25rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 3px solid #0EA5A6;
-      line-height: 1.4;
-    }
-    
-    .about-page h3 {
-      font-size: 1.35rem;
-      font-weight: 600;
-      color: #0F172A;
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-    }
-    
-    .about-page p {
-      font-size: 1.1rem;
-      color: #374151;
-      margin-bottom: 1.5rem;
-      line-height: 1.8;
-    }
-    
-    .about-page ul {
-      margin: 1.5rem 0;
-      padding-left: 2rem;
-    }
-    
-    .about-page ul li {
-      font-size: 1.1rem;
-      color: #374151;
-      margin-bottom: 0.75rem;
-      line-height: 1.7;
-    }
-    
-    .pull-quote {
-      background: linear-gradient(135deg, rgba(14, 165, 166, 0.08), rgba(255, 199, 44, 0.08));
-      border-left: 4px solid #0EA5A6;
-      padding: 2rem 2.5rem;
-      margin: 3rem 0;
-      font-size: 1.25rem;
-      font-style: italic;
-      color: #0F172A;
-      line-height: 1.7;
-      border-radius: 0 0.5rem 0.5rem 0;
-    }
-    
-    .section-divider {
-      height: 2px;
-      background: linear-gradient(90deg, transparent, #e5e7eb, transparent);
-      margin: 3rem 0;
-    }
-    
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      margin: 2rem 0;
-    }
-    
-    .skills-grid .skill-item {
-      background: #f9fafb;
-      padding: 1rem 1.5rem;
-      border-radius: 0.5rem;
-      border: 1px solid #e5e7eb;
-      font-size: 1rem;
-      color: #374151;
-      text-align: center;
-      font-weight: 500;
-    }
-    
-    .cert-list {
-      background: #f9fafb;
-      padding: 2rem;
-      border-radius: 0.75rem;
-      border: 1px solid #e5e7eb;
-    }
-    
-    .cert-list ul {
-      margin: 0;
-      padding-left: 1.5rem;
-    }
-    
-    .cert-list li {
-      margin-bottom: 1rem;
-      font-size: 1.05rem;
-    }
-    
-    .emphasis {
-      font-weight: 600;
-      color: #0EA5A6;
-    }
-    
-    /* Profile Image Section */
-    .profile-header {
-      display: flex;
-      align-items: center;
-      gap: 3rem;
-      margin-bottom: 3rem;
-      padding: 2.5rem;
-      background: linear-gradient(135deg, rgba(14, 165, 166, 0.05), rgba(255, 199, 44, 0.05));
-      border-radius: 1rem;
-      border: 1px solid rgba(14, 165, 166, 0.1);
-    }
-    
-    .profile-image-container {
-      flex-shrink: 0;
-    }
-    
-    .profile-image {
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid #0EA5A6;
-      box-shadow: 0 10px 30px rgba(14, 165, 166, 0.2);
-      background: #f9fafb;
-    }
-    
-    .profile-intro {
-      flex: 1;
-    }
-    
-    .profile-intro h1 {
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-      font-size: 2.5rem;
-    }
-    
-    .profile-tagline {
-      font-size: 1.2rem;
-      color: #0EA5A6;
-      font-weight: 600;
-      margin-bottom: 1rem;
-    }
-    
-    .profile-intro p {
-      margin-bottom: 0;
-      font-size: 1.05rem;
-    }
-    
-    /* Education Section */
-    .education-section {
-      background: #ffffff;
-      border: 2px solid #e5e7eb;
-      border-radius: 1rem;
-      padding: 2.5rem;
-      margin: 3rem 0;
-    }
-    
-    .education-item {
-      display: flex;
-      gap: 2rem;
-      margin-bottom: 2.5rem;
-      padding-bottom: 2.5rem;
-      border-bottom: 1px solid #e5e7eb;
-    }
-    
-    .education-item:last-child {
-      margin-bottom: 0;
-      padding-bottom: 0;
-      border-bottom: none;
-    }
-    
-    .education-icon {
-      flex-shrink: 0;
-      width: 70px;
-      height: 70px;
-      background: linear-gradient(135deg, #0EA5A6, #0c8b8c);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 2rem;
-      box-shadow: 0 4px 12px rgba(14, 165, 166, 0.25);
-    }
-    
-    .education-content {
-      flex: 1;
-    }
-    
-    .education-degree {
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: #0F172A;
-      margin-bottom: 0.5rem;
-      line-height: 1.3;
-    }
-    
-    .education-institution {
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: #0EA5A6;
-      margin-bottom: 0.5rem;
-    }
-    
-    .education-date {
-      font-size: 1rem;
-      color: #6B7280;
-      margin-bottom: 0.75rem;
-      font-style: italic;
-    }
-    
-    .education-details {
-      font-size: 1.05rem;
-      color: #374151;
-      line-height: 1.7;
-      margin-top: 0.75rem;
-    }
-    
-    .education-highlights {
-      margin-top: 0.75rem;
-      padding-left: 1.5rem;
-    }
-    
-    .education-highlights li {
-      font-size: 1.05rem;
-      color: #374151;
-      margin-bottom: 0.5rem;
-      line-height: 1.6;
-    }
-    
-    /* Image Gallery Section */
-    .image-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin: 3rem 0;
-    }
-    
-    .gallery-item {
-      position: relative;
-      border-radius: 1rem;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      background: #f9fafb;
-      aspect-ratio: 4/3;
-    }
-    
-    .gallery-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    }
-    
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    
-    .gallery-caption {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: linear-gradient(to top, rgba(15, 23, 42, 0.95), transparent);
-      color: white;
-      padding: 1.5rem 1.25rem 1rem;
-      font-size: 0.95rem;
-      font-weight: 500;
-      line-height: 1.4;
-    }
-    
-    @media (max-width: 768px) {
-      .about-page {
-        padding: 2rem 1.5rem;
-      }
-      
-      .about-page h1 {
-        font-size: 2rem;
-      }
-      
-      .about-page h2 {
-        font-size: 1.5rem;
-        margin-top: 2.5rem;
-      }
-      
-      .about-page h3 {
-        font-size: 1.2rem;
-      }
-      
-      .about-page p,
-      .about-page ul li {
-        font-size: 1rem;
-      }
-      
-      .pull-quote {
-        font-size: 1.1rem;
-        padding: 1.5rem 1.75rem;
-      }
-      
-      .skills-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .profile-header {
-        flex-direction: column;
-        gap: 2rem;
-        text-align: center;
-        padding: 2rem 1.5rem;
-      }
-      
-      .profile-image {
-        width: 180px;
-        height: 180px;
-      }
-      
-      .profile-intro h1 {
-        font-size: 1.75rem;
-      }
-      
-      .education-item {
-        flex-direction: column;
-        gap: 1rem;
-      }
-      
-      .education-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 1.75rem;
-        margin: 0 auto;
-      }
-      
-      .education-content {
-        text-align: center;
-      }
-      
-      .image-gallery {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-    }
-  </style>
-</head>
-<body>
-  <header class="compact">
-    <h1>Bolametiren Akinlaja</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="skills.html">Skills</a>
-      <a href="contact.html">Contact</a>
-      <span class="socials">
-        <a href="https://www.linkedin.com/in/bolametiren-akinlaja-497602213/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/Bibicentric" title="GitHub"><i class="fab fa-github"></i></a>
-      </span>
-    </nav>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="About Bolametiren 'Bibi' Akinlaja - Data Analytics Program Manager & Innovation Strategist transforming data into opportunity. Architect of the Data Tribe, leader of $350K+ lab modernization, and builder of programs impacting 500+ learners across two continents.">
+    <meta name="author" content="Bolametiren Akinlaja">
+    <title>About | Bolametiren "Bibi" Akinlaja</title>
 
-  <main class="about-page">
-    <!-- Profile Header with Image -->
-    <div class="profile-header">
-      <div class="profile-image-container">
-        <img src="images/profile-photo.jpg" alt="Bolametiren 'Bibi' Akinlaja" class="profile-image" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'profile-image\' style=\'display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #0EA5A6;\'><i class=\'fas fa-user-circle\'></i></div>'">
-      </div>
-      <div class="profile-intro">
-        <h1>Bolametiren "Bibi" Akinlaja</h1>
-        <p class="profile-tagline">Data Analytics Program Manager | Innovation Strategist | Community Builder</p>
-        <p>Transforming data into opportunity across two continents • 500+ learners impacted • $350K+ in programs delivered</p>
-      </div>
-    </div>
-    
-    <h2>About Me</h2>
-    
-    <p>I'm Bolametiren "Bibi" Akinlaja—a Data Analytics Program Manager, Program Builder, and Innovation Strategist who transforms data from numbers into opportunity. With professional experience spanning two continents, I architect data-driven ecosystems that don't just analyze information, but fundamentally reshape how institutions, communities, and individuals access and leverage analytics for transformative impact.</p>
-    
-    <div class="pull-quote">
-      "I don't just work with data—I build the bridges between data and people, creating pathways where insights become action and potential becomes career-defining opportunity."
-    </div>
-    
-    <p>My career has been defined not by data outputs alone, but by the infrastructure I've built around them—the programs that scale, the partnerships that endure, and the learning environments where analytics becomes accessible, actionable, and transformative.</p>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/homepage.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    <h2>Architecting Programs That Scale Impact</h2>
-    
-    <p>At Bowie State University's Center for Data Analytics (CDA), I don't just manage programs—I orchestrate entire ecosystems of innovation. My leadership spans the full spectrum from strategic vision to tactical execution: designing program models that scale, managing complex timelines and resources, coordinating cross-functional teams across academic and industry boundaries, and ensuring every initiative delivers measurable, repeatable outcomes.</p>
-    
-    <p>What began as project coordination has evolved into comprehensive program leadership with tangible impact:</p>
-    
-    <ul>
-      <li><strong>Leading multi-phase analytics initiatives</strong> from concept through delivery, impacting <span class="emphasis">500+ learners and professionals</span></li>
-      <li><strong>Spearheading the $350K+ modernization</strong> of the Truist Data Analytics Research, Trading, and Technology (DARTT) Lab—transforming it into an AI-ready innovation hub</li>
-      <li><strong>Designing transformative analytics training programs</strong> that don't just teach tools, but cultivate data storytellers who can translate insights into strategic action</li>
-      <li><strong>Elevating research capabilities</strong> by supporting faculty and student researchers with sophisticated analytics, compelling visualizations, and narratives that amplify their scholarly impact</li>
-    </ul>
-    
-    <p>As an assistant facilitator for an NSF-funded workshop on Data and the African Diaspora, I've contributed to shaping national discourse around culturally relevant data science education—ensuring that innovation in analytics reflects and serves diverse communities.</p>
+    <!-- Optional: improves font rendering -->
+    <meta name="color-scheme" content="light dark" />
+    <style>
+      .skip-to-content {
+        position: absolute;
+        left: -9999px;
+        z-index: 999;
+        padding: 1em;
+        background-color: #667eea;
+        color: white;
+        text-decoration: none;
+      }
+      .skip-to-content:focus {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+      }
+    </style>
+  </head>
 
-    <h2>Founding the Data Tribe: Where Community Becomes Career Catalyst</h2>
-    
-    <p>Perhaps my most transformative accomplishment has been founding the <span class="emphasis">Data Tribe</span>—a pioneering student-centered data community that revolutionized how students experience analytics education. This wasn't born from a committee meeting or institutional mandate. I saw a critical gap: students had access to courses and software, but lacked the sense of belonging, peer learning, and community that transforms casual learners into confident data professionals.</p>
-    
-    <p>I built the Data Tribe from the ground up—solo:</p>
-    
-    <ul>
-      <li><strong>Architected the complete vision</strong>—from conceptual framework to operational model, creating a blueprint for sustainable, student-led data communities</li>
-      <li><strong>Created the brand identity from scratch</strong>—designing logos, developing messaging, and crafting a recruitment strategy that resonated with students across majors and skill levels</li>
-      <li><strong>Engineered a unique engagement framework</strong> that seamlessly blends technical skill-building, data storytelling workshops, and professional development experiences</li>
-      <li><strong>Cultivated strategic industry partnerships</strong> bringing conversations with partners like Northrop Grumman directly to students, bridging the gap between classroom theory and career reality</li>
-    </ul>
-    
-    <p>The results speak to the power of community-driven learning:</p>
-    
-    <ul>
-      <li><span class="emphasis">250+ participants</span> engaged across workshops, industry panels, and community events</li>
-      <li>Established a <strong>sustainable workforce pipeline</strong> with students progressing from curious beginners to confident practitioners ready for industry roles</li>
-      <li>Created a <strong>welcoming, inclusive gateway</strong> into analytics—proving that data excellence thrives when learning is collaborative, human-centered, and accessible to all</li>
-      <li>Built a <strong>student-owned leadership engine</strong> where members don't just consume content—they create it, lead it, and shape its evolution</li>
-    </ul>
-    
-    <div class="pull-quote">
-      The Data Tribe embodies my core philosophy: data education is most powerful when it's communal, culturally relevant, and designed to empower—not just educate.
-    </div>
+  <body class="is-preload">
+    <a href="#main" class="skip-to-content">Skip to main content</a>
+    <div id="wrapper" class="custom">
 
-    <h2>Leadership Through Strategic Mentorship and Ecosystem Building</h2>
-    
-    <p>True program leadership extends beyond managing tasks—it's about constructing pathways that fundamentally alter career trajectories. I specialize in designing mentorship architectures and engagement models that connect emerging talent with industry mentors, hands-on projects, and professional networks that open doors.</p>
-    
-    <p>My approach is experiential and relationship-driven. During my tenure as President of the International Business Club, I pioneered globally-focused programming featuring cultural exchange summits, C-suite guest speaker series, and cross-cultural mentorship initiatives that prepared students for the interconnected reality of modern business.</p>
-    
-    <p>These experiences crystallized my leadership philosophy: <strong>transformative learning happens at the intersection of experience, relationship, and global perspective.</strong></p>
-
-    <h2>Global Foundations: From Lagos to Leading Innovation</h2>
-    
-    <p>Before my U.S. career, I honed my strategic execution skills as a Project Manager in Nigeria's dynamic hospitality sector—a proving ground that demanded resourcefulness, adaptability, and results. I led market research initiatives, business planning, digital transformation projects, and cross-functional team coordination—often with constrained budgets and aggressive timelines.</p>
-    
-    <p>That environment taught me to see constraints not as limitations, but as catalysts for creative problem-solving. It shaped my approach to program design today: <strong>prioritize clarity in complexity, maintain flexibility without sacrificing rigor, and always deliver outcomes that matter to stakeholders.</strong></p>
-    
-    <p>This global experience—spanning Nigeria's entrepreneurial ecosystem and the United States' innovation landscape—gives me a unique lens on program design: one that values diverse perspectives, cultural competence, and solutions that work across contexts.</p>
-
-    <h2>Future-Proofing Leadership: AI Strategy and Executive Decision-Making</h2>
-    
-    <p>To remain at the forefront of data-driven leadership, I'm currently completing a Certificate in AI Business Strategy from Johns Hopkins University—a strategic investment in bridging the gap between emerging AI capabilities and sound organizational decision-making.</p>
-    
-    <p>This advanced study is expanding my expertise across critical domains:</p>
-    
-    <ul>
-      <li><strong>Responsible AI adoption</strong>—ensuring technologies serve people equitably and ethically</li>
-      <li><strong>AI governance frameworks</strong>—building decision-making structures that balance innovation with accountability</li>
-      <li><strong>Strategic translation</strong>—converting analytics insights into executive-level strategy that drives organizational transformation</li>
-      <li><strong>Mission-aligned technology investment</strong>—ensuring every AI implementation advances institutional purpose, not just technical capability</li>
-    </ul>
-    
-    <p>This represents my evolution toward <span class="emphasis">data-informed executive leadership</span>—where I don't just implement technology, but shape how institutions thoughtfully harness it for sustainable impact.</p>
-
-    <h2>My Leadership DNA</h2>
-    
-    <p>Across continents, sectors, and initiatives, my approach is defined by four core principles:</p>
-    
-    <ul>
-      <li><strong>Systems Thinking:</strong> I design programs as interconnected ecosystems—not isolated projects—where people, tools, and processes amplify each other's impact</li>
-      <li><strong>Radical Clarity:</strong> I translate complexity into actionable frameworks that empower others to lead, execute, and innovate independently</li>
-      <li><strong>Strategic Collaboration:</strong> I build bridges—between disciplines, institutions, cultures, and industries—creating synergies that unlock exponential value</li>
-      <li><strong>Measurable Impact:</strong> Every initiative I lead is designed for outcomes that can be quantified, communicated, and scaled—because sustainable programs must prove their worth</li>
-    </ul>
-
-    <h2>Strategic Impact Areas</h2>
-    
-    <ul>
-      <li><strong>Program & Project Management</strong> — End-to-end leadership of complex, multi-stakeholder initiatives</li>
-      <li><strong>Data Analytics & Visualization</strong> — Transforming raw data into strategic narratives that drive decisions</li>
-      <li><strong>Workforce & Talent Pipeline Development</strong> — Building pathways from education to career-defining opportunity</li>
-      <li><strong>Community & Ecosystem Building</strong> — Creating self-sustaining networks where learning compounds through collaboration</li>
-      <li><strong>Research Support & Applied Analytics</strong> — Amplifying scholarly impact through sophisticated data storytelling</li>
-      <li><strong>AI & Innovation Strategy</strong> — Guiding organizations through responsible, mission-aligned technology adoption</li>
-      <li><strong>Stakeholder & Partnership Management</strong> — Orchestrating cross-sector collaboration for mutual value creation</li>
-    </ul>
-
-    <h2>Tools & Skills</h2>
-    
-    <div class="skills-grid">
-      <div class="skill-item">Power BI</div>
-      <div class="skill-item">Tableau</div>
-      <div class="skill-item">Excel</div>
-      <div class="skill-item">SQL</div>
-      <div class="skill-item">Python</div>
-      <div class="skill-item">Microsoft Teams</div>
-      <div class="skill-item">Project Documentation</div>
-      <div class="skill-item">Data Storytelling</div>
-      <div class="skill-item">Cross-Functional Coordination</div>
-    </div>
-
-    <h2>Education</h2>
-    
-    <div class="education-section">
-      <div class="education-item">
-        <div class="education-icon">
-          <i class="fas fa-graduation-cap"></i>
+      <!-- =========================
+           NAV (Adapted from index.html)
+           =========================
+      -->
+      <header class="homepage-header">
+        <div class="homepage-header-content">
+          <h1>Bolametiren Akinlaja</h1>
+          <nav class="homepage-nav" role="navigation" aria-label="Main navigation">
+            <a href="index.html" aria-label="Home page">Home</a>
+            <a href="about.html" aria-label="About me">About</a>
+            <a href="projects.html" aria-label="View all projects">Projects</a>
+            <a href="skills.html" aria-label="Skills and technologies">Skills</a>
+            <a href="contact.html" aria-label="Contact information">Contact</a>
+            <span class="socials" role="complementary" aria-label="Social media links">
+              <a href="https://www.linkedin.com/in/bolametiren-akinlaja-497602213/" title="LinkedIn" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/Bibicentric" title="GitHub" aria-label="GitHub Profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            </span>
+          </nav>
         </div>
-        <div class="education-content">
-          <div class="education-degree">Certificate in AI Business Strategy</div>
-          <div class="education-institution">Johns Hopkins University</div>
-          <div class="education-date">In Progress | 2024 - 2025</div>
-          <div class="education-details">
-            Advanced certificate program focusing on strategic AI implementation, responsible AI governance, and translating analytics into executive-level decision-making frameworks.
+      </header>
+      <!-- END NAV -->
+
+      <main id="main" class="about-page">
+
+        <!-- Hero -->
+        <section class="about-hero">
+          <div class="container">
+            <div class="hero-grid">
+              <div class="hero-copy">
+                <p class="eyebrow">About</p>
+                <h1>Bolametiren "Bibi" Akinlaja</h1>
+                <p class="subtitle">
+                  Data Analytics Program Manager • Program Builder • Innovation & AI Strategy
+                </p>
+
+                <div class="hero-cta">
+                  <a class="btn primary" href="projects.html">View Projects →</a>
+                  <a class="btn ghost" href="contact.html">Let's Connect →</a>
+                </div>
+              </div>
+
+              <div class="hero-media">
+                <!-- Replace src with your real headshot path -->
+                <img
+                  src="images/profile-photo.jpg"
+                  alt="Bolametiren Akinlaja headshot"
+                  loading="lazy"
+                  onerror="this.style.display='none'"
+                />
+              </div>
+            </div>
           </div>
-          <ul class="education-highlights">
-            <li>AI Governance & Ethics in Organizational Strategy</li>
-            <li>Machine Learning for Business Leaders</li>
-            <li>Data-Driven Strategic Decision Making</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="education-item">
-        <div class="education-icon">
-          <i class="fas fa-university"></i>
-        </div>
-        <div class="education-content">
-          <div class="education-degree">Bachelor of Science in Business Administration</div>
-          <div class="education-institution">Bowie State University</div>
-          <div class="education-date">Graduated | 2018 - 2022</div>
-          <div class="education-details">
-            Concentration in International Business with focus on global strategy, cross-cultural management, and international market dynamics.
+        </section>
+
+        <!-- Quick highlights (quiet credibility, no bragging) -->
+        <section class="about-highlights">
+          <div class="container">
+            <div class="highlight-grid" role="list">
+              <div class="highlight" role="listitem">
+                <p class="kpi">Global</p>
+                <p class="kpi-label">Nigeria + United States experience</p>
+              </div>
+              <div class="highlight" role="listitem">
+                <p class="kpi">Programs</p>
+                <p class="kpi-label">Workforce, research, and community initiatives</p>
+              </div>
+              <div class="highlight" role="listitem">
+                <p class="kpi">AI Focus</p>
+                <p class="kpi-label">Johns Hopkins AI Business Strategy (in progress)</p>
+              </div>
+            </div>
           </div>
-          <ul class="education-highlights">
-            <li>President, International Business Club</li>
-            <li>Leadership in global programming and cultural exchange initiatives</li>
-            <li>Foundation in business analytics and strategic planning</li>
-          </ul>
+        </section>
+
+        <!-- About narrative (structured, scannable) -->
+        <section class="about-content">
+          <div class="container">
+            <div class="content-grid">
+              <aside class="toc">
+                <p class="toc-title">On this page</p>
+                <a href="#about-me">About Me</a>
+                <a href="#scale">Building Programs & Systems</a>
+                <a href="#data-tribe">Founding the Data Tribe</a>
+                <a href="#mentorship">Mentorship & Engagement</a>
+                <a href="#global">Global Foundation</a>
+                <a href="#ai">AI & Strategy</a>
+                <a href="#how-i-work">How I Work</a>
+                <a href="#skills">Core Skills</a>
+              </aside>
+
+              <article class="prose">
+                <section id="about-me" class="block">
+                  <h2>About Me</h2>
+                  <p>
+                    I'm <strong>Bolametiren "Bibi" Akinlaja</strong>, a <strong>Data Analytics Program Manager, Program Builder,
+                    and Innovation Strategist</strong> with professional experience spanning <strong>Nigeria and the United States</strong>.
+                    I design data-driven programs, systems, and partnerships that help institutions and communities translate analytics
+                    into practical action.
+                  </p>
+                  <p>
+                    Rather than focusing only on data outputs, my work emphasizes building the <strong>infrastructure around data</strong>—the
+                    programs, partnerships, and learning environments that make data usable, repeatable, and measurable over time.
+                  </p>
+                </section>
+
+                <section id="scale" class="block">
+                  <h2>Building Programs and Systems That Scale</h2>
+                  <p>
+                    At <strong>Bowie State University's Center for Data Analytics (CDA)</strong>, I lead initiatives across program design,
+                    project execution, research support, and industry engagement. My work spans both strategy and delivery—structuring programs,
+                    coordinating stakeholders, and ensuring outcomes are measurable and useful.
+                  </p>
+                  <ul>
+                    <li>Program and project planning from concept through implementation</li>
+                    <li>Lab operations and modernization support within the <strong>Truist DARTT Lab</strong></li>
+                    <li>Analytics training design that builds practical skills in analysis, modeling, and visualization</li>
+                    <li>Applied research support through analysis, reporting, and data storytelling</li>
+                  </ul>
+                  <p class="callout">
+                    <strong>Focus:</strong> building systems that teams can run, learners can grow within, and stakeholders can measure.
+                  </p>
+                </section>
+
+                <section id="data-tribe" class="block">
+                  <h2>Founding the Data Tribe: Building a Culture of Data</h2>
+                  <p>
+                    A defining milestone in my work has been the <strong>creation and founding of the Data Tribe</strong>—a student-centered
+                    data community designed to provide continuity, peer leadership, and applied learning beyond the classroom.
+                  </p>
+                  <p>
+                    I built the Data Tribe to close a consistent gap: students had access to tools and courses, but needed a <strong>sustained
+                    community</strong> where data felt approachable, social, and connected to real opportunities.
+                  </p>
+                  <ul>
+                    <li>Designed the vision, structure, and operating model</li>
+                    <li>Built engagement strategy, recruitment approach, and peer-led programming</li>
+                    <li>Integrated professional development and industry conversations into community experiences</li>
+                    <li>Created a welcoming entry point for students across skill levels and majors</li>
+                  </ul>
+                </section>
+
+                <section id="mentorship" class="block">
+                  <h2>Leadership Through Mentorship and Engagement</h2>
+                  <p>
+                    A consistent theme in my work is <strong>pipeline building</strong>—creating pathways that connect learners to mentors,
+                    applied projects, and professional networks. I've led engagement through structured programs and student leadership development.
+                  </p>
+                  <p>
+                    Earlier, as <strong>President of the International Business Club</strong>, I organized globally focused programming and mentorship
+                    opportunities that reinforced my approach: learning is strongest when it's experiential and relational.
+                  </p>
+                </section>
+
+                <section id="global" class="block">
+                  <h2>A Global Foundation in Strategy and Execution</h2>
+                  <p>
+                    Before transitioning to the U.S., I worked as a <strong>Project Manager in Nigeria</strong> within the hospitality sector,
+                    leading market research, business planning, digital optimization, and cross-functional execution.
+                  </p>
+                  <p>
+                    That experience grounded my work in practical delivery—balancing constraints, building clarity, and improving performance through
+                    measurable changes.
+                  </p>
+                </section>
+
+                <section id="ai" class="block">
+                  <h2>Expanding Into AI and Strategic Decision-Making</h2>
+                  <p>
+                    I am currently completing a <strong>Certificate in AI Business Strategy from Johns Hopkins University</strong>, strengthening my ability
+                    to connect analytics with leadership decision-making and responsible technology adoption.
+                  </p>
+                  <ul>
+                    <li>Responsible and ethical AI adoption</li>
+                    <li>AI governance and decision frameworks</li>
+                    <li>Translating analytics into executive strategy</li>
+                    <li>Aligning AI investments with mission-driven outcomes</li>
+                  </ul>
+                </section>
+
+                <section id="how-i-work" class="block">
+                  <h2>How I Work</h2>
+                  <ul class="principles">
+                    <li><strong>Systems thinking:</strong> designing programs that connect people, tools, and processes</li>
+                    <li><strong>Clarity:</strong> translating complexity into structures others can follow</li>
+                    <li><strong>Collaboration:</strong> working across disciplines and institutions</li>
+                    <li><strong>Impact:</strong> prioritizing outcomes that can be measured and communicated</li>
+                  </ul>
+                </section>
+
+                <section id="skills" class="block">
+                  <h2>Core Areas of Focus</h2>
+                  <div class="pill-grid">
+                    <span class="pill">Program & Project Management</span>
+                    <span class="pill">Data Analytics & Visualization</span>
+                    <span class="pill">Workforce & Talent Pipeline Development</span>
+                    <span class="pill">Community & Ecosystem Building</span>
+                    <span class="pill">Research Support & Applied Analytics</span>
+                    <span class="pill">AI & Innovation Strategy</span>
+                    <span class="pill">Stakeholder & Partnership Management</span>
+                  </div>
+
+                  <h3>Tools & Skills</h3>
+                  <p class="muted">
+                    Power BI • Tableau • Excel • SQL • Python • Microsoft Teams • Project Documentation • Data Storytelling • Cross-Functional Coordination
+                  </p>
+
+                  <h3>Certifications & Professional Development</h3>
+                  <ul>
+                    <li><strong>AI Business Strategy Certificate</strong> — Johns Hopkins University <em>(in progress)</em></li>
+                    <li>Bloomberg Client Engagement Job Simulation — Forage</li>
+                    <li>Excel Essentials for Data Analytics — Coursera</li>
+                    <li>Data Analytics with Python — IBM</li>
+                    <li>Amazon Kinesis Analytics — AWS</li>
+                    <li>Advanced Excel / CRM / CompTIA Project+ — New Horizons</li>
+                    <li>Association of Public Data Users (APDU) — Member</li>
+                  </ul>
+                </section>
+
+                <div class="page-nav">
+                  <a class="btn ghost" href="projects.html">View Projects →</a>
+                  <a class="btn primary" href="contact.html">Let's Connect →</a>
+                </div>
+
+              </article>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- Footer (optional: match your site footer) -->
+      <footer class="site-footer">
+        <div class="container">
+          <p class="muted">© <span id="year"></span> Bolametiren "Bibi" Akinlaja</p>
         </div>
-      </div>
+      </footer>
+
     </div>
 
-    <h2>Certifications & Professional Development</h2>
-    
-    <div class="cert-list">
-      <ul>
-        <li><strong>AI Business Strategy Certificate</strong> — Johns Hopkins University (in progress)</li>
-        <li><strong>Bloomberg Client Engagement Job Simulation</strong> — Forage</li>
-        <li><strong>Excel Essentials for Data Analytics</strong> — Coursera</li>
-        <li><strong>Data Analytics with Python</strong> — IBM</li>
-        <li><strong>Amazon Kinesis Analytics</strong> — AWS</li>
-        <li><strong>Advanced Excel / CRM / CompTIA Project+</strong> — New Horizons</li>
-        <li><strong>Association of Public Data Users (APDU)</strong> — Member</li>
-      </ul>
-    </div>
-
-    <h2>In Action: Impact Through Images</h2>
-    
-    <div class="image-gallery">
-      <div class="gallery-item">
-        <img src="images/data-tribe-event.jpg" alt="Data Tribe Community Event" onerror="this.parentElement.style.backgroundColor='#f0f9fa'; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23f0f9fa\' width=\'400\' height=\'300\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'system-ui\' font-size=\'18\' fill=\'%230EA5A6\'%3EData Tribe Event%3C/text%3E%3C/svg%3E'">
-        <div class="gallery-caption">Data Tribe community engagement: Building belonging through data storytelling</div>
-      </div>
-      
-      <div class="gallery-item">
-        <img src="images/dartt-lab.jpg" alt="DARTT Lab Innovation Hub" onerror="this.parentElement.style.backgroundColor='#f0f9fa'; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23f0f9fa\' width=\'400\' height=\'300\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'system-ui\' font-size=\'18\' fill=\'%230EA5A6\'%3EDARTT Lab%3C/text%3E%3C/svg%3E'">
-        <div class="gallery-caption">DARTT Lab: $350K+ AI-ready innovation hub transforming data education</div>
-      </div>
-      
-      <div class="gallery-item">
-        <img src="images/workshop-facilitation.jpg" alt="Workshop Facilitation" onerror="this.parentElement.style.backgroundColor='#f0f9fa'; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23f0f9fa\' width=\'400\' height=\'300\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'system-ui\' font-size=\'18\' fill=\'%230EA5A6\'%3EWorkshop%3C/text%3E%3C/svg%3E'">
-        <div class="gallery-caption">Leading analytics training: Empowering 500+ learners with practical data skills</div>
-      </div>
-      
-      <div class="gallery-item">
-        <img src="images/industry-partnership.jpg" alt="Industry Partnership Event" onerror="this.parentElement.style.backgroundColor='#f0f9fa'; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23f0f9fa\' width=\'400\' height=\'300\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'system-ui\' font-size=\'18\' fill=\'%230EA5A6\'%3EIndustry Partnership%3C/text%3E%3C/svg%3E'">
-        <div class="gallery-caption">Bridging academia and industry: Strategic partnerships with Fortune 500 companies</div>
-      </div>
-      
-      <div class="gallery-item">
-        <img src="images/afrotech-conference.jpg" alt="AfroTech Conference 2025" onerror="this.parentElement.style.backgroundColor='#f0f9fa'; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23f0f9fa\' width=\'400\' height=\'300\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'system-ui\' font-size=\'18\' fill=\'%230EA5A6\'%3EAfroTech 2025%3C/text%3E%3C/svg%3E'">
-        <div class="gallery-caption">AfroTech 2025: Elevating HBCU data excellence on the national stage</div>
-      </div>
-      
-      <div class="gallery-item">
-        <img src="images/mentorship-session.jpg" alt="Student Mentorship" onerror="this.parentElement.style.backgroundColor='#f0f9fa'; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23f0f9fa\' width=\'400\' height=\'300\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'system-ui\' font-size=\'18\' fill=\'%230EA5A6\'%3EMentorship%3C/text%3E%3C/svg%3E'">
-        <div class="gallery-caption">Mentorship in action: Creating pathways from learning to career opportunity</div>
-      </div>
-    </div>
-
-    <div class="section-divider"></div>
-    
-    <div class="pull-quote" style="font-style: normal; font-weight: 600; font-size: 1.35rem; background: linear-gradient(135deg, rgba(14, 165, 166, 0.12), rgba(255, 199, 44, 0.12)); border-left: 5px solid #0EA5A6;">
-      My mission is singular and unwavering: to architect data ecosystems where technology empowers people, institutions fulfill their promise, and analytics becomes the catalyst for opportunity—not just optimization.
-    </div>
-
-  </main>
-
-  <footer>
-    &copy; 2025 Bolametiren Akinlaja. All rights reserved.
-  </footer>
-</body>
+    <script>
+      // Set current year in footer
+      const yearElement = document.getElementById("year");
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+    </script>
+  </body>
 </html>
