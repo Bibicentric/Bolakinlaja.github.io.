@@ -235,6 +235,91 @@ section + section { border-top: 1px solid var(--line); }
 .card a.card-link:hover h3 { color: var(--accent); }
 .card-note { font-style: italic; color: var(--text-light); font-size: 0.9rem; }
 
+/* ---- Featured photo hero ---- */
+.photo-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+.photo-hero img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  box-shadow: 0 12px 32px rgba(28, 28, 26, 0.12);
+}
+@media (max-width: 800px) {
+  .photo-hero { grid-template-columns: 1fr; }
+}
+
+/* ---- Numbers grid: a larger, more visual stat block ---- */
+.numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 0;
+  margin-top: 2rem;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.numbers-grid .num-item {
+  padding: 2rem 1.75rem;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.numbers-grid .num-item .num {
+  font-family: 'Fraunces', serif;
+  font-size: 2.6rem;
+  color: var(--accent);
+  display: block;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.numbers-grid .num-item .label {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  line-height: 1.4;
+  display: block;
+}
+.numbers-grid .num-item .src {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-light);
+  margin-top: 0.4rem;
+  font-style: italic;
+}
+
+/* ---- Pull quote ---- */
+.pull-quote {
+  font-family: 'Fraunces', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--ink);
+  border-left: 3px solid var(--accent);
+  padding: 0.25rem 0 0.25rem 1.75rem;
+  margin: 2rem 0;
+}
+.pull-quote cite {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-top: 0.75rem;
+}
+
+/* ---- Featured entry (entry with a photo alongside) ---- */
+.entry-featured {
+  grid-template-columns: 1fr;
+}
+.entry-featured .entry-photo {
+  margin-top: 1.25rem;
+  aspect-ratio: 16/9;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgba(28, 28, 26, 0.1);
+}
+
 /* ---- Footer ---- */
 .site-footer {
   border-top: 1px solid var(--line);
