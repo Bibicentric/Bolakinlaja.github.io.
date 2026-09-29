@@ -389,7 +389,7 @@ section + section { border-top: 1px solid var(--line); }
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-size: 0.95rem;
-  color: #e0c990;
+  color: var(--accent);
   margin-top: 1.5rem;
 }
 
@@ -444,6 +444,48 @@ section + section { border-top: 1px solid var(--line); }
     transition: opacity 0.6s ease, transform 0.6s ease;
   }
   .reveal.is-visible { opacity: 1; transform: none; }
+}
+
+/* ---- Highlight grid: 3-up card variant of .entry, for visual break from stacked rows ---- */
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+.highlight-grid .h-card {
+  border-top: 2px solid var(--accent);
+  padding-top: 1.25rem;
+}
+.highlight-grid .h-card .entry-meta { color: var(--text-light); font-size: 0.85rem; }
+.highlight-grid .h-card h3 { margin: 0.5rem 0 0.6rem; font-size: 1.05rem; }
+.highlight-grid .h-card p { font-size: 0.95rem; }
+
+/* ---- Numbered index list: editorial directory, used for "Where to look next" ---- */
+.index-list { margin-top: 2rem; border-top: 1px solid var(--line); }
+.index-list a {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  text-decoration: none;
+}
+.index-list a .idx {
+  font-family: 'Fraunces', serif;
+  font-size: 1rem;
+  color: var(--gold);
+  flex-shrink: 0;
+  width: 1.6rem;
+}
+.index-list a .idx-title { font-family: 'Fraunces', serif; font-size: 1.3rem; flex-shrink: 0; }
+.index-list a .idx-desc { color: var(--text-light); font-size: 0.92rem; flex: 1; text-align: right; }
+.index-list a:hover { background: var(--card); }
+.index-list a:hover .idx-title { color: var(--accent); }
+@media (max-width: 640px) {
+  .index-list a { flex-wrap: wrap; }
+  .index-list a .idx-desc { text-align: left; width: 100%; }
 }
 
 /* ---- Footer ---- */
