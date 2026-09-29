@@ -16,6 +16,9 @@
     .price-table th, .price-table td { text-align: left; padding: 0.6rem 0.9rem; border-bottom: 1px solid var(--line); }
     .price-table th { font-family: 'Fraunces', serif; font-weight: 600; color: var(--ink); }
     .price-table td.num { font-family: 'Fraunces', serif; color: var(--accent); }
+    .logo-row { display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap; margin: 1.75rem 0; padding: 1.5rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .logo-row img { max-height: 34px; width: auto; filter: grayscale(1); opacity: 0.75; }
+    .logo-row span { font-size: 0.8rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.06em; }
   </style>
 </head>
 <body>
@@ -43,9 +46,14 @@
   <main id="main">
     <section class="hero">
       <div class="wrap">
-        <span class="eyebrow">Ventures</span>
-        <h1>I don't just run programs. I build products.</h1>
-        <p class="hero-sub">Outside the CDA, I found, design, and ship my own software — with real paying customers.</p>
+        <div class="portrait-hero">
+          <img src="images/nexaflow-founder.jpg" alt="Bolametiren Akinlaja, Founder of NexaFlow Analytics">
+          <div>
+            <span class="eyebrow">Ventures</span>
+            <h1>I don't just run programs. I build products.</h1>
+          </div>
+        </div>
+        <p class="hero-sub" style="margin-top: 1.5rem;">Outside the CDA, I found, design, and ship my own software — with real paying customers.</p>
         <div class="numbers-grid">
           <div class="num-item">
             <span class="num">3</span>
@@ -83,6 +91,12 @@
               <tr><td>Premium</td><td class="num">$99</td><td>Adds competitor profiles and a 5-year financial model</td></tr>
             </table>
             <p>50+ industry-specific report types — bakeries, food trucks, salons, logistics, childcare, consulting, and more — each with its own landing page and benchmark data. A free tool, Market Pulse, gives a quick opportunity score with no purchase required. Every plan carries a 14-day money-back guarantee.</p>
+            <div class="logo-row">
+              <span>Real customers</span>
+              <img src="images/cloud9-logo.png" alt="Cloud 9 Decor & Events">
+              <img src="images/daso-logistics-logo.jpeg" alt="DASO Logistics & Delivery Services">
+              <img src="images/ls-ent-logo.png" alt="LS Entertainment Music Empire">
+            </div>
             <blockquote class="pull-quote">
               "After 20+ years in business, we still found blind spots. The report gave us numbers we could use in partner and investor conversations."
               <cite>— LS Entertainment Music Empire</cite>
