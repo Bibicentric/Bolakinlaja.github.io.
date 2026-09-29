@@ -48,6 +48,14 @@
 
 html { scroll-behavior: smooth; }
 
+@media (prefers-reduced-motion: no-preference) {
+  a, .btn, .btn-quiet, .site-nav a, .card, .num-item, .entry img, .photo-hero img,
+  .entry-featured .entry-photo, .portrait-hero img, .gallery-grid img {
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease,
+                box-shadow 0.25s ease, transform 0.3s ease, opacity 0.3s ease;
+  }
+}
+
 body {
   margin: 0;
   background: var(--paper);
@@ -128,13 +136,25 @@ section + section { border-top: 1px solid var(--line); }
   flex-wrap: wrap;
 }
 .site-nav a {
+  position: relative;
   color: var(--ink-soft);
   font-size: 0.92rem;
   font-weight: 500;
   text-decoration: none;
+  padding-bottom: 3px;
+}
+.site-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 0; height: 1px;
+  background: var(--ink);
+  transition: width 0.25s ease;
 }
 .site-nav a:hover,
-.site-nav a.active { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
+.site-nav a.active { color: var(--ink); }
+.site-nav a:hover::after,
+.site-nav a.active::after { width: 100%; }
 .site-nav .socials { display: flex; gap: 0.9rem; margin-left: 0.2rem; }
 .site-nav .socials a { font-size: 1.05rem; color: var(--ink-soft); }
 .site-nav .socials a:hover { color: var(--accent); }
@@ -234,6 +254,23 @@ section + section { border-top: 1px solid var(--line); }
 .card a.card-link { color: var(--ink); text-decoration: none; }
 .card a.card-link:hover h3 { color: var(--accent); }
 .card-note { font-style: italic; color: var(--text-light); font-size: 0.9rem; }
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 14px 28px rgba(28, 28, 26, 0.1);
+}
+.numbers-grid .num-item { position: relative; overflow: hidden; }
+.numbers-grid .num-item:hover { background: var(--accent-soft); }
+.entry:hover h3 { color: var(--accent); }
+.entry-photo-wrap, .about-photo, .portrait-hero img, .entry-featured .entry-photo,
+.photo-hero img, .gallery-grid figure {
+  overflow: hidden;
+}
+.entry img:hover, .photo-hero img:hover, .entry-featured .entry-photo:hover,
+.gallery-grid img:hover, .about-photo img:hover {
+  transform: scale(1.03);
+}
+.portrait-hero img:hover { transform: scale(1.05); }
 
 /* ---- Featured photo hero ---- */
 .photo-hero {
@@ -388,6 +425,22 @@ section + section { border-top: 1px solid var(--line); }
   object-fit: cover;
   box-shadow: 0 8px 24px rgba(28, 28, 26, 0.15);
   flex-shrink: 0;
+}
+
+/* ---- Motion: page load + scroll reveal ---- */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: none; }
+  }
+  .hero { animation: fadeInUp 0.7s ease both; }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.is-visible { opacity: 1; transform: none; }
 }
 
 /* ---- Footer ---- */
