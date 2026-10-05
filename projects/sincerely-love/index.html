@@ -3,216 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sincerely, Love Research Cohort - Mental health and data research initiative">
+  <meta name="description" content="Sincerely, Love — a mental health summit and student research cohort hosted by the Center for Data Analytics.">
   <meta name="author" content="Bolametiren Akinlaja">
-  <title>Sincerely, Love Research Cohort - Bolametiren Akinlaja</title>
+  <title>Sincerely, Love — Bolametiren Akinlaja</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/css/editorial.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <style>
-    
-    
-    .project-hero {
-      background: linear-gradient(135deg, rgba(14, 165, 166, 0.1), rgba(255, 199, 44, 0.1));
-      padding: 3rem 2rem;
-      margin-bottom: 3rem;
-    }
-    
-    .project-hero-container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    .project-hero h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      line-height: 1.2;
-    }
-    
-    .project-hero-tagline {
-      font-size: 1.25rem;
-      color: var(--project-teal);
-      font-weight: 600;
-      margin-bottom: 2rem;
-    }
-    
-    .project-hero-image {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      border-radius: 0.75rem;
-      overflow: hidden;
-      margin-bottom: 2rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    }
-    
-    .project-hero-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    
-    .impact-snapshot-tiles {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-    
-    .impact-tile {
-      background: rgba(255, 255, 255, 0.05);
-      border: 2px solid rgba(255, 255, 255, 0.1);
-      border-radius: 0.75rem;
-      padding: 1.5rem;
-      text-align: center;
-    }
-    
-    .impact-tile-number {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--project-gold);
-      margin-bottom: 0.5rem;
-    }
-    
-    .impact-tile-label {
-      font-size: 0.95rem;
-      color: var(--text-light);
-    }
-    
-    .project-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem 4rem;
-    }
-    
-    .project-section {
-      margin-bottom: 3rem;
-    }
-    
-    .project-section h2 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      color: var(--project-teal);
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    
-    .project-section ul {
-      list-style: none;
-      padding: 0;
-    }
-    
-    .project-section ul li {
-      padding-left: 2rem;
-      margin-bottom: 0.75rem;
-      position: relative;
-      line-height: 1.7;
-    }
-    
-    .project-section ul li:before {
-      content: "→";
-      position: absolute;
-      left: 0;
-      color: var(--project-gold);
-      font-weight: 700;
-    }
-    
-    .project-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    
-    .gallery-item {
-      border-radius: 0.75rem;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-    
-    .gallery-item img {
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
-    }
-    
-    .gallery-caption {
-      padding: 1rem;
-      background: rgba(255, 255, 255, 0.05);
-      font-size: 0.9rem;
-      color: var(--text-light);
-    }
-    
-    .project-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 2rem;
-      background: rgba(255, 255, 255, 0.03);
-      border-radius: 0.75rem;
-      margin-top: 3rem;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    
-    .project-nav-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--project-gold);
-      text-decoration: none;
-      font-weight: 600;
-      padding: 0.75rem 1.5rem;
-      border: 2px solid var(--project-teal);
-      border-radius: 0.5rem;
-      transition: all 0.3s ease;
-    }
-    
-    .project-nav-link:hover {
-      background: var(--project-teal);
-      color: var(--project-navy);
-    }
-    
-    .back-to-projects {
-      position: sticky;
-      top: 80px;
-      z-index: 50;
-      text-align: center;
-      padding: 1rem;
-      background: var(--paper);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--line);
-    }
-    
-    .back-to-projects a {
-      color: var(--project-gold);
-      text-decoration: none;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    
-    @media (max-width: 768px) {
-      .project-hero h1 {
-        font-size: 1.8rem;
-      }
-      
-      .impact-snapshot-tiles {
-        grid-template-columns: 1fr;
-      }
-      
-      .project-nav {
-        flex-direction: column;
-      }
-    }
-  </style>
 </head>
 <body>
+  <a href="#main" class="skip-to-content">Skip to main content</a>
   <header class="site-header">
     <div class="site-header-inner">
       <a href="../../index.html" class="site-brand">Bolametiren Akinlaja</a>
@@ -220,7 +21,7 @@
         <a href="../../index.html">Home</a>
         <a href="../../about.html">About</a>
         <a href="../../experience.html">Experience</a>
-        <a href="../../programs.html">Programs</a>
+        <a href="../../programs.html" class="active">Programs</a>
         <a href="../../impact-events.html">Impact &amp; Events</a>
         <a href="../../ventures.html">Ventures</a>
         <a href="../../capabilities-expertise.html">Capabilities</a>
@@ -233,148 +34,37 @@
     </div>
   </header>
 
-  <div class="back-to-projects">
-    <a href="../../projects/">
-      <i class="fas fa-arrow-left"></i> Back to Projects
-    </a>
-  </div>
-
-  <main class="project-detail-main">
-    <!-- Project Hero -->
-    <section class="project-hero">
-      <div class="project-hero-container">
-        <h1>Sincerely, Love Research Cohort</h1>
-        <p class="project-hero-tagline">Founded research cohort employing 5 students exploring mental health and data</p>
-        
-        <div class="project-hero-image">
-          <img src="../../images/cda-students-group.jpg" alt="Sincerely, Love Mental Health Summit — the &quot;Data, Love &amp; Community&quot; group photo" loading="lazy">
-        </div>
-        
-        <!-- Impact Snapshot -->
-        <div class="impact-snapshot-tiles">
-          <div class="impact-tile">
-            <div class="impact-tile-number">5</div>
-            <div class="impact-tile-label">Student Researchers</div>
-          </div>
-          <div class="impact-tile">
-            <div class="impact-tile-number">100+</div>
-            <div class="impact-tile-label">Summit Attendees</div>
-          </div>
-          <div class="impact-tile">
-            <div class="impact-tile-number">3</div>
-            <div class="impact-tile-label">Research Projects</div>
-          </div>
-          <div class="impact-tile">
-            <div class="impact-tile-number">1</div>
-            <div class="impact-tile-label">Community Summit</div>
-          </div>
-        </div>
+  <main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <span class="eyebrow">Mental health &amp; data</span>
+        <h1>Sincerely, Love</h1>
+        <p class="hero-sub">A mental health summit and student research cohort hosted by the Center for Data Analytics, exploring how data can help students talk about and act on wellbeing.</p>
+        <img src="../../images/cda-students-group.jpg" alt="Sincerely, Love Mental Health Summit group photo" style="width: 100%; margin-top: 2.5rem;">
       </div>
     </section>
 
-    <div class="project-content">
-      <!-- Overview -->
-      <section class="project-section">
-        <h2><i class="fas fa-compass"></i> Overview</h2>
-        <p>
-          Founded research cohort employing 5 students exploring mental health and data, hosting summit with 100+ attendees for wellbeing conversations. This initiative combines data science with mental health advocacy to create spaces for vulnerable conversations and research-driven insights on student wellbeing.
-        </p>
-      </section>
-
-      <!-- My Role -->
-      <section class="project-section">
-        <h2><i class="fas fa-user-tie"></i> My Role</h2>
-        <ul>
-          <li>Founded Sincerely, Love research initiative combining data and mental health</li>
-          <li>Recruited and employed 5 student researchers exploring wellbeing topics</li>
-          <li>Designed research projects examining student mental health through data lens</li>
-          <li>Organized community summit with 100+ attendees for wellbeing conversations</li>
-          <li>Created safe spaces for vulnerable conversations about mental health</li>
-          <li>Developed research outputs including visualizations and reports</li>
-        </ul>
-      </section>
-
-      <!-- Objectives -->
-      <section class="project-section">
-        <h2><i class="fas fa-bullseye"></i> Objectives</h2>
-        <ul>
-          <li>Explore intersection of data science and mental health advocacy</li>
-          <li>Employ students to conduct meaningful research on wellbeing topics</li>
-          <li>Host community conversations destigmatizing mental health discussions</li>
-          <li>Generate data-driven insights on student mental health needs</li>
-          <li>Create sustainable model for student-led wellness research</li>
-        </ul>
-      </section>
-
-      <!-- Approach / What I Did -->
-      <section class="project-section">
-        <h2><i class="fas fa-tasks"></i> Approach / What I Did</h2>
-        <ul>
-          <li>Founded research cohort with focus on mental health and wellbeing</li>
-          <li>Recruited 5 student researchers focused on mental health advocacy</li>
-          <li>Designed 3 research projects exploring student wellbeing through data</li>
-          <li>Conducted surveys, interviews, and data analysis on mental health topics</li>
-          <li>Organized Sincerely, Love Summit bringing together 100+ students for conversations</li>
-          <li>Created visual storytelling and reports sharing research insights</li>
-          <li>Built partnerships with campus counseling and wellness resources</li>
-          <li>Established foundation for ongoing research and community engagement</li>
-        </ul>
-        <p>The summit drew students, mental health advocates and local leaders — including City of Laurel Mayor Keith Sydnor and Forest Heights Mayor Troy Barrington Lilly. I led a live data activity exploring how people define, feel and express love, turning each response into part of a shared story about connection and belonging.</p>
-      </section>
-
-      <!-- Deliverables -->
-      <section class="project-section">
-        <h2><i class="fas fa-box-open"></i> Deliverables</h2>
-        <ul>
-          <li><strong>3 Research Projects on Student Wellbeing:</strong> Data-driven exploration of mental health topics affecting students</li>
-          <li><strong>Community Summit Event:</strong> Sincerely, Love Summit bringing together 100+ students for wellness conversations</li>
-          <li><strong>Research Visualizations and Reports:</strong> Visual storytelling and written reports sharing research findings</li>
-          <li><strong>Survey Instruments:</strong> Validated survey tools for collecting mental health and wellbeing data</li>
-          <li><strong>Student Employment Opportunities:</strong> Paid research positions for 5 students exploring mental health topics</li>
-          <li><strong>Partnership Network:</strong> Connections with campus counseling, wellness, and support resources</li>
-        </ul>
-      </section>
-
-      <!-- Outcomes -->
-      <section class="project-section">
-        <h2><i class="fas fa-trophy"></i> Outcomes</h2>
-        <ul>
-          <li><strong>5 students employed</strong> as mental health and data researchers</li>
-          <li><strong>100+ attendees</strong> at Sincerely, Love Summit for wellbeing conversations</li>
-          <li><strong>3 research projects completed</strong> exploring student mental health</li>
-          <li><strong>200+ survey responses collected</strong> on wellbeing topics</li>
-          <li><strong>Safe spaces created</strong> for vulnerable mental health conversations</li>
-          <li><strong>Foundation established</strong> for ongoing wellness research and advocacy</li>
-        </ul>
-      </section>
-
-      <!-- What's Next -->
-      <section class="project-section">
-        <h2><i class="fas fa-rocket"></i> What's Next</h2>
-        <p>
-          The initiative continues with plans to expand the research cohort, host biannual wellness summits, and develop mental health data dashboards for campus administrators. We're also partnering with counseling services to translate research insights into actionable support programs for students.
-        </p>
-      </section>
-
-      <!-- Navigation -->
-      <div class="project-nav">
-        <a href="../../projects/" class="project-nav-link">
-          <i class="fas fa-th"></i> All Projects
-        </a>
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-          <a href="../eic-market-research/" class="project-nav-link">
-            <i class="fas fa-arrow-left"></i> Previous
-          </a>
-          <a href="../match/" class="project-nav-link">
-            Next <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
+    <section>
+      <div class="wrap">
+        <span class="eyebrow">The summit</span>
+        <h2>Data, love, and community</h2>
+        <p>The summit brought students, mental health advocates, and local leaders into conversation about wellbeing. Attendees included City of Laurel Mayor Keith Sydnor and Forest Heights Mayor Troy Barrington Lilly.</p>
+        <p>The session I led was a live data activity on how people define, feel, and express love. Each response became part of a shared picture of the room.</p>
       </div>
-    </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <span class="eyebrow">Research</span>
+        <h2>The student cohort</h2>
+        <p>I founded the research cohort to give students research roles on student wellbeing, combining survey work, data analysis, and visual reporting. The cohort's work focused on campus mental health and how data can inform support for students.</p>
+        <p><a href="../../programs.html" class="btn-quiet">&larr; Back to programs</a></p>
+      </div>
+    </section>
   </main>
 
-  <footer class="homepage-footer" style="background: var(--bg-dark); padding: 2rem; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.1);">
-    <p style="margin: 0; color: var(--text-light);">&copy; 2026 Bolametiren Akinlaja. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="wrap center">&copy; 2026 Bolametiren Akinlaja.</div>
   </footer>
   <script src="../../assets/js/motion.js" defer></script>
 </body>

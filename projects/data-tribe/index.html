@@ -3,216 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Data Tribe - Student Leadership & Data Community">
+  <meta name="description" content="Data Tribe — a student-led data community founded in 2022 at Bowie State University, offering workshops, boot camps, mentorship, and industry panels.">
   <meta name="author" content="Bolametiren Akinlaja">
-  <title>Data Tribe - Bolametiren Akinlaja</title>
+  <title>Data Tribe — Bolametiren Akinlaja</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/css/editorial.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <style>
-    
-    
-    .project-hero {
-      background: linear-gradient(135deg, rgba(14, 165, 166, 0.1), rgba(255, 199, 44, 0.1));
-      padding: 3rem 2rem;
-      margin-bottom: 3rem;
-    }
-    
-    .project-hero-container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    .project-hero h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      line-height: 1.2;
-    }
-    
-    .project-hero-tagline {
-      font-size: 1.25rem;
-      color: var(--project-teal);
-      font-weight: 600;
-      margin-bottom: 2rem;
-    }
-    
-    .project-hero-image {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      border-radius: 0.75rem;
-      overflow: hidden;
-      margin-bottom: 2rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    }
-    
-    .project-hero-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    
-    .impact-snapshot-tiles {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-    
-    .impact-tile {
-      background: rgba(255, 255, 255, 0.05);
-      border: 2px solid rgba(255, 255, 255, 0.1);
-      border-radius: 0.75rem;
-      padding: 1.5rem;
-      text-align: center;
-    }
-    
-    .impact-tile-number {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--project-gold);
-      margin-bottom: 0.5rem;
-    }
-    
-    .impact-tile-label {
-      font-size: 0.95rem;
-      color: var(--text-light);
-    }
-    
-    .project-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem 4rem;
-    }
-    
-    .project-section {
-      margin-bottom: 3rem;
-    }
-    
-    .project-section h2 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      color: var(--project-teal);
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    
-    .project-section ul {
-      list-style: none;
-      padding: 0;
-    }
-    
-    .project-section ul li {
-      padding-left: 2rem;
-      margin-bottom: 0.75rem;
-      position: relative;
-      line-height: 1.7;
-    }
-    
-    .project-section ul li:before {
-      content: "→";
-      position: absolute;
-      left: 0;
-      color: var(--project-gold);
-      font-weight: 700;
-    }
-    
-    .project-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    
-    .gallery-item {
-      border-radius: 0.75rem;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-    
-    .gallery-item img {
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
-    }
-    
-    .gallery-caption {
-      padding: 1rem;
-      background: rgba(255, 255, 255, 0.05);
-      font-size: 0.9rem;
-      color: var(--text-light);
-    }
-    
-    .project-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 2rem;
-      background: rgba(255, 255, 255, 0.03);
-      border-radius: 0.75rem;
-      margin-top: 3rem;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    
-    .project-nav-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--project-gold);
-      text-decoration: none;
-      font-weight: 600;
-      padding: 0.75rem 1.5rem;
-      border: 2px solid var(--project-teal);
-      border-radius: 0.5rem;
-      transition: all 0.3s ease;
-    }
-    
-    .project-nav-link:hover {
-      background: var(--project-teal);
-      color: var(--project-navy);
-    }
-    
-    .back-to-projects {
-      position: sticky;
-      top: 80px;
-      z-index: 50;
-      text-align: center;
-      padding: 1rem;
-      background: var(--paper);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--line);
-    }
-    
-    .back-to-projects a {
-      color: var(--project-gold);
-      text-decoration: none;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    
-    @media (max-width: 768px) {
-      .project-hero h1 {
-        font-size: 1.8rem;
-      }
-      
-      .impact-snapshot-tiles {
-        grid-template-columns: 1fr;
-      }
-      
-      .project-nav {
-        flex-direction: column;
-      }
-    }
-  </style>
 </head>
 <body>
+  <a href="#main" class="skip-to-content">Skip to main content</a>
   <header class="site-header">
     <div class="site-header-inner">
       <a href="../../index.html" class="site-brand">Bolametiren Akinlaja</a>
@@ -220,7 +21,7 @@
         <a href="../../index.html">Home</a>
         <a href="../../about.html">About</a>
         <a href="../../experience.html">Experience</a>
-        <a href="../../programs.html">Programs</a>
+        <a href="../../programs.html" class="active">Programs</a>
         <a href="../../impact-events.html">Impact &amp; Events</a>
         <a href="../../ventures.html">Ventures</a>
         <a href="../../capabilities-expertise.html">Capabilities</a>
@@ -233,146 +34,57 @@
     </div>
   </header>
 
-  <div class="back-to-projects">
-    <a href="../../projects/">
-      <i class="fas fa-arrow-left"></i> Back to Projects
-    </a>
-  </div>
+  <main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <span class="eyebrow">Student data community</span>
+        <h1>Data Tribe</h1>
+        <p class="hero-sub">A student-led data community at Bowie State University, founded in 2022 to build applied data skills, professional connections, and a sense of belonging in the field.</p>
+        <img src="../../images/northrop-grumman-session.jpg" alt="Data Tribe session with Northrop Grumman speakers" style="width: 100%; margin-top: 2.5rem;">
+      </div>
+    </section>
 
-  <main class="project-detail-main">
-    <!-- Project Hero -->
-    <section class="project-hero">
-      <div class="project-hero-container">
-        <h1>Data Tribe — Student Leadership & Data Community</h1>
-        <p class="project-hero-tagline">Student-owned leadership engine fostering applied data skills, professional development, and talent pipeline</p>
-        
-        <div class="project-hero-image">
-          <img src="../../images/northrop-grumman-session.jpg" alt="Data Tribe session with Northrop Grumman speakers" loading="lazy">
-        </div>
-        
-        <!-- Impact Snapshot -->
-        <div class="impact-snapshot-tiles">
-          <div class="impact-tile">
-            <div class="impact-tile-number">250+</div>
-            <div class="impact-tile-label">Participants</div>
+    <section>
+      <div class="wrap">
+        <span class="eyebrow">What it offers</span>
+        <h2>Programs and activities</h2>
+        <div class="highlight-grid">
+          <div class="h-card">
+            <div class="entry-meta">Training</div>
+            <h3>Workshops and bootcamps</h3>
+            <p>Training sessions, technical lectures, and a 23-student boot camp track.</p>
           </div>
-          <div class="impact-tile">
-            <div class="impact-tile-number">8</div>
-            <div class="impact-tile-label">Executive Leaders</div>
+          <div class="h-card">
+            <div class="entry-meta">Mentorship</div>
+            <h3>Peer and mentor support</h3>
+            <p>Mentorship programs and peer-led learning across academic levels.</p>
           </div>
-          <div class="impact-tile">
-            <div class="impact-tile-number">50+</div>
-            <div class="impact-tile-label">Events</div>
+          <div class="h-card">
+            <div class="entry-meta">Industry</div>
+            <h3>Panels and speakers</h3>
+            <p>Industry panels, including a session with Northrop Grumman engineers.</p>
           </div>
-          <div class="impact-tile">
-            <div class="impact-tile-number">4</div>
-            <div class="impact-tile-label">Years Running</div>
+          <div class="h-card">
+            <div class="entry-meta">Events</div>
+            <h3>Symposiums and events</h3>
+            <p>Six campus events, plus research projects and student hands-on activities such as an SQL escape room.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="project-content">
-      <!-- Overview -->
-      <section class="project-section">
-        <h2><i class="fas fa-compass"></i> Overview</h2>
-        <p>
-          Student-owned leadership engine fostering applied data skills, professional development, and talent pipeline for 250+ participants through peer-led programming. Data Tribe serves as the premier student organization for data science, creating a vibrant community of learners and future professionals.
-        </p>
-      </section>
-
-      <!-- My Role -->
-      <section class="project-section">
-        <h2><i class="fas fa-user-tie"></i> My Role</h2>
-        <ul>
-          <li>Founded and architected Data Tribe as student-led data community</li>
-          <li>Recruited and mentored 8-person executive leadership team</li>
-          <li>Facilitated 50+ workshops, panels, and networking events</li>
-          <li>Created curriculum for peer-led skill-building sessions</li>
-          <li>Established partnerships with industry sponsors and speakers</li>
-          <li>Built sustainable organizational structure for long-term growth</li>
-        </ul>
-      </section>
-
-      <!-- Objectives -->
-      <section class="project-section">
-        <h2><i class="fas fa-bullseye"></i> Objectives</h2>
-        <ul>
-          <li>Create student-owned community fostering data science excellence</li>
-          <li>Provide hands-on learning through peer-led workshops and projects</li>
-          <li>Build professional development pipeline connecting students to opportunities</li>
-          <li>Establish sustainable leadership model for continued growth</li>
-          <li>Position Data Tribe as premier HBCU data science organization</li>
-        </ul>
-      </section>
-
-      <!-- Approach / What I Did -->
-      <section class="project-section">
-        <h2><i class="fas fa-tasks"></i> Approach / What I Did</h2>
-        <ul>
-          <li>Launched the organization with a founding team of data science students</li>
-          <li>Recruited diverse executive team representing multiple academic disciplines</li>
-          <li>Developed semester programming including workshops, hackathons, and guest speakers</li>
-          <li>Created mentorship program connecting underclassmen with upperclass leaders</li>
-          <li>Established industry partnerships for sponsorships, speakers, and internship opportunities</li>
-          <li>Built social media presence and branding to attract new members</li>
-          <li>Implemented feedback loops to continuously improve programming and engagement</li>
-        </ul>
-      </section>
-
-      <!-- Deliverables -->
-      <section class="project-section">
-        <h2><i class="fas fa-box-open"></i> Deliverables</h2>
-        <ul>
-          <li><strong>Organizational Structure:</strong> Leadership framework and governance model for sustainable growth</li>
-          <li><strong>Event Programming Calendar:</strong> Comprehensive schedule of workshops, panels, and networking events</li>
-          <li><strong>Workshop Curriculum:</strong> Peer-led educational content covering data science skills and tools</li>
-          <li><strong>Industry Partnership Network:</strong> Connections with sponsors, speakers, and career opportunities</li>
-          <li><strong>Member Database:</strong> System for tracking engagement and communicating with community</li>
-          <li><strong>Social Media Presence:</strong> Brand identity and digital platforms for community building</li>
-        </ul>
-      </section>
-
-      <!-- Outcomes -->
-      <section class="project-section">
-        <h2><i class="fas fa-trophy"></i> Outcomes</h2>
-        <ul>
-          <li><strong>250+ participants</strong> engaged across 4 years</li>
-          <li><strong>50+ events hosted</strong> including workshops, panels, and networking</li>
-          <li><strong>8 executive leaders</strong> developed leadership and management skills</li>
-          <li><strong>10+ industry partnerships</strong> established</li>
-          <li><strong>90%+ member satisfaction</strong> rates</li>
-          <li><strong>Foundation for sustained growth</strong> and impact</li>
-        </ul>
-      </section>
-
-      <!-- What's Next -->
-      <section class="project-section">
-        <h2><i class="fas fa-rocket"></i> What's Next</h2>
-        <p>
-          Data Tribe continues to expand with plans to launch a formal mentorship program, host the first annual data science conference, and establish a career placement pipeline with partner companies. The organization is positioned to become a national model for student-led data science communities at HBCUs.
-        </p>
-      </section>
-
-      <!-- Navigation -->
-      <div class="project-nav">
-        <a href="../../projects/" class="project-nav-link">
-          <i class="fas fa-th"></i> All Projects
-        </a>
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-          <a href="../dartt-lab/" class="project-nav-link">
-            <i class="fas fa-arrow-left"></i> Previous
-          </a>
-          <a href="../eic-market-research/" class="project-nav-link">
-            Next <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
+    <section>
+      <div class="wrap">
+        <span class="eyebrow">Membership</span>
+        <h2>Who it serves</h2>
+        <p>Data Tribe is open to all undergraduate and graduate students, regardless of major, with a 3.0 minimum GPA. The community has grown to more than 100 members since launch.</p>
+        <p><a href="../../programs.html" class="btn-quiet">&larr; Back to programs</a></p>
       </div>
-    </div>
+    </section>
   </main>
 
-  <footer class="homepage-footer" style="background: var(--bg-dark); padding: 2rem; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.1);">
-    <p style="margin: 0; color: var(--text-light);">&copy; 2026 Bolametiren Akinlaja. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="wrap center">&copy; 2026 Bolametiren Akinlaja.</div>
   </footer>
   <script src="../../assets/js/motion.js" defer></script>
 </body>
