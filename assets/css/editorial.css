@@ -5,15 +5,15 @@
    ========================================================================== */
 
 :root {
-  --ink: #f3ede3;        /* light text/headlines on the dark ground */
-  --ink-soft: #cbc2b3;
-  --text-light: #948a78;
-  --paper: #15100e;      /* the dark ground itself */
-  --card: #1e1714;       /* slightly lifted panel on the ground */
-  --line: rgba(196, 160, 96, 0.22);  /* thin metallic-toned hairline */
+  --ink: #1b1613;        /* headlines and body text on the white ground */
+  --ink-soft: #4a4340;
+  --text-light: #6b625a;
+  --paper: #ffffff;      /* the white ground itself */
+  --card: #f7f4f0;       /* slightly tinted panel on the ground */
+  --line: rgba(120, 90, 40, 0.22);  /* thin warm hairline */
   --accent: #9c2b3a;     /* deep burgundy */
-  --accent-soft: rgba(156, 43, 58, 0.16);
-  --gold: #c9a463;       /* secondary metallic accent, used sparingly */
+  --accent-soft: rgba(156, 43, 58, 0.10);
+  --gold: #8a6a2a;       /* secondary accent, darkened for legibility on white */
 
   /* Back-compat: old inline styles across the site reference these names.
      Redefining them here re-themes every page that still uses var(--x)
@@ -364,12 +364,12 @@ section + section { border-top: 1px solid var(--line); }
   color: var(--paper);
 }
 .section-dark h1, .section-dark h2, .section-dark h3 { color: var(--paper); }
-.section-dark p { color: #4a4340; }
-.section-dark .eyebrow { color: var(--accent); }
-.section-dark .numbers-grid { border-color: rgba(21, 16, 14, 0.15); }
-.section-dark .numbers-grid .num-item { border-color: rgba(21, 16, 14, 0.15); }
-.section-dark .numbers-grid .num-item .num { color: var(--accent); }
-.section-dark .numbers-grid .num-item .label { color: #4a4340; }
+.section-dark p { color: #cbc2b3; }
+.section-dark .eyebrow { color: #c9a463; }
+.section-dark .numbers-grid { border-color: rgba(255, 255, 255, 0.15); }
+.section-dark .numbers-grid .num-item { border-color: rgba(255, 255, 255, 0.15); }
+.section-dark .numbers-grid .num-item .num { color: #e0b96a; }
+.section-dark .numbers-grid .num-item .label { color: #cbc2b3; }
 .section-dark .btn-quiet { color: var(--paper) !important; border-color: var(--paper) !important; }
 .section-dark .btn-quiet:hover { color: var(--accent) !important; border-color: var(--accent) !important; }
 
