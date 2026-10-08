@@ -311,6 +311,7 @@ section + section { border-top: 1px solid var(--line); }
   display: block;
   line-height: 1;
   margin-bottom: 0.5rem;
+  font-variant-numeric: tabular-nums;
 }
 .numbers-grid .num-item .label {
   font-size: 0.9rem;
